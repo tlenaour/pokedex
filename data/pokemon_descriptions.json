@@ -1,0 +1,1361 @@
+[
+  {
+    "id": 1,
+    "name": "bulbasaur",
+    "glance": "squat green four-legged creature with bulb on back",
+    "detailed": "squat blue-green four-legged toad-like body with darker green patches; large closed green plant bulb on its back; red eyes; pointed ears; no flower, no leaves",
+    "everyday": "looks like a green frog or little dinosaur carrying a big onion on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "name": "ivysaur",
+    "glance": "green four-legged creature with pink flower bud on back",
+    "detailed": "medium blue-green four-legged toad-like body with dark patches; closed pink flower bud on its back surrounded by large green leaves; red eyes; pointed ears",
+    "everyday": "looks like a green frog-dinosaur with a pink flower bud and leaves growing on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "name": "venusaur",
+    "glance": "large green toad-like beast with huge pink flower",
+    "detailed": "large heavy blue-green four-legged body with warty skin; huge open pink flower with white spots on its back; broad green leaves; red eyes",
+    "everyday": "looks like a giant green toad with a palm tree and big pink flower on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 4,
+    "name": "charmander",
+    "glance": "small orange lizard with flame on its tail",
+    "detailed": "small orange lizard standing on two legs; cream belly; round head with big eyes; flame on the tip of its tail; no horn, no wings",
+    "everyday": "looks like a little orange baby dinosaur or salamander with a burning tail",
+    "confidence": "high",
+    "notes": "data says red; the body is orange, described as orange"
+  },
+  {
+    "id": 5,
+    "name": "charmeleon",
+    "glance": "red lizard with head horn and flaming tail",
+    "detailed": "medium dark red lizard standing on two legs; cream belly; single horn-like crest on back of head; sharp claws; flame on tail tip; no wings",
+    "everyday": "looks like a red dinosaur with a spike on its head and a burning tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "name": "charizard",
+    "glance": "large orange winged dragon with flaming tail",
+    "detailed": "large orange dragon standing on two legs; big wings with blue-green undersides; cream belly; long neck; two horns on its head; flame on tail tip",
+    "everyday": "looks like a big orange dragon with wings and fire on the end of its tail",
+    "confidence": "high",
+    "notes": "data says red; the body is orange, described as orange"
+  },
+  {
+    "id": 7,
+    "name": "squirtle",
+    "glance": "small light blue turtle standing on two legs",
+    "detailed": "small light blue turtle standing upright; brown shell with cream front; round head; big eyes; short curled tail; no ears, no cannons",
+    "everyday": "looks like a cute baby blue turtle walking on its back legs with a curly tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "name": "wartortle",
+    "glance": "blue turtle with fluffy pale ears and tail",
+    "detailed": "medium blue turtle standing upright; brown shell with cream front; feathery wing-like pale ears; large fluffy pale curled tail; small fangs; no cannons",
+    "everyday": "looks like a blue turtle with furry ears and a big fluffy tail shaped like a wave",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "name": "blastoise",
+    "glance": "large blue turtle with cannons on its shell",
+    "detailed": "large bulky dark blue turtle standing upright; big brown shell with cream front; two metal cannons sticking out of the shell; small ears; short tail",
+    "everyday": "looks like a giant blue tortoise with two water guns poking out of its shell",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "name": "caterpie",
+    "glance": "tiny green caterpillar with red forked antenna",
+    "detailed": "tiny green segmented caterpillar; pale yellow underside; red Y-shaped antenna on its head; large black eyes with yellow rings; yellow ring markings along its sides",
+    "everyday": "looks like a little green worm or caterpillar with big eyes and a red forked horn",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "name": "metapod",
+    "glance": "green crescent-shaped cocoon with sleepy eyes",
+    "detailed": "medium green hard cocoon shaped like a crescent or bean pod; smooth segmented shell; half-closed eyes; pointed bottom; no arms, no legs, no wings",
+    "everyday": "looks like a green banana or pea pod with tired eyes",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 12,
+    "name": "butterfree",
+    "glance": "white-winged butterfly with purple body and red eyes",
+    "detailed": "medium butterfly with large white wings with black veins; round purple-blue body; big red compound eyes; two black antennae; pale blue hands and feet",
+    "everyday": "looks like a big butterfly with white wings, a purple body and huge red eyes",
+    "confidence": "high",
+    "notes": "data says white: the wings are white but the body is purple; both are described"
+  },
+  {
+    "id": 13,
+    "name": "weedle",
+    "glance": "tiny tan caterpillar with spike on head",
+    "detailed": "tiny yellowish-brown segmented caterpillar; round pink nose; pink round feet; sharp cone-shaped stinger on its head and another on its tail; black bead eyes",
+    "everyday": "looks like a small yellow-brown worm with a pink nose and a sharp spike on its head",
+    "confidence": "high",
+    "notes": "data says brown; it is a yellowish-brown or ochre"
+  },
+  {
+    "id": 14,
+    "name": "kakuna",
+    "glance": "yellow cocoon with black triangle eyes",
+    "detailed": "small yellow cocoon shaped like a rounded cone; dark triangular eyes; two small arm-like bumps on the front; segmented lower body; no legs, no wings",
+    "everyday": "looks like a yellow cocoon or corn cob with angry black eyes",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 15,
+    "name": "beedrill",
+    "glance": "yellow and black wasp with large stingers",
+    "detailed": "medium yellow wasp with black stripes on its abdomen; big red eyes; two pairs of clear wings; long cone-shaped stingers for hands; stinger on tail",
+    "everyday": "looks like a giant bee or wasp with red eyes and needles for arms",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 16,
+    "name": "pidgey",
+    "glance": "small plump brown bird with cream belly",
+    "detailed": "tiny plump brown bird; cream belly and face; short head crest of three tufts; black markings around the eyes; pink beak and feet; short tail",
+    "everyday": "looks like a little brown sparrow or pigeon with a pale chest",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "name": "pidgeotto",
+    "glance": "brown bird with pink-red head crest",
+    "detailed": "medium brown bird of prey; cream belly; long pink-red crest feathers swept back on its head; red and yellow tail feathers; black eye markings",
+    "everyday": "looks like a brown hawk with a reddish mohawk and a colorful tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "name": "pidgeot",
+    "glance": "brown eagle with very long red-yellow crest",
+    "detailed": "medium brown bird of prey; cream belly; very long flowing head crest of yellow and red feathers reaching down its back; red tail feathers",
+    "everyday": "looks like a brown eagle with long red and yellow hair flowing behind its head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "name": "rattata",
+    "glance": "small purple rat with large front teeth",
+    "detailed": "small purple rat on four legs; cream belly; large buck teeth; long whiskers; thin purple tail curled at the tip; red eyes; rounded ears",
+    "everyday": "looks like a little purple mouse or rat with big front teeth and a curly tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 20,
+    "name": "raticate",
+    "glance": "tan-brown rat with huge front teeth",
+    "detailed": "medium tan-brown rat with shaggy fur; cream belly; huge orange-yellow buck teeth; long whiskers; webbed back feet; long bare scaly tail; ragged ears",
+    "everyday": "looks like a fat brown rat or beaver with giant teeth and a bare tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "name": "spearow",
+    "glance": "small brown bird with red wings",
+    "detailed": "small scruffy bird with rough brown head feathers; red-pink wings; cream belly; black back; short hooked pink beak; angry eyes; short brown tail feathers",
+    "everyday": "looks like a small angry sparrow with a messy brown head and reddish wings",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 22,
+    "name": "fearow",
+    "glance": "brown bird with very long pointed beak",
+    "detailed": "medium brown bird with a long thin neck; very long narrow pink beak; red comb on its head; cream shaggy neck feathers; broad wings",
+    "everyday": "looks like a brown vulture or stork with a long skinny neck and a long sharp beak",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 23,
+    "name": "ekans",
+    "glance": "purple snake with yellow rattle on tail",
+    "detailed": "large purple snake, usually coiled; yellow belly; yellow band around its neck; yellow rattle at the tail tip; yellow eyes; no hood",
+    "everyday": "looks like a purple rattlesnake with a yellow ring around its neck",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 24,
+    "name": "arbok",
+    "glance": "huge purple cobra with patterned hood",
+    "detailed": "huge purple cobra rearing up; wide flat hood with a face-like pattern of red, yellow and black markings; sharp fangs; black stripe bands; no rattle",
+    "everyday": "looks like a giant purple cobra with a scary face drawn on its spread neck",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 25,
+    "name": "pikachu",
+    "glance": "small yellow mouse with red cheeks",
+    "detailed": "small yellow rodent; red circles on its cheeks; long pointed ears with black tips; flat tail shaped like a lightning bolt; brown stripes on back",
+    "everyday": "looks like a cute yellow mouse or hamster with a zigzag tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 26,
+    "name": "raichu",
+    "glance": "orange mouse with long thin lightning-bolt tail",
+    "detailed": "medium orange rodent standing upright; white belly; yellow cheek circles; curled dark brown ears; very long thin black tail ending in a yellow lightning bolt",
+    "everyday": "looks like an orange mouse with curly ears and a long cable tail with a lightning tip",
+    "confidence": "high",
+    "notes": "data says yellow: the body is orange; only the cheeks and tail tip are yellow"
+  },
+  {
+    "id": 27,
+    "name": "sandshrew",
+    "glance": "small yellow armadillo with brick-pattern skin",
+    "detailed": "small yellow armadillo-like creature standing upright; skin with a brick-like pattern; white belly and snout; pointed snout; short thick tail; small claws; no spikes",
+    "everyday": "looks like a little yellow armadillo or mouse covered in a brick wall pattern",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 28,
+    "name": "sandslash",
+    "glance": "yellow creature with brown spikes on back",
+    "detailed": "medium yellow creature standing upright; back covered in large sharp brown spikes; white belly; pointed snout; two very long claws on each hand; thick tail",
+    "everyday": "looks like a yellow hedgehog or pangolin with brown quills and long claws",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 29,
+    "name": "nidoran-f",
+    "glance": "small light blue spiny rabbit-like creature",
+    "detailed": "small light blue creature on four legs; darker blue spots; large rounded ears; whiskers; two front teeth; small spikes on its back; tiny forehead horn",
+    "everyday": "looks like a small blue rabbit or mouse with big ears and little spines on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 30,
+    "name": "nidorina",
+    "glance": "blue four-legged creature with spines and large ears",
+    "detailed": "medium turquoise-blue creature on four legs; darker spots; large rounded ears with ragged edges; spines along its back; pale belly; two fangs; no forehead horn",
+    "everyday": "looks like a chubby blue rabbit-rhino with big ears and spikes down its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 31,
+    "name": "nidoqueen",
+    "glance": "bulky blue armored creature standing upright",
+    "detailed": "medium bulky blue reptile-like creature standing upright; cream plates on chest and belly; small forehead horn; large rounded ears; spines down its back; thick tail",
+    "everyday": "looks like a chubby blue dinosaur or rhino standing up with cream armor on its chest",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 32,
+    "name": "nidoran-m",
+    "glance": "small purple spiny creature with large ears",
+    "detailed": "small pink-purple creature on four legs; darker spots; very large pointed ears with green insides; long sharp forehead horn; spines on its back; buck teeth",
+    "everyday": "looks like a small purple rabbit with huge ears, a horn and a prickly back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 33,
+    "name": "nidorino",
+    "glance": "purple four-legged creature with long horn",
+    "detailed": "medium pink-purple creature on four legs; darker spots; long pointed horn on its forehead; large spiky ears with green insides; spines along its back; fangs",
+    "everyday": "looks like a purple rhino-rabbit with a big horn and spikes on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 34,
+    "name": "nidoking",
+    "glance": "bulky purple horned monster standing upright",
+    "detailed": "medium bulky purple reptile-like creature standing upright; long forehead horn; large spiky ears; gray-white plates on chest and belly; spines down back; long thick tail",
+    "everyday": "looks like a purple dinosaur or rhino standing up with a big horn and thick tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 35,
+    "name": "clefairy",
+    "glance": "small pink chubby creature with curled tail",
+    "detailed": "small pink chubby star-shaped creature standing upright; pointed ears with dark brown tips; curl of fur on forehead; curled tail; tiny wings on its back",
+    "everyday": "looks like a pink chubby teddy bear or fairy with pointy ears and a curly tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 36,
+    "name": "clefable",
+    "glance": "pink chubby creature with long ears and wings",
+    "detailed": "medium pink chubby creature standing upright; long pointed ears with dark tips; small dark pink wings on its back; tightly curled tail; forehead curl",
+    "everyday": "looks like a tall pink fairy teddy bear with long pointy ears and small wings",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 37,
+    "name": "vulpix",
+    "glance": "small red-brown fox with six curly tails",
+    "detailed": "small red-brown fox on four legs; six orange tails curled at the tips; three curled orange tufts on its head; cream belly; pointed ears",
+    "everyday": "looks like a little red fox cub with curly hair and a bunch of curly tails",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 38,
+    "name": "ninetales",
+    "glance": "pale golden fox with nine long tails",
+    "detailed": "medium slim pale golden-cream fox on four legs; nine long flowing tails with orange tips; fluffy mane around its neck; long head crest; red eyes",
+    "everyday": "looks like an elegant cream-colored fox with nine long fluffy tails",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 39,
+    "name": "jigglypuff",
+    "glance": "small round pink ball with big eyes",
+    "detailed": "small round pink balloon-like body; huge blue-green eyes; curled tuft of fur on its forehead; short pointed ears; tiny stubby arms and feet",
+    "everyday": "looks like a pink balloon or marshmallow with big eyes and a hair curl",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 40,
+    "name": "wigglytuff",
+    "glance": "pink egg-shaped creature with long rabbit ears",
+    "detailed": "medium pink egg-shaped body; white belly; long rabbit-like ears; huge blue-green eyes; fluffy swirl of fur on its forehead; stubby arms and feet",
+    "everyday": "looks like a tall pink rabbit balloon with long ears and a white tummy",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 41,
+    "name": "zubat",
+    "glance": "blue bat with purple wings and no eyes",
+    "detailed": "medium blue bat with a round body; no eyes; purple wing membranes; big pointed ears; small open mouth with four fangs; two long thin legs",
+    "everyday": "looks like a blue bat with no eyes, big ears and purple wings",
+    "confidence": "high",
+    "notes": "data says purple: the body is blue, only the wing membranes are purple"
+  },
+  {
+    "id": 42,
+    "name": "golbat",
+    "glance": "large blue bat with enormous open mouth",
+    "detailed": "large blue bat; body almost entirely a huge gaping mouth with four fangs; small slanted eyes; purple wing membranes; small pointed ears; short feet",
+    "everyday": "looks like a big blue bat that is mostly a giant mouth with sharp teeth",
+    "confidence": "high",
+    "notes": "data says purple: the body is blue, only the wing membranes are purple"
+  },
+  {
+    "id": 43,
+    "name": "oddish",
+    "glance": "small blue bulb with green leaves on head",
+    "detailed": "small round dark blue body like a bulb; five long green leaves growing from its head; red eyes; two small feet; no arms, no flower",
+    "everyday": "looks like a blue radish or onion with feet and a tuft of grass on top",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 44,
+    "name": "gloom",
+    "glance": "blue creature with droopy brown-red flower, drooling",
+    "detailed": "medium dark blue round body with arms and legs; large droopy reddish-brown spotted flower on its head; half-closed eyes; drool hanging from its mouth",
+    "everyday": "looks like a sad blue plant person with a wilted flower hat and a drooling mouth",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 45,
+    "name": "vileplume",
+    "glance": "blue creature with giant red spotted flower",
+    "detailed": "medium dark blue round body with stubby arms and legs; enormous red flower with white spots and five thick petals on its head; red eyes",
+    "everyday": "looks like a small blue person wearing a giant red flower with white dots as a hat",
+    "confidence": "high",
+    "notes": "data says red: the flower is red, the body is dark blue; both are described"
+  },
+  {
+    "id": 46,
+    "name": "paras",
+    "glance": "small orange bug with two mushrooms on back",
+    "detailed": "small orange insect-like crab on four legs; two small red mushrooms with yellow spots on its back; large front pincers; round white eyes with pupils",
+    "everyday": "looks like a little orange crab or bug with two red toadstools growing on its back",
+    "confidence": "high",
+    "notes": "data says red; the body is orange and the mushrooms are red"
+  },
+  {
+    "id": 47,
+    "name": "parasect",
+    "glance": "orange bug under one giant red mushroom",
+    "detailed": "medium orange insect-like crab; body almost hidden under one giant red mushroom cap with yellow spots; blank white eyes with no pupils; large pincers",
+    "everyday": "looks like a crab hiding under a huge red mushroom with yellow dots",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 48,
+    "name": "venonat",
+    "glance": "round purple fuzzy ball with big red eyes",
+    "detailed": "medium round body covered in purple fuzzy fur; huge red compound eyes; two white antennae; small pincer mouth; stubby hands; tan feet; no wings",
+    "everyday": "looks like a purple furry ball or pom-pom with giant red bug eyes and antennae",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 49,
+    "name": "venomoth",
+    "glance": "pale purple moth with large dusty wings",
+    "detailed": "medium pale purple moth; two pairs of large light purple wings with darker wavy markings; round pale blue eyes; three-pointed head crest; striped segmented body",
+    "everyday": "looks like a big light purple moth with round bug eyes",
+    "confidence": "medium",
+    "notes": "wing markings and eye color described from memory, less certain than the overall shape and color"
+  },
+  {
+    "id": 50,
+    "name": "diglett",
+    "glance": "tiny brown lump with big pink nose",
+    "detailed": "tiny brown rounded cylinder sticking out of a hole in the ground; big oval pink nose; small black bead eyes; single head; no limbs",
+    "everyday": "looks like a little brown mole or sausage popping out of the dirt with a pink nose",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 51,
+    "name": "dugtrio",
+    "glance": "three brown heads with pink noses together",
+    "detailed": "three brown rounded cylinders of different heights sticking out of the ground side by side; each with a big pink nose; no limbs",
+    "everyday": "looks like three brown moles popping out of the same hole in the ground",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 52,
+    "name": "meowth",
+    "glance": "small cream cat with gold coin on forehead",
+    "detailed": "small cream-colored cat often standing upright; gold oval coin on its forehead; black ears with pink insides; long whiskers; brown back paws; curled brown-tipped tail",
+    "everyday": "looks like a pale cat with a gold coin stuck on its head and a curly tail",
+    "confidence": "high",
+    "notes": "data says yellow; the fur is cream or pale beige"
+  },
+  {
+    "id": 53,
+    "name": "persian",
+    "glance": "sleek cream cat with red forehead jewel",
+    "detailed": "medium slim cream-colored big cat on four legs; red round jewel on its forehead; black-rimmed ears; long whiskers; long tail curled at tip; no coin",
+    "everyday": "looks like a pale puma or elegant siamese cat with a red gem on its forehead",
+    "confidence": "high",
+    "notes": "data says yellow; the fur is cream or pale beige"
+  },
+  {
+    "id": 54,
+    "name": "psyduck",
+    "glance": "chubby yellow duck with blank stare",
+    "detailed": "medium chubby yellow duck standing upright; wide flat cream bill; three black hairs on top of its head; blank round eyes; webbed cream feet",
+    "everyday": "looks like a chubby yellow duck or platypus with a blank stare and three hairs on its head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 55,
+    "name": "golduck",
+    "glance": "large blue duck-like creature with red forehead gem",
+    "detailed": "large slim blue creature standing upright; cream duck bill; red gem on its forehead; four-pointed head crest; webbed hands and feet; long paddle-tipped tail",
+    "everyday": "looks like a tall blue duck-man or lizard with a beak and a red jewel on its forehead",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 56,
+    "name": "mankey",
+    "glance": "small round fluffy cream monkey with pig nose",
+    "detailed": "small round ball of shaggy cream-white fur; pig-like pink snout; triangular ears; brown hands and feet; long thin tail with a brown tip; red eyes",
+    "everyday": "looks like a round fluffy white monkey with a pig nose and a long tail",
+    "confidence": "high",
+    "notes": "data says brown: the fur is cream-white; only hands, feet and tail tip are brown"
+  },
+  {
+    "id": 57,
+    "name": "primeape",
+    "glance": "round fluffy cream monkey with angry face",
+    "detailed": "medium round ball of shaggy cream-white fur; angry eyes with a bulging forehead vein; pig snout; brown arms and legs with metal cuffs; no tail",
+    "everyday": "looks like a furious fluffy white ball with a pig nose, boxing arms and cuffs",
+    "confidence": "high",
+    "notes": "data says brown: the fur is cream-white; only arms and legs are brown"
+  },
+  {
+    "id": 58,
+    "name": "growlithe",
+    "glance": "orange puppy with black stripes and cream fluff",
+    "detailed": "medium orange dog on four legs; black stripes on its back and legs; fluffy cream tufts on head, chest and tail; cream muzzle; rounded ears",
+    "everyday": "looks like an orange puppy with tiger stripes and a fluffy cream tail",
+    "confidence": "high",
+    "notes": "data says brown; the coat is orange with black stripes"
+  },
+  {
+    "id": 59,
+    "name": "arcanine",
+    "glance": "large orange striped dog with big cream mane",
+    "detailed": "large orange dog on four legs; black jagged stripes; thick cream mane around head and chest; long bushy cream tail; cream tufts behind each leg",
+    "everyday": "looks like a huge orange dog crossed with a tiger or lion, with a fluffy cream mane",
+    "confidence": "high",
+    "notes": "data says brown; the coat is orange with black stripes"
+  },
+  {
+    "id": 60,
+    "name": "poliwag",
+    "glance": "small blue round tadpole with belly swirl",
+    "detailed": "small round dark blue body with no arms; white belly with a black spiral swirl; two small feet; large flat see-through tail; big round eyes",
+    "everyday": "looks like a blue tadpole with feet and a spiral drawn on its tummy",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 61,
+    "name": "poliwhirl",
+    "glance": "round blue frog-like body with belly swirl, gloves",
+    "detailed": "medium round dark blue body standing upright; white belly with a black spiral swirl; arms with white glove-like hands; bulging eyes on top; no tail",
+    "everyday": "looks like a round blue frog with a spiral on its tummy and white boxing gloves",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 62,
+    "name": "poliwrath",
+    "glance": "muscular round blue body with belly swirl",
+    "detailed": "medium bulky round dark blue body standing upright; thick muscular arms with white fists; white belly with black spiral swirl; angry bulging eyes; no tail",
+    "everyday": "looks like a strong blue frog bodybuilder with a spiral on its belly and white gloves",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 63,
+    "name": "abra",
+    "glance": "yellow fox-like creature sitting with closed eyes",
+    "detailed": "medium yellow creature sitting upright; fox-like head with pointed ears; eyes shut as slits; brown chest and shoulder armor; thick tail; no mustache, no spoon",
+    "everyday": "looks like a sleepy yellow fox or cat person sitting with its eyes closed",
+    "confidence": "high",
+    "notes": "data says brown: the body is yellow; only the armor-like chest and bands are brown"
+  },
+  {
+    "id": 64,
+    "name": "kadabra",
+    "glance": "yellow fox-like creature with mustache holding spoon",
+    "detailed": "medium yellow creature standing upright; fox-like head; long mustache; red star on forehead; holds one silver spoon; brown chest armor; red belly lines; bushy tail",
+    "everyday": "looks like a yellow fox man with a big mustache holding a spoon and a bushy tail",
+    "confidence": "high",
+    "notes": "data says brown: the body is yellow; only the chest armor and tail are brown"
+  },
+  {
+    "id": 65,
+    "name": "alakazam",
+    "glance": "yellow creature with huge mustache, two spoons",
+    "detailed": "medium thin yellow creature standing upright; large head with very long drooping mustache; holds a silver spoon in each hand; brown chest armor; no tail",
+    "everyday": "looks like a skinny yellow wizard fox with a giant mustache holding two spoons",
+    "confidence": "high",
+    "notes": "data says brown: the body is yellow; only the armor-like parts are brown"
+  },
+  {
+    "id": 66,
+    "name": "machop",
+    "glance": "gray-blue muscular child with three head ridges",
+    "detailed": "medium gray-blue human-like body with muscles; three tan ridges on top of its head; red eyes; visible ribs; short tail; two arms; no belt",
+    "everyday": "looks like a small gray muscly kid or baby bodybuilder with ridges on its head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 67,
+    "name": "machoke",
+    "glance": "gray-purple muscleman with belt and red arm stripes",
+    "detailed": "medium muscular gray-purple human-like body; two arms with red vein-like stripes; black trunks with a gold belt; three head ridges; lizard-like face; no tail",
+    "everyday": "looks like a gray wrestler or bodybuilder wearing black shorts and a champion belt",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 68,
+    "name": "machamp",
+    "glance": "large gray muscleman with four arms",
+    "detailed": "large very muscular gray-blue human-like body; four arms, two on each side; black trunks with a gold belt; three head ridges; yellow lips; no tail",
+    "everyday": "looks like a giant gray bodybuilder or wrestler with four arms and a belt",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 69,
+    "name": "bellsprout",
+    "glance": "thin plant with yellow bell head, root legs",
+    "detailed": "medium very thin brown stem body; yellow bell-shaped head with pink lips and small black eyes; two green leaves as arms; root-like feet",
+    "everyday": "looks like a walking flower stalk with a yellow bell head and two leaves for hands",
+    "confidence": "high",
+    "notes": "data says green: the head is yellow and the stem brown; only the leaves are green"
+  },
+  {
+    "id": 70,
+    "name": "weepinbell",
+    "glance": "yellow bell-shaped plant with big round mouth",
+    "detailed": "medium yellow bell-shaped body hanging from a brown stem; wide round mouth with pink lips; green spots; one green leaf on each side; no legs",
+    "everyday": "looks like a yellow bell or hanging pear with a big mouth and two leaves",
+    "confidence": "high",
+    "notes": "data says green: the body is yellow; only the leaves and spots are green"
+  },
+  {
+    "id": 71,
+    "name": "victreebel",
+    "glance": "large yellow pitcher plant with gaping fanged mouth",
+    "detailed": "large yellow bell-shaped body with dark green spots; huge open mouth on top with sharp fangs; big green leaf above the mouth; long brown vine",
+    "everyday": "looks like a giant yellow venus flytrap or vase with teeth and a leaf lid",
+    "confidence": "high",
+    "notes": "data says green: the body is yellow; only the leaves and spots are green"
+  },
+  {
+    "id": 72,
+    "name": "tentacool",
+    "glance": "light blue jellyfish with red gems, two tentacles",
+    "detailed": "medium clear light blue jellyfish with a tall dome head; two large red gems on top, one small between; two long gray tentacles; small eyes",
+    "everyday": "looks like a blue jellyfish with red jewels on its head and two dangling arms",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 73,
+    "name": "tentacruel",
+    "glance": "large blue jellyfish with many tentacles",
+    "detailed": "large light blue jellyfish with a wide dome head; two big red gems on top; beak-like mouth; many gray tentacles hanging below; angry eyes",
+    "everyday": "looks like a big blue jellyfish or squid with red orbs and lots of tentacles",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 74,
+    "name": "geodude",
+    "glance": "small gray floating rock with two arms",
+    "detailed": "small round gray-brown boulder with a face; two muscular rocky arms with five-fingered hands; heavy brow ridge; no legs, no body below the head",
+    "everyday": "looks like a gray stone ball with an angry face and two strong arms",
+    "confidence": "high",
+    "notes": "data says brown; it is gray rock with a slight brown tint"
+  },
+  {
+    "id": 75,
+    "name": "graveler",
+    "glance": "gray boulder with four arms and short legs",
+    "detailed": "medium round gray-brown boulder body covered in rocky bumps; four arms, two large and two small; two short legs; face in the middle; craggy brow",
+    "everyday": "looks like a big lumpy rock with a face, four arms and little feet",
+    "confidence": "high",
+    "notes": "data says brown; it is gray rock with a slight brown tint"
+  },
+  {
+    "id": 76,
+    "name": "golem",
+    "glance": "round rock-shell ball with reptile head poking out",
+    "detailed": "medium round body covered by a shell of gray-green rock plates; brown reptile head with red eyes poking out; short clawed arms and legs",
+    "everyday": "looks like a turtle or dinosaur wearing a round boulder as a shell",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 77,
+    "name": "ponyta",
+    "glance": "cream pony with mane and tail of flames",
+    "detailed": "medium cream-white horse on four legs; mane and tail made of orange and yellow flames; flames at the ankles; gray hooves; no horn",
+    "everyday": "looks like a small white pony whose mane and tail are on fire",
+    "confidence": "high",
+    "notes": "data says yellow; the body is cream-white, the flames are orange-yellow"
+  },
+  {
+    "id": 78,
+    "name": "rapidash",
+    "glance": "large cream horse with flaming mane and horn",
+    "detailed": "large slim cream-white horse on four legs; single pointed horn on its forehead; long flowing mane and tail of orange flames; flames on legs",
+    "everyday": "looks like a white unicorn with fire for its mane and tail",
+    "confidence": "high",
+    "notes": "data says yellow; the body is cream-white, the flames are orange-yellow"
+  },
+  {
+    "id": 79,
+    "name": "slowpoke",
+    "glance": "pink hippo-like creature with blank stare",
+    "detailed": "medium pink four-legged creature like a hippo or salamander; rounded cream muzzle; curled ears; vacant round eyes; long thick white-tipped tail; no shell",
+    "everyday": "looks like a dopey pink hippo or giant salamander with a long tail and an empty look",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 80,
+    "name": "slowbro",
+    "glance": "large pink creature standing with shell on tail",
+    "detailed": "large pink creature standing upright; cream muzzle and striped cream belly; vacant eyes; gray spiral spiked shell with eyes clamped onto its tail; curled ears",
+    "everyday": "looks like a dopey pink hippo standing up with a big seashell biting its tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 81,
+    "name": "magnemite",
+    "glance": "small gray metal ball with eye and magnets",
+    "detailed": "tiny gray steel ball with one large eye; a horseshoe magnet with red and blue tips on each side; three screws; single body",
+    "everyday": "looks like a metal ball with one eye, screws and two horseshoe magnets for arms",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 82,
+    "name": "magneton",
+    "glance": "three gray metal one-eyed balls joined together",
+    "detailed": "three gray steel balls joined in a triangle, one on top and two below; each with one eye, screws and two horseshoe magnets",
+    "everyday": "looks like three metal eyeballs with magnets stuck together in a cluster",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 83,
+    "name": "farfetchd",
+    "glance": "brown duck holding a green leek stalk",
+    "detailed": "medium brown duck standing upright; cream belly; yellow beak; black V-shaped eyebrow mark; holds a green leek stalk in its wing; yellow webbed feet",
+    "everyday": "looks like a brown wild duck carrying a leek or spring onion like a sword",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 84,
+    "name": "doduo",
+    "glance": "brown wingless bird with two heads",
+    "detailed": "medium round fluffy brown body with two long thin necks; two round heads with long pointed cream beaks; no wings; two long thin legs",
+    "everyday": "looks like a brown ostrich or kiwi with two heads and no wings",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 85,
+    "name": "dodrio",
+    "glance": "large brown bird with three heads",
+    "detailed": "large round brown body with three long necks and three heads; long beaks; black feather crests; pink and gray tail feathers; long legs; no wings",
+    "everyday": "looks like an ostrich with three heads on three long necks",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 86,
+    "name": "seel",
+    "glance": "white seal with small horn on head",
+    "detailed": "medium white seal with a plump body; small horn on its forehead; cream muzzle with tongue sticking out; two small fangs; front flippers; tail fins",
+    "everyday": "looks like a chubby white baby seal or sea lion with a little horn and its tongue out",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 87,
+    "name": "dewgong",
+    "glance": "large sleek white sea lion with horn",
+    "detailed": "large long sleek white sea lion body; small pointed horn on its head; small tusks; black eyes and nose; long flowing tail with fins",
+    "everyday": "looks like a long white seal or mermaid-like sea lion with a small horn",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 88,
+    "name": "grimer",
+    "glance": "purple pile of slime with eyes and arms",
+    "detailed": "medium shapeless heap of purple sludge; two arms with dripping hands; large white eyes with tiny pupils; gray open mouth; no legs; no visible teeth",
+    "everyday": "looks like a blob of purple mud or slime reaching out with gooey hands",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 89,
+    "name": "muk",
+    "glance": "wide purple slime heap with huge mouth",
+    "detailed": "medium wide mound of dark purple sludge; huge gaping mouth with a gray tongue; small eyes close together; thick dripping arms with fingers",
+    "everyday": "looks like a melting mountain of purple mud with a giant open mouth and arms",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 90,
+    "name": "shellder",
+    "glance": "small purple clam with tongue sticking out",
+    "detailed": "small purple two-part clam shell with ridges; black round body inside with big white eyes; long pink tongue sticking out; no spikes, no horn",
+    "everyday": "looks like a purple clam or mussel with eyes inside, sticking its tongue out",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 91,
+    "name": "cloyster",
+    "glance": "spiky gray-purple shell with dark face inside",
+    "detailed": "medium oyster-like shell, light purple outside and gray inside, covered with spikes; black round pearl-like face inside with eyes; single horn above the face",
+    "everyday": "looks like a big spiky oyster with a black pearl face peeking out",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 92,
+    "name": "gastly",
+    "glance": "black ball surrounded by purple gas",
+    "detailed": "medium floating black ball surrounded by a cloud of purple gas; large white eyes; wide mouth with two fangs; no arms, no hands, no legs",
+    "everyday": "looks like a black ball with a spooky face floating in purple smoke",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 93,
+    "name": "haunter",
+    "glance": "purple ghost with floating detached clawed hands",
+    "detailed": "large purple ghost with a spiky head; two detached floating hands with three claws each; wide jagged mouth; triangular eyes; pointed lower body; no legs",
+    "everyday": "looks like a purple cartoon ghost with a spiky head and two hands floating by themselves",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 94,
+    "name": "gengar",
+    "glance": "round purple ghost with big grin, red eyes",
+    "detailed": "medium round dark purple body standing on two short legs; wide white toothy grin; red eyes; pointed ears; spikes along its back; short attached arms",
+    "everyday": "looks like a chubby purple shadow monster with a spiky back and a huge creepy smile",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 95,
+    "name": "onix",
+    "glance": "huge gray snake made of boulders",
+    "detailed": "huge snake made of a chain of gray round boulders, smaller toward the tail; large head with a rocky horn on top; no limbs",
+    "everyday": "looks like a giant worm or snake built from big gray rocks",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 96,
+    "name": "drowzee",
+    "glance": "yellow and brown tapir with short trunk",
+    "detailed": "medium chubby creature standing upright; yellow upper body and brown lower body with a wavy line between; short trunk-like snout; sleepy eyes; no neck fur",
+    "everyday": "looks like a chubby yellow tapir or small elephant standing up wearing brown pants",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 97,
+    "name": "hypno",
+    "glance": "yellow humanoid with white neck ruff, pendulum",
+    "detailed": "large yellow human-like creature; long pointed nose; fluffy white fur collar around its neck; holds a pendulum, a coin on a string; pointed ears",
+    "everyday": "looks like a yellow long-nosed goblin man with a white fur collar swinging a pendulum",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 98,
+    "name": "krabby",
+    "glance": "small orange-red crab with two big claws",
+    "detailed": "small crab with red-orange top shell and cream lower body; two large pincers of equal size; two small spikes on its head; four thin legs",
+    "everyday": "looks like a small red crab with big pincers and a cream belly",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 99,
+    "name": "kingler",
+    "glance": "red crab with one giant oversized claw",
+    "detailed": "medium crab with red-orange top shell and cream jaw; one enormous pincer, far bigger than the other; crown of spikes on its head; four legs",
+    "everyday": "looks like a red crab with a spiky crown and one gigantic claw",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 100,
+    "name": "voltorb",
+    "glance": "small ball, red top and white bottom",
+    "detailed": "small smooth ball with no limbs; top half red, bottom half white; angry slanted eyes on the red half; no mouth",
+    "everyday": "looks like a red and white ball or toy capsule with angry eyes",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 101,
+    "name": "electrode",
+    "glance": "ball, white top and red bottom, grinning",
+    "detailed": "medium smooth ball with no limbs; top half white, bottom half red; slanted eyes on the white half; wide grinning mouth",
+    "everyday": "looks like a white and red ball or toy capsule with a cheeky grin",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 102,
+    "name": "exeggcute",
+    "glance": "six pale pink eggs with faces clustered",
+    "detailed": "cluster of six small pale pink eggs with different faces; some with cracked shells; one with yellow yolk showing through a crack; no limbs",
+    "everyday": "looks like a group of six pink eggs with grumpy faces, some cracked",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 103,
+    "name": "exeggutor",
+    "glance": "large palm tree with three coconut heads",
+    "detailed": "large palm tree-like creature on two thick legs; brown trunk body; green leaves on top; three round yellow coconut-like heads with different faces; clawed feet",
+    "everyday": "looks like a walking palm tree with three coconut faces",
+    "confidence": "high",
+    "notes": "data says yellow: only the heads are yellow; the trunk is brown and the leaves green"
+  },
+  {
+    "id": 104,
+    "name": "cubone",
+    "glance": "small brown creature wearing skull, holding bone",
+    "detailed": "small brown dinosaur-like creature standing upright; cream belly; wears a white skull as a helmet covering its face; holds a bone club; short tail",
+    "everyday": "looks like a baby dinosaur wearing a skull mask and carrying a bone",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 105,
+    "name": "marowak",
+    "glance": "brown creature with skull head, holding bone",
+    "detailed": "medium brown dinosaur-like creature standing upright; cream belly; white skull fitted tightly as its head, with a pointed crown; holds a long bone; thick tail",
+    "everyday": "looks like a brown lizard with a skull for a head swinging a long bone club",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 106,
+    "name": "hitmonlee",
+    "glance": "brown headless body with long springy legs",
+    "detailed": "medium brown egg-shaped body with no separate head; eyes on upper torso; no mouth; very long legs coiled like springs; cream wrist and ankle bands",
+    "everyday": "looks like a brown egg with eyes and extremely long kicking legs, no head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 107,
+    "name": "hitmonchan",
+    "glance": "tan humanoid with red boxing gloves, purple tunic",
+    "detailed": "medium tan human-like body; red boxing gloves; light purple tunic and kilt; purple boots; head with ridged crest; shoulder pads; normal-length legs",
+    "everyday": "looks like a brown boxer man in a purple outfit with big red boxing gloves",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 108,
+    "name": "lickitung",
+    "glance": "pink round creature with enormous long tongue",
+    "detailed": "medium chubby pink creature standing upright; extremely long thick pink tongue hanging out; cream stripes on belly and knees; small eyes; thick tail; thumb-like hands",
+    "everyday": "looks like a fat pink lizard with a giant tongue hanging out of its mouth",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 109,
+    "name": "koffing",
+    "glance": "purple floating ball with craters, skull mark",
+    "detailed": "small round purple ball covered in crater-like bumps leaking yellowish gas; cream skull and crossbones mark below its face; wide smile; single head; no limbs",
+    "everyday": "looks like a purple balloon or sea mine with a silly grin and a skull sign",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 110,
+    "name": "weezing",
+    "glance": "two purple gassy balls joined together",
+    "detailed": "two purple balls joined together, one large and one small; crater-like bumps leaking gas; skull and crossbones marks; droopy frown with flat teeth; no limbs",
+    "everyday": "looks like two purple balloons stuck together with grumpy faces and smoke coming out",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 111,
+    "name": "rhyhorn",
+    "glance": "gray rhino covered in rocky plates",
+    "detailed": "medium gray rhino on four legs; body covered in rough rocky armor plates; one short nose horn; ridge of spikes along its back; short legs",
+    "everyday": "looks like a gray rhinoceros made of stone slabs with a small horn",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 112,
+    "name": "rhydon",
+    "glance": "large gray rhino standing upright, drill horn",
+    "detailed": "large gray rhino-like creature standing on two legs; long drill-shaped horn on its nose; cream ridged belly; spiky head crest; thick long tail; clawed arms",
+    "everyday": "looks like a gray rhino dinosaur standing up with a drill for a horn",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 113,
+    "name": "chansey",
+    "glance": "pink egg-shaped creature carrying egg in pouch",
+    "detailed": "medium pink egg-shaped body; white egg in a pouch on its belly; three hair-like flaps on each side of its head; stubby arms; short tail",
+    "everyday": "looks like a pink egg-shaped nurse blob with an egg in a pocket on its tummy",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 114,
+    "name": "tangela",
+    "glance": "ball of blue vines with eyes and red feet",
+    "detailed": "medium round mass of tangled blue vines like seaweed or spaghetti; two round white eyes in a dark gap; two red boot-like feet; no arms",
+    "everyday": "looks like a ball of blue spaghetti or seaweed with eyes peeking out and red shoes",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 115,
+    "name": "kangaskhan",
+    "glance": "large brown kangaroo with baby in pouch",
+    "detailed": "large bulky brown kangaroo-like creature standing upright; cream belly with a pouch holding a small purple-gray baby; dark helmet-like head plates; thick tail",
+    "everyday": "looks like a big brown kangaroo dinosaur carrying a baby in its belly pouch",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 116,
+    "name": "horsea",
+    "glance": "small light blue seahorse with tube snout",
+    "detailed": "small light blue seahorse; long tube-shaped snout; tightly curled tail; cream ridged belly; one small fin on its back; small spikes on head; red eyes",
+    "everyday": "looks like a tiny blue seahorse with a trumpet mouth and a curly tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 117,
+    "name": "seadra",
+    "glance": "blue spiky seahorse with ragged fins",
+    "detailed": "medium blue seahorse; long tube snout; sharp spikes on its head; large pointed ragged fins like wings on its sides; cream belly; curled tail",
+    "everyday": "looks like a blue seahorse with a spiky head and jagged fins",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 118,
+    "name": "goldeen",
+    "glance": "white and orange goldfish with forehead horn",
+    "detailed": "small white fish with orange-red patches on its back and fins; long flowing frilly tail like a veil; single horn on its forehead; pink lips",
+    "everyday": "looks like a fancy white and orange goldfish with a horn and a flowing tail",
+    "confidence": "high",
+    "notes": "data says red: the body is mostly white with orange-red patches"
+  },
+  {
+    "id": 119,
+    "name": "seaking",
+    "glance": "orange fish with white and black patches, horn",
+    "detailed": "medium plump orange-red fish; white belly with black spots; large horn on its forehead; white fins and frilly tail with black speckles; small fangs",
+    "everyday": "looks like a big orange koi or goldfish with a horn on its head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 120,
+    "name": "staryu",
+    "glance": "golden-brown starfish with red center gem",
+    "detailed": "medium golden-brown five-pointed starfish; red round gem in a gold casing at its center; gold ring around one arm; single layer of arms; no face",
+    "everyday": "looks like a tan starfish with a red jewel in the middle",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 121,
+    "name": "starmie",
+    "glance": "purple ten-pointed starfish with red jewel",
+    "detailed": "medium purple starfish made of two overlapping five-pointed stars, ten points in total; large faceted red jewel in a gold casing at its center",
+    "everyday": "looks like a purple double star or sea star with a big red gem in the middle",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 122,
+    "name": "mr-mime",
+    "glance": "pink and white clown with blue hair tufts",
+    "detailed": "medium human-like clown; round white body with red belly spot; pink head with red cheeks; blue frizzy hair tufts on each side; white-gloved hands",
+    "everyday": "looks like a pink-faced clown or mime with blue hair horns and big white gloves",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 123,
+    "name": "scyther",
+    "glance": "green mantis with blade arms and wings",
+    "detailed": "medium green praying mantis standing on two legs; large white scythe blades for forearms; thin cream wings on its back; reptile-like head with three points",
+    "everyday": "looks like a big green praying mantis or dinosaur with swords for arms",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 124,
+    "name": "jynx",
+    "glance": "humanoid with long blonde hair, red dress",
+    "detailed": "medium human-like figure; purple face and hands; long straight blonde hair; large pink lips; red dress with gold chest pieces; white arms; no visible feet",
+    "everyday": "looks like a lady in a red gown with long yellow hair and big lips",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 125,
+    "name": "electabuzz",
+    "glance": "yellow creature with black stripes, two antennae",
+    "detailed": "medium bulky yellow ape-like creature standing upright; black stripes; black lightning-bolt mark on its chest; two round-tipped antennae on its head; fangs; long thin tail",
+    "everyday": "looks like a yellow gorilla or tiger-striped yeti with two antennas",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 126,
+    "name": "magmar",
+    "glance": "red and yellow duck-billed creature with flames",
+    "detailed": "medium red creature standing upright with a yellow flame pattern; yellow duck-like bill; two flame-shaped lumps on its forehead; flame on tail tip; back spikes",
+    "everyday": "looks like a red and yellow duck-faced lizard covered in flame patterns with a burning tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 127,
+    "name": "pinsir",
+    "glance": "brown beetle with two large spiked horns",
+    "detailed": "medium brown stag beetle standing upright; two huge gray-white spiked pincer horns on top of its head; mouth with rows of teeth; no wings",
+    "everyday": "looks like a brown stag beetle standing up with giant spiky pincers on its head",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 128,
+    "name": "tauros",
+    "glance": "brown bull with three tails, gray horns",
+    "detailed": "medium light brown bull on four legs; dark brown shaggy mane around neck; two curved gray horns; three gray forehead bumps; three thin black tails",
+    "everyday": "looks like a brown bull or bison with a shaggy mane and three whip tails",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 129,
+    "name": "magikarp",
+    "glance": "red-orange fish with whiskers and gaping mouth",
+    "detailed": "medium red-orange fish with large scales; long yellow whiskers; yellow three-pointed crown-like fin on its back; white fins and tail; big blank eyes; open lips",
+    "everyday": "looks like a dopey orange carp or goldfish with whiskers and a crown fin",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 130,
+    "name": "gyarados",
+    "glance": "huge blue sea serpent with gaping fanged mouth",
+    "detailed": "huge blue serpent with a segmented body; cream belly; enormous open mouth with fangs; long whiskers; three-pointed dark blue head crest; white spiky back fins",
+    "everyday": "looks like a giant angry blue sea dragon or Chinese dragon with a huge mouth",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 131,
+    "name": "lapras",
+    "glance": "large blue sea creature with gray shell",
+    "detailed": "large blue long-necked sea creature; cream underside; gray bumpy shell on its back; four flippers; small horn on forehead; curled ears; darker blue spots",
+    "everyday": "looks like a blue plesiosaur or Loch Ness monster with a turtle shell on its back",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 132,
+    "name": "ditto",
+    "glance": "small pink-purple blob with dot eyes",
+    "detailed": "small shapeless pink-purple jelly blob; two tiny dot eyes; thin line smile; two stubby arm-like bumps; smooth surface; no legs, no nose",
+    "everyday": "looks like a blob of pink slime or chewing gum with a simple smiley face",
+    "confidence": "high",
+    "notes": "data says purple; it is a light pinkish purple"
+  },
+  {
+    "id": 133,
+    "name": "eevee",
+    "glance": "small brown fox with cream fluffy collar",
+    "detailed": "small brown fox-like creature on four legs; fluffy cream fur collar around its neck; big bushy tail with a cream tip; long pointed ears",
+    "everyday": "looks like a brown puppy or fox cub with long ears and a fluffy cream scarf",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 134,
+    "name": "vaporeon",
+    "glance": "light blue four-legged creature with fish tail",
+    "detailed": "medium light blue four-legged creature; white ruffled collar; three cream fins on its head; dark blue back ridge; long tail ending in a fish fin",
+    "everyday": "looks like a blue cat or fox mermaid with fins on its head and a dolphin tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 135,
+    "name": "jolteon",
+    "glance": "yellow spiky-furred fox with white collar",
+    "detailed": "medium yellow fox-like creature on four legs; sharp spiky fur all over, especially on its back; white spiky collar; long pointed ears; no visible tail",
+    "everyday": "looks like a yellow fox or dog with fur sticking out like needles",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 136,
+    "name": "flareon",
+    "glance": "orange-red fox with fluffy cream mane, tail",
+    "detailed": "medium orange-red fox-like creature on four legs; very fluffy cream-yellow mane around its neck; cream tuft on its head; large bushy cream tail; pointed ears",
+    "everyday": "looks like a fluffy orange fox or pomeranian dog with a big cream tail and collar",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 137,
+    "name": "porygon",
+    "glance": "pink and blue blocky angular bird-like figure",
+    "detailed": "medium creature made of flat geometric shapes; pink angular body and head; blue beak-like snout, blue belly and blue block feet; blue tail; hexagonal eyes",
+    "everyday": "looks like a pink and blue origami duck or toy made of blocks",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 138,
+    "name": "omanyte",
+    "glance": "small blue creature in spiral snail shell",
+    "detailed": "small light blue soft body with several short tentacles; large cream-yellow spiral shell on its back; round eyes; no spikes on shell; no beak",
+    "everyday": "looks like a blue octopus or snail living in a spiral seashell",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 139,
+    "name": "omastar",
+    "glance": "blue tentacled creature in spiked spiral shell",
+    "detailed": "medium light blue body with long tentacles, two longer than the rest; cream spiral shell with sharp spikes; fanged beak-like mouth; fierce slit eyes",
+    "everyday": "looks like a blue squid in a spiky snail shell with a toothy mouth",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 140,
+    "name": "kabuto",
+    "glance": "small brown dome shell with red eyes underneath",
+    "detailed": "small flat brown dome-shaped shell like a helmet; black underside with two glowing red eyes; four short yellow pointed legs; two tiny eyes on top",
+    "everyday": "looks like a brown horseshoe crab or upside-down bowl with red eyes peeking out",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 141,
+    "name": "kabutops",
+    "glance": "brown skeletal creature with scythe arms",
+    "detailed": "medium thin brown creature standing upright; large curved gray-white blade in place of each hand; flat half-circle head; cream ribbed chest; back spikes; thin tail",
+    "everyday": "looks like a brown skeleton lizard with a flat helmet head and sickles for hands",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 142,
+    "name": "aerodactyl",
+    "glance": "large gray-purple pterodactyl with fanged jaws",
+    "detailed": "large gray-purple flying reptile; big bat-like wings with purple membranes and clawed hands; long jaw with saw-like fangs; pointed head horns; arrow-tipped tail; no feathers",
+    "everyday": "looks like a gray pterodactyl or dragon with a big toothy mouth and bat wings",
+    "confidence": "high",
+    "notes": "data says purple; the body is gray with a purple tint, the wing membranes are purple"
+  },
+  {
+    "id": 143,
+    "name": "snorlax",
+    "glance": "large very fat dark blue-green creature, cream belly",
+    "detailed": "large enormously fat body; dark blue-green fur; cream face, belly and feet; closed slit eyes; two small pointed ears; two bottom fangs; short clawed arms",
+    "everyday": "looks like a giant fat sleeping bear or cat with a big cream tummy",
+    "confidence": "high",
+    "notes": "data says black; it is a dark teal blue-green with a cream belly and face"
+  },
+  {
+    "id": 144,
+    "name": "articuno",
+    "glance": "large light blue bird with long streaming tail",
+    "detailed": "large light blue bird; long flowing ribbon-like dark blue tail; three dark blue crest feathers on its forehead; pale gray-white chest; broad wings; red eyes",
+    "everyday": "looks like a big elegant ice-blue bird with a long ribbon tail and a small crest",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 145,
+    "name": "zapdos",
+    "glance": "large yellow bird with spiky jagged feathers",
+    "detailed": "large yellow bird; sharp spiky feathers like lightning bolts; black jagged wing undersides and tail edges; long thin orange beak; spiky head crest; tan legs",
+    "everyday": "looks like a big yellow bird with pointy zigzag feathers and a long sharp beak",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 146,
+    "name": "moltres",
+    "glance": "large orange-yellow bird with flaming wings",
+    "detailed": "large orange-yellow bird with a long neck; wings, head crest and tail made of bright orange flames; long straight brown beak; thin legs",
+    "everyday": "looks like a golden phoenix or big bird with fire for wings and tail",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 147,
+    "name": "dratini",
+    "glance": "long light blue snake with white nose",
+    "detailed": "large long thin light blue snake-like body; white belly; round white bump on snout; small white fin-like ears; big purple eyes; no horn, no orbs",
+    "everyday": "looks like a long baby-blue snake or eel with big eyes and little white ear fins",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 148,
+    "name": "dragonair",
+    "glance": "huge slender blue serpent with horn and orbs",
+    "detailed": "huge slender blue serpent; white belly; small white forehead horn; small feathery wings on its head; blue orbs under its chin and on its tail",
+    "everyday": "looks like a graceful long blue sea snake with a horn, tiny head wings and blue pearls",
+    "confidence": "high",
+    "notes": ""
+  },
+  {
+    "id": 149,
+    "name": "dragonite",
+    "glance": "large orange chubby dragon with small wings",
+    "detailed": "large chubby orange dragon standing upright; cream striped belly; small wings with blue-green undersides; two long thin antennae; small head horn; thick tail; rounded face",
+    "everyday": "looks like a big friendly orange dragon or dinosaur with tiny wings and antennae",
+    "confidence": "high",
+    "notes": "data says brown; the body is orange"
+  },
+  {
+    "id": 150,
+    "name": "mewtwo",
+    "glance": "large pale gray-purple humanoid with purple tail",
+    "detailed": "large pale gray-purple human-like cat creature standing upright; long thick purple tail; purple belly; two short horn-like ears; tube from back of head to spine",
+    "everyday": "looks like a tall pale alien cat with a long purple tail and a tube behind its neck",
+    "confidence": "high",
+    "notes": "data says purple: the body is pale gray-white with a lilac tint; only the tail and belly are clearly purple"
+  },
+  {
+    "id": 151,
+    "name": "mew",
+    "glance": "small pink cat-like creature with long thin tail",
+    "detailed": "small pale pink cat-like creature; large blue eyes; short triangular ears; very long thin tail with an oval tip; big back feet; short arms",
+    "everyday": "looks like a tiny pink kitten or cat embryo with big feet and a very long tail",
+    "confidence": "high",
+    "notes": ""
+  }
+]

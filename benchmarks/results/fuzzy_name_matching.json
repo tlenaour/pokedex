@@ -1,0 +1,7260 @@
+{
+ "cases": {
+  "standard": 755,
+  "handwritten": 242,
+  "hard": 5,
+  "edge": 20,
+  "negative": 70
+ },
+ "baseline": {
+  "positives_hit1": 4.5,
+  "positives_hit5": 4.5,
+  "standard_hit1": 3.0,
+  "standard_hit5": 3.0,
+  "handwritten_hit1": 9.1,
+  "handwritten_hit5": 9.1,
+  "edge_hit1": 5.0,
+  "edge_hit5": 5.0,
+  "hard_hit5": 0.0,
+  "negatives_false_positive": 0.0,
+  "negatives_avg_fuzzy": 0,
+  "positives_avg_noise": 0
+ },
+ "methods": {
+  "levenshtein": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 89.5,
+     "positives_hit5": 93.4,
+     "standard_hit1": 86.2,
+     "standard_hit5": 91.4,
+     "handwritten_hit1": 99.6,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 90.0,
+     "edge_hit5": 90.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 27.1,
+     "negatives_avg_fuzzy": 0.39,
+     "positives_avg_noise": 0.87
+    },
+    "0.55": {
+     "positives_hit1": 85.8,
+     "positives_hit5": 86.2,
+     "standard_hit1": 81.3,
+     "standard_hit5": 81.7,
+     "handwritten_hit1": 99.6,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 90.0,
+     "edge_hit5": 90.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 8.6,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.4
+    },
+    "0.6": {
+     "positives_hit1": 85.4,
+     "positives_hit5": 85.8,
+     "standard_hit1": 81.2,
+     "standard_hit5": 81.6,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 99.6,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.21
+    },
+    "0.65": {
+     "positives_hit1": 83.1,
+     "positives_hit5": 83.4,
+     "standard_hit1": 78.5,
+     "standard_hit5": 78.8,
+     "handwritten_hit1": 97.5,
+     "handwritten_hit5": 97.9,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.11
+    },
+    "0.7": {
+     "positives_hit1": 78.7,
+     "positives_hit5": 78.9,
+     "standard_hit1": 74.0,
+     "standard_hit5": 74.2,
+     "handwritten_hit1": 93.8,
+     "handwritten_hit5": 94.2,
+     "edge_hit1": 70.0,
+     "edge_hit5": 70.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.07
+    },
+    "0.75": {
+     "positives_hit1": 73.2,
+     "positives_hit5": 73.4,
+     "standard_hit1": 68.6,
+     "standard_hit5": 68.7,
+     "handwritten_hit1": 88.4,
+     "handwritten_hit5": 88.8,
+     "edge_hit1": 60.0,
+     "edge_hit5": 60.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.04
+    },
+    "0.8": {
+     "positives_hit1": 65.0,
+     "positives_hit5": 65.1,
+     "standard_hit1": 60.1,
+     "standard_hit5": 60.1,
+     "handwritten_hit1": 81.8,
+     "handwritten_hit5": 82.2,
+     "edge_hit1": 45.0,
+     "edge_hit5": 45.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    },
+    "0.85": {
+     "positives_hit1": 50.1,
+     "positives_hit5": 50.1,
+     "standard_hit1": 47.0,
+     "standard_hit5": 47.0,
+     "handwritten_hit1": 60.7,
+     "handwritten_hit5": 60.7,
+     "edge_hit1": 40.0,
+     "edge_hit5": 40.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.9": {
+     "positives_hit1": 12.9,
+     "positives_hit5": 12.9,
+     "standard_hit1": 11.0,
+     "standard_hit5": 11.0,
+     "handwritten_hit1": 18.6,
+     "handwritten_hit5": 18.6,
+     "edge_hit1": 15.0,
+     "edge_hit5": 15.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.95": {
+     "positives_hit1": 4.5,
+     "positives_hit5": 4.5,
+     "standard_hit1": 3.0,
+     "standard_hit5": 3.0,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 92.5,
+    "target_score_p10": 0.5,
+    "target_score_median": 0.833,
+    "negative_best_median": 0.354,
+    "negative_best_p90": 0.5,
+    "negative_best_max": 0.6
+   },
+   "timing": {
+    "ms_151_scores": 0.034,
+    "ms_rank_worst_case": 1.402
+   },
+   "chosen_threshold": 0.6
+  },
+  "damerau_osa": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 90.0,
+     "positives_hit5": 93.7,
+     "standard_hit1": 86.8,
+     "standard_hit5": 91.7,
+     "handwritten_hit1": 99.6,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 27.1,
+     "negatives_avg_fuzzy": 0.39,
+     "positives_avg_noise": 0.89
+    },
+    "0.55": {
+     "positives_hit1": 86.6,
+     "positives_hit5": 86.9,
+     "standard_hit1": 82.3,
+     "standard_hit5": 82.5,
+     "handwritten_hit1": 99.6,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 8.6,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.41
+    },
+    "0.6": {
+     "positives_hit1": 86.2,
+     "positives_hit5": 86.5,
+     "standard_hit1": 82.1,
+     "standard_hit5": 82.4,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 99.6,
+     "edge_hit1": 85.0,
+     "edge_hit5": 85.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.22
+    },
+    "0.65": {
+     "positives_hit1": 84.8,
+     "positives_hit5": 85.1,
+     "standard_hit1": 80.7,
+     "standard_hit5": 80.9,
+     "handwritten_hit1": 97.5,
+     "handwritten_hit5": 97.9,
+     "edge_hit1": 85.0,
+     "edge_hit5": 85.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.12
+    },
+    "0.7": {
+     "positives_hit1": 83.3,
+     "positives_hit5": 83.5,
+     "standard_hit1": 79.9,
+     "standard_hit5": 80.0,
+     "handwritten_hit1": 94.6,
+     "handwritten_hit5": 95.0,
+     "edge_hit1": 75.0,
+     "edge_hit5": 75.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.07
+    },
+    "0.75": {
+     "positives_hit1": 82.1,
+     "positives_hit5": 82.3,
+     "standard_hit1": 79.9,
+     "standard_hit5": 80.0,
+     "handwritten_hit1": 90.5,
+     "handwritten_hit5": 90.9,
+     "edge_hit1": 65.0,
+     "edge_hit5": 65.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.04
+    },
+    "0.8": {
+     "positives_hit1": 78.8,
+     "positives_hit5": 79.0,
+     "standard_hit1": 77.5,
+     "standard_hit5": 77.6,
+     "handwritten_hit1": 84.7,
+     "handwritten_hit5": 85.1,
+     "edge_hit1": 55.0,
+     "edge_hit5": 55.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    },
+    "0.85": {
+     "positives_hit1": 61.3,
+     "positives_hit5": 61.3,
+     "standard_hit1": 60.9,
+     "standard_hit5": 60.9,
+     "handwritten_hit1": 63.6,
+     "handwritten_hit5": 63.6,
+     "edge_hit1": 45.0,
+     "edge_hit5": 45.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.9": {
+     "positives_hit1": 14.4,
+     "positives_hit5": 14.4,
+     "standard_hit1": 12.7,
+     "standard_hit5": 12.7,
+     "handwritten_hit1": 19.4,
+     "handwritten_hit5": 19.4,
+     "edge_hit1": 15.0,
+     "edge_hit5": 15.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.95": {
+     "positives_hit1": 4.5,
+     "positives_hit5": 4.5,
+     "standard_hit1": 3.0,
+     "standard_hit5": 3.0,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 93.7,
+    "target_score_p10": 0.5,
+    "target_score_median": 0.857,
+    "negative_best_median": 0.354,
+    "negative_best_p90": 0.5,
+    "negative_best_max": 0.6
+   },
+   "timing": {
+    "ms_151_scores": 0.029,
+    "ms_rank_worst_case": 1.343
+   },
+   "chosen_threshold": 0.6
+  },
+  "indel_ratio": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 93.0,
+     "positives_hit5": 99.8,
+     "standard_hit1": 91.4,
+     "standard_hit5": 99.7,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 57.1,
+     "negatives_avg_fuzzy": 1.59,
+     "positives_avg_noise": 2.71
+    },
+    "0.55": {
+     "positives_hit1": 91.1,
+     "positives_hit5": 95.9,
+     "standard_hit1": 88.7,
+     "standard_hit5": 94.4,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 25.7,
+     "negatives_avg_fuzzy": 0.54,
+     "positives_avg_noise": 1.28
+    },
+    "0.6": {
+     "positives_hit1": 90.1,
+     "positives_hit5": 93.8,
+     "standard_hit1": 87.4,
+     "standard_hit5": 91.7,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 20.0,
+     "negatives_avg_fuzzy": 0.27,
+     "positives_avg_noise": 0.77
+    },
+    "0.65": {
+     "positives_hit1": 86.1,
+     "positives_hit5": 86.9,
+     "standard_hit1": 82.1,
+     "standard_hit5": 82.5,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 5.7,
+     "negatives_avg_fuzzy": 0.06,
+     "positives_avg_noise": 0.38
+    },
+    "0.7": {
+     "positives_hit1": 84.3,
+     "positives_hit5": 85.0,
+     "standard_hit1": 80.1,
+     "standard_hit5": 80.4,
+     "handwritten_hit1": 96.7,
+     "handwritten_hit5": 98.8,
+     "edge_hit1": 90.0,
+     "edge_hit5": 90.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.2
+    },
+    "0.75": {
+     "positives_hit1": 83.5,
+     "positives_hit5": 84.1,
+     "standard_hit1": 80.0,
+     "standard_hit5": 80.3,
+     "handwritten_hit1": 94.6,
+     "handwritten_hit5": 96.3,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.1
+    },
+    "0.8": {
+     "positives_hit1": 81.1,
+     "positives_hit5": 81.6,
+     "standard_hit1": 78.3,
+     "standard_hit5": 78.5,
+     "handwritten_hit1": 91.3,
+     "handwritten_hit5": 92.6,
+     "edge_hit1": 65.0,
+     "edge_hit5": 65.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.04
+    },
+    "0.85": {
+     "positives_hit1": 68.4,
+     "positives_hit5": 68.7,
+     "standard_hit1": 67.7,
+     "standard_hit5": 67.8,
+     "handwritten_hit1": 72.7,
+     "handwritten_hit5": 73.6,
+     "edge_hit1": 45.0,
+     "edge_hit5": 45.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    },
+    "0.9": {
+     "positives_hit1": 43.2,
+     "positives_hit5": 43.2,
+     "standard_hit1": 41.1,
+     "standard_hit5": 41.1,
+     "handwritten_hit1": 50.4,
+     "handwritten_hit5": 50.4,
+     "edge_hit1": 35.0,
+     "edge_hit5": 35.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.95": {
+     "positives_hit1": 6.1,
+     "positives_hit5": 6.1,
+     "standard_hit1": 4.8,
+     "standard_hit5": 4.8,
+     "handwritten_hit1": 10.3,
+     "handwritten_hit5": 10.3,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 93.1,
+    "target_score_p10": 0.615,
+    "target_score_median": 0.875,
+    "negative_best_median": 0.5,
+    "negative_best_p90": 0.615,
+    "negative_best_max": 0.667
+   },
+   "timing": {
+    "ms_151_scores": 0.029,
+    "ms_rank_worst_case": 1.386
+   },
+   "chosen_threshold": 0.7
+  },
+  "jaro_winkler": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.6,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 98.6,
+     "negatives_avg_fuzzy": 4.9,
+     "positives_avg_noise": 4.0
+    },
+    "0.55": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.6,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 97.1,
+     "negatives_avg_fuzzy": 4.5,
+     "positives_avg_noise": 3.98
+    },
+    "0.6": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.6,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 82.9,
+     "negatives_avg_fuzzy": 3.04,
+     "positives_avg_noise": 3.83
+    },
+    "0.65": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.5,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.5,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 51.4,
+     "negatives_avg_fuzzy": 1.47,
+     "positives_avg_noise": 2.74
+    },
+    "0.7": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.5,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.5,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 27.1,
+     "negatives_avg_fuzzy": 0.67,
+     "positives_avg_noise": 1.54
+    },
+    "0.75": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 99.4,
+     "standard_hit1": 94.6,
+     "standard_hit5": 99.3,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 14.3,
+     "negatives_avg_fuzzy": 0.19,
+     "positives_avg_noise": 0.9
+    },
+    "0.8": {
+     "positives_hit1": 92.6,
+     "positives_hit5": 95.3,
+     "standard_hit1": 90.9,
+     "standard_hit5": 93.8,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.53
+    },
+    "0.85": {
+     "positives_hit1": 85.3,
+     "positives_hit5": 85.9,
+     "standard_hit1": 81.7,
+     "standard_hit5": 82.1,
+     "handwritten_hit1": 95.5,
+     "handwritten_hit5": 97.1,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.28
+    },
+    "0.9": {
+     "positives_hit1": 80.9,
+     "positives_hit5": 81.4,
+     "standard_hit1": 77.9,
+     "standard_hit5": 78.0,
+     "handwritten_hit1": 90.9,
+     "handwritten_hit5": 92.6,
+     "edge_hit1": 75.0,
+     "edge_hit5": 75.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.07
+    },
+    "0.95": {
+     "positives_hit1": 58.5,
+     "positives_hit5": 58.6,
+     "standard_hit1": 59.6,
+     "standard_hit5": 59.6,
+     "handwritten_hit1": 56.2,
+     "handwritten_hit5": 56.6,
+     "edge_hit1": 45.0,
+     "edge_hit5": 45.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    }
+   },
+   "raw": {
+    "raw_top1": 95.2,
+    "target_score_p10": 0.824,
+    "target_score_median": 0.956,
+    "negative_best_median": 0.662,
+    "negative_best_p90": 0.771,
+    "negative_best_max": 0.85
+   },
+   "timing": {
+    "ms_151_scores": 0.036,
+    "ms_rank_worst_case": 1.486
+   },
+   "chosen_threshold": 0.8
+  },
+  "partial_ratio": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 90.9,
+     "positives_hit5": 99.9,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 92.1,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 98.6,
+     "negatives_avg_fuzzy": 4.39,
+     "positives_avg_noise": 3.98
+    },
+    "0.55": {
+     "positives_hit1": 90.9,
+     "positives_hit5": 99.9,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 92.1,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 78.6,
+     "negatives_avg_fuzzy": 2.79,
+     "positives_avg_noise": 3.71
+    },
+    "0.6": {
+     "positives_hit1": 90.9,
+     "positives_hit5": 99.9,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 92.1,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 74.3,
+     "negatives_avg_fuzzy": 2.33,
+     "positives_avg_noise": 3.38
+    },
+    "0.65": {
+     "positives_hit1": 90.9,
+     "positives_hit5": 99.9,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 92.1,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 60.0,
+     "negatives_avg_fuzzy": 1.47,
+     "positives_avg_noise": 2.43
+    },
+    "0.7": {
+     "positives_hit1": 90.9,
+     "positives_hit5": 99.8,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 92.1,
+     "handwritten_hit5": 99.6,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 27.1,
+     "negatives_avg_fuzzy": 0.44,
+     "positives_avg_noise": 1.12
+    },
+    "0.75": {
+     "positives_hit1": 90.8,
+     "positives_hit5": 99.6,
+     "standard_hit1": 90.6,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 91.7,
+     "handwritten_hit5": 98.8,
+     "edge_hit1": 85.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 15.7,
+     "negatives_avg_fuzzy": 0.26,
+     "positives_avg_noise": 0.8
+    },
+    "0.8": {
+     "positives_hit1": 85.7,
+     "positives_hit5": 93.1,
+     "standard_hit1": 84.8,
+     "standard_hit5": 92.3,
+     "handwritten_hit1": 90.1,
+     "handwritten_hit5": 96.3,
+     "edge_hit1": 70.0,
+     "edge_hit5": 85.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 7.1,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.42
+    },
+    "0.85": {
+     "positives_hit1": 70.0,
+     "positives_hit5": 74.3,
+     "standard_hit1": 68.3,
+     "standard_hit5": 72.5,
+     "handwritten_hit1": 76.0,
+     "handwritten_hit5": 80.2,
+     "edge_hit1": 60.0,
+     "edge_hit5": 75.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.18
+    },
+    "0.9": {
+     "positives_hit1": 32.0,
+     "positives_hit5": 33.2,
+     "standard_hit1": 26.6,
+     "standard_hit5": 27.7,
+     "handwritten_hit1": 47.9,
+     "handwritten_hit5": 49.2,
+     "edge_hit1": 40.0,
+     "edge_hit5": 50.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.05
+    },
+    "0.95": {
+     "positives_hit1": 11.2,
+     "positives_hit5": 11.3,
+     "standard_hit1": 8.1,
+     "standard_hit5": 8.1,
+     "handwritten_hit1": 20.2,
+     "handwritten_hit5": 20.2,
+     "edge_hit1": 20.0,
+     "edge_hit5": 25.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    }
+   },
+   "raw": {
+    "raw_top1": 87.9,
+    "target_score_p10": 0.8,
+    "target_score_median": 0.875,
+    "negative_best_median": 0.667,
+    "negative_best_p90": 0.75,
+    "negative_best_max": 0.889
+   },
+   "timing": {
+    "ms_151_scores": 0.08,
+    "ms_rank_worst_case": 1.688
+   },
+   "chosen_threshold": 0.85
+  },
+  "wratio": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 94.1,
+     "positives_hit5": 99.4,
+     "standard_hit1": 93.5,
+     "standard_hit5": 99.3,
+     "handwritten_hit1": 96.7,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 74.3,
+     "negatives_avg_fuzzy": 2.51,
+     "positives_avg_noise": 3.46
+    },
+    "0.55": {
+     "positives_hit1": 94.1,
+     "positives_hit5": 99.4,
+     "standard_hit1": 93.5,
+     "standard_hit5": 99.3,
+     "handwritten_hit1": 96.7,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 55.7,
+     "negatives_avg_fuzzy": 1.34,
+     "positives_avg_noise": 2.15
+    },
+    "0.6": {
+     "positives_hit1": 94.1,
+     "positives_hit5": 99.4,
+     "standard_hit1": 93.5,
+     "standard_hit5": 99.3,
+     "handwritten_hit1": 96.7,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 51.4,
+     "negatives_avg_fuzzy": 1.09,
+     "positives_avg_noise": 1.71
+    },
+    "0.65": {
+     "positives_hit1": 94.1,
+     "positives_hit5": 99.4,
+     "standard_hit1": 93.5,
+     "standard_hit5": 99.3,
+     "handwritten_hit1": 96.7,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 18.6,
+     "negatives_avg_fuzzy": 0.31,
+     "positives_avg_noise": 0.78
+    },
+    "0.7": {
+     "positives_hit1": 90.3,
+     "positives_hit5": 94.0,
+     "standard_hit1": 88.7,
+     "standard_hit5": 92.5,
+     "handwritten_hit1": 95.5,
+     "handwritten_hit5": 98.8,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 7.1,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.36
+    },
+    "0.75": {
+     "positives_hit1": 87.5,
+     "positives_hit5": 90.3,
+     "standard_hit1": 85.7,
+     "standard_hit5": 88.2,
+     "handwritten_hit1": 93.4,
+     "handwritten_hit5": 96.3,
+     "edge_hit1": 85.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.18
+    },
+    "0.8": {
+     "positives_hit1": 81.9,
+     "positives_hit5": 83.7,
+     "standard_hit1": 79.7,
+     "standard_hit5": 81.1,
+     "handwritten_hit1": 90.1,
+     "handwritten_hit5": 92.6,
+     "edge_hit1": 65.0,
+     "edge_hit5": 75.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.08
+    },
+    "0.85": {
+     "positives_hit1": 68.2,
+     "positives_hit5": 68.8,
+     "standard_hit1": 67.5,
+     "standard_hit5": 67.8,
+     "handwritten_hit1": 72.3,
+     "handwritten_hit5": 73.6,
+     "edge_hit1": 45.0,
+     "edge_hit5": 50.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    },
+    "0.9": {
+     "positives_hit1": 43.2,
+     "positives_hit5": 43.3,
+     "standard_hit1": 41.1,
+     "standard_hit5": 41.1,
+     "handwritten_hit1": 50.4,
+     "handwritten_hit5": 50.4,
+     "edge_hit1": 35.0,
+     "edge_hit5": 40.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    },
+    "0.95": {
+     "positives_hit1": 6.1,
+     "positives_hit5": 6.1,
+     "standard_hit1": 4.8,
+     "standard_hit5": 4.8,
+     "handwritten_hit1": 10.3,
+     "handwritten_hit5": 10.3,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 93.0,
+    "target_score_p10": 0.75,
+    "target_score_median": 0.889,
+    "negative_best_median": 0.6,
+    "negative_best_p90": 0.675,
+    "negative_best_max": 0.8
+   },
+   "timing": {
+    "ms_151_scores": 0.15,
+    "ms_rank_worst_case": 1.911
+   },
+   "chosen_threshold": 0.75
+  },
+  "prefix_osa": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 47.1,
+     "negatives_avg_fuzzy": 1.16,
+     "positives_avg_noise": 1.71
+    },
+    "0.55": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 17.1,
+     "negatives_avg_fuzzy": 0.21,
+     "positives_avg_noise": 0.79
+    },
+    "0.6": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 11.4,
+     "negatives_avg_fuzzy": 0.16,
+     "positives_avg_noise": 0.59
+    },
+    "0.65": {
+     "positives_hit1": 96.3,
+     "positives_hit5": 99.4,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 98.8,
+     "edge_hit1": 90.0,
+     "edge_hit5": 90.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 5.7,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.33
+    },
+    "0.7": {
+     "positives_hit1": 95.2,
+     "positives_hit5": 98.2,
+     "standard_hit1": 95.2,
+     "standard_hit5": 99.1,
+     "handwritten_hit1": 95.9,
+     "handwritten_hit5": 96.7,
+     "edge_hit1": 85.0,
+     "edge_hit5": 85.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 2.9,
+     "negatives_avg_fuzzy": 0.06,
+     "positives_avg_noise": 0.23
+    },
+    "0.75": {
+     "positives_hit1": 94.3,
+     "positives_hit5": 97.3,
+     "standard_hit1": 95.2,
+     "standard_hit5": 99.1,
+     "handwritten_hit1": 92.6,
+     "handwritten_hit5": 93.4,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 2.9,
+     "negatives_avg_fuzzy": 0.06,
+     "positives_avg_noise": 0.19
+    },
+    "0.8": {
+     "positives_hit1": 84.5,
+     "positives_hit5": 86.4,
+     "standard_hit1": 83.7,
+     "standard_hit5": 86.1,
+     "handwritten_hit1": 88.0,
+     "handwritten_hit5": 88.8,
+     "edge_hit1": 70.0,
+     "edge_hit5": 70.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.09
+    },
+    "0.85": {
+     "positives_hit1": 61.8,
+     "positives_hit5": 62.0,
+     "standard_hit1": 60.7,
+     "standard_hit5": 60.9,
+     "handwritten_hit1": 66.5,
+     "handwritten_hit5": 66.5,
+     "edge_hit1": 50.0,
+     "edge_hit5": 50.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    },
+    "0.9": {
+     "positives_hit1": 14.4,
+     "positives_hit5": 14.4,
+     "standard_hit1": 12.7,
+     "standard_hit5": 12.7,
+     "handwritten_hit1": 19.4,
+     "handwritten_hit5": 19.4,
+     "edge_hit1": 15.0,
+     "edge_hit5": 15.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.95": {
+     "positives_hit1": 4.5,
+     "positives_hit5": 4.5,
+     "standard_hit1": 3.0,
+     "standard_hit5": 3.0,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 95.1,
+    "target_score_p10": 0.75,
+    "target_score_median": 0.857,
+    "negative_best_median": 0.429,
+    "negative_best_p90": 0.6,
+    "negative_best_max": 0.75
+   },
+   "timing": {
+    "ms_151_scores": 0.088,
+    "ms_rank_worst_case": 2.216
+   },
+   "chosen_threshold": 0.7
+  },
+  "hybrid_osa": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 100.0,
+     "negatives_false_positive": 48.6,
+     "negatives_avg_fuzzy": 1.23,
+     "positives_avg_noise": 1.74
+    },
+    "0.55": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 17.1,
+     "negatives_avg_fuzzy": 0.23,
+     "positives_avg_noise": 0.8
+    },
+    "0.6": {
+     "positives_hit1": 96.7,
+     "positives_hit5": 99.8,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 99.2,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 11.4,
+     "negatives_avg_fuzzy": 0.16,
+     "positives_avg_noise": 0.59
+    },
+    "0.65": {
+     "positives_hit1": 96.4,
+     "positives_hit5": 99.5,
+     "standard_hit1": 95.9,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 98.8,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 5.7,
+     "negatives_avg_fuzzy": 0.09,
+     "positives_avg_noise": 0.33
+    },
+    "0.7": {
+     "positives_hit1": 95.2,
+     "positives_hit5": 98.2,
+     "standard_hit1": 95.2,
+     "standard_hit5": 99.1,
+     "handwritten_hit1": 95.9,
+     "handwritten_hit5": 96.7,
+     "edge_hit1": 85.0,
+     "edge_hit5": 85.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 2.9,
+     "negatives_avg_fuzzy": 0.06,
+     "positives_avg_noise": 0.23
+    },
+    "0.75": {
+     "positives_hit1": 94.3,
+     "positives_hit5": 97.3,
+     "standard_hit1": 95.2,
+     "standard_hit5": 99.1,
+     "handwritten_hit1": 92.6,
+     "handwritten_hit5": 93.4,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 2.9,
+     "negatives_avg_fuzzy": 0.06,
+     "positives_avg_noise": 0.19
+    },
+    "0.8": {
+     "positives_hit1": 84.5,
+     "positives_hit5": 86.4,
+     "standard_hit1": 83.7,
+     "standard_hit5": 86.1,
+     "handwritten_hit1": 88.0,
+     "handwritten_hit5": 88.8,
+     "edge_hit1": 70.0,
+     "edge_hit5": 70.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.09
+    },
+    "0.85": {
+     "positives_hit1": 61.8,
+     "positives_hit5": 62.0,
+     "standard_hit1": 60.7,
+     "standard_hit5": 60.9,
+     "handwritten_hit1": 66.5,
+     "handwritten_hit5": 66.5,
+     "edge_hit1": 50.0,
+     "edge_hit5": 50.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    },
+    "0.9": {
+     "positives_hit1": 14.4,
+     "positives_hit5": 14.4,
+     "standard_hit1": 12.7,
+     "standard_hit5": 12.7,
+     "handwritten_hit1": 19.4,
+     "handwritten_hit5": 19.4,
+     "edge_hit1": 15.0,
+     "edge_hit5": 15.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.95": {
+     "positives_hit1": 4.5,
+     "positives_hit5": 4.5,
+     "standard_hit1": 3.0,
+     "standard_hit5": 3.0,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 95.1,
+    "target_score_p10": 0.75,
+    "target_score_median": 0.857,
+    "negative_best_median": 0.444,
+    "negative_best_p90": 0.6,
+    "negative_best_max": 0.75
+   },
+   "timing": {
+    "ms_151_scores": 0.183,
+    "ms_rank_worst_case": 2.332
+   },
+   "chosen_threshold": 0.7
+  },
+  "trigram_jaccard": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 50.6,
+     "positives_hit5": 51.0,
+     "standard_hit1": 46.5,
+     "standard_hit5": 46.9,
+     "handwritten_hit1": 63.6,
+     "handwritten_hit5": 64.0,
+     "edge_hit1": 50.0,
+     "edge_hit5": 50.0,
+     "hard_hit5": 20.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    },
+    "0.55": {
+     "positives_hit1": 29.2,
+     "positives_hit5": 29.2,
+     "standard_hit1": 24.9,
+     "standard_hit5": 24.9,
+     "handwritten_hit1": 42.6,
+     "handwritten_hit5": 42.6,
+     "edge_hit1": 30.0,
+     "edge_hit5": 30.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    },
+    "0.6": {
+     "positives_hit1": 21.2,
+     "positives_hit5": 21.2,
+     "standard_hit1": 17.1,
+     "standard_hit5": 17.1,
+     "handwritten_hit1": 33.9,
+     "handwritten_hit5": 33.9,
+     "edge_hit1": 25.0,
+     "edge_hit5": 25.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    },
+    "0.65": {
+     "positives_hit1": 15.0,
+     "positives_hit5": 15.0,
+     "standard_hit1": 11.4,
+     "standard_hit5": 11.4,
+     "handwritten_hit1": 26.0,
+     "handwritten_hit5": 26.0,
+     "edge_hit1": 20.0,
+     "edge_hit5": 20.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.7": {
+     "positives_hit1": 12.1,
+     "positives_hit5": 12.1,
+     "standard_hit1": 9.1,
+     "standard_hit5": 9.1,
+     "handwritten_hit1": 21.1,
+     "handwritten_hit5": 21.1,
+     "edge_hit1": 15.0,
+     "edge_hit5": 15.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.0
+    },
+    "0.75": {
+     "positives_hit1": 7.5,
+     "positives_hit5": 7.5,
+     "standard_hit1": 5.6,
+     "standard_hit5": 5.6,
+     "handwritten_hit1": 13.2,
+     "handwritten_hit5": 13.2,
+     "edge_hit1": 10.0,
+     "edge_hit5": 10.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    },
+    "0.8": {
+     "positives_hit1": 5.1,
+     "positives_hit5": 5.1,
+     "standard_hit1": 3.7,
+     "standard_hit5": 3.7,
+     "handwritten_hit1": 9.5,
+     "handwritten_hit5": 9.5,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    },
+    "0.85": {
+     "positives_hit1": 5.1,
+     "positives_hit5": 5.1,
+     "standard_hit1": 3.7,
+     "standard_hit5": 3.7,
+     "handwritten_hit1": 9.5,
+     "handwritten_hit5": 9.5,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    },
+    "0.9": {
+     "positives_hit1": 4.8,
+     "positives_hit5": 4.8,
+     "standard_hit1": 3.4,
+     "standard_hit5": 3.4,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    },
+    "0.95": {
+     "positives_hit1": 4.6,
+     "positives_hit5": 4.6,
+     "standard_hit1": 3.2,
+     "standard_hit5": 3.2,
+     "handwritten_hit1": 9.1,
+     "handwritten_hit5": 9.1,
+     "edge_hit1": 5.0,
+     "edge_hit5": 5.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0
+    }
+   },
+   "raw": {
+    "raw_top1": 91.8,
+    "target_score_p10": 0.25,
+    "target_score_median": 0.5,
+    "negative_best_median": 0.091,
+    "negative_best_p90": 0.167,
+    "negative_best_max": 0.25
+   },
+   "timing": {
+    "ms_151_scores": 0.633,
+    "ms_rank_worst_case": 2.63
+   },
+   "chosen_threshold": 0.5
+  },
+  "jw_prefix_max": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 95.7,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.0,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 98.6,
+     "negatives_avg_fuzzy": 4.9,
+     "positives_avg_noise": 4.0
+    },
+    "0.55": {
+     "positives_hit1": 95.7,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.0,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 97.1,
+     "negatives_avg_fuzzy": 4.5,
+     "positives_avg_noise": 3.98
+    },
+    "0.6": {
+     "positives_hit1": 95.7,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.0,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 82.9,
+     "negatives_avg_fuzzy": 3.04,
+     "positives_avg_noise": 3.83
+    },
+    "0.65": {
+     "positives_hit1": 95.7,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.0,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 51.4,
+     "negatives_avg_fuzzy": 1.47,
+     "positives_avg_noise": 2.74
+    },
+    "0.7": {
+     "positives_hit1": 95.6,
+     "positives_hit5": 99.6,
+     "standard_hit1": 94.8,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 30.0,
+     "negatives_avg_fuzzy": 0.73,
+     "positives_avg_noise": 1.56
+    },
+    "0.75": {
+     "positives_hit1": 95.6,
+     "positives_hit5": 99.6,
+     "standard_hit1": 94.8,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 17.1,
+     "negatives_avg_fuzzy": 0.24,
+     "positives_avg_noise": 0.92
+    },
+    "0.8": {
+     "positives_hit1": 93.6,
+     "positives_hit5": 96.7,
+     "standard_hit1": 92.2,
+     "standard_hit5": 95.6,
+     "handwritten_hit1": 97.9,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.54
+    },
+    "0.85": {
+     "positives_hit1": 85.3,
+     "positives_hit5": 85.9,
+     "standard_hit1": 81.7,
+     "standard_hit5": 82.1,
+     "handwritten_hit1": 95.5,
+     "handwritten_hit5": 97.1,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 1.4,
+     "negatives_avg_fuzzy": 0.01,
+     "positives_avg_noise": 0.28
+    },
+    "0.9": {
+     "positives_hit1": 80.9,
+     "positives_hit5": 81.4,
+     "standard_hit1": 77.9,
+     "standard_hit5": 78.0,
+     "handwritten_hit1": 90.9,
+     "handwritten_hit5": 92.6,
+     "edge_hit1": 75.0,
+     "edge_hit5": 75.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.07
+    },
+    "0.95": {
+     "positives_hit1": 58.5,
+     "positives_hit5": 58.6,
+     "standard_hit1": 59.6,
+     "standard_hit5": 59.6,
+     "handwritten_hit1": 56.2,
+     "handwritten_hit5": 56.6,
+     "edge_hit1": 45.0,
+     "edge_hit5": 45.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.01
+    }
+   },
+   "raw": {
+    "raw_top1": 95.4,
+    "target_score_p10": 0.825,
+    "target_score_median": 0.956,
+    "negative_best_median": 0.662,
+    "negative_best_p90": 0.771,
+    "negative_best_max": 0.85
+   },
+   "timing": {
+    "ms_151_scores": 0.185,
+    "ms_rank_worst_case": 2.208
+   },
+   "chosen_threshold": 0.8
+  },
+  "jw_or_prefix": {
+   "sweep": {
+    "0.5": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 98.6,
+     "negatives_avg_fuzzy": 4.9,
+     "positives_avg_noise": 4.0
+    },
+    "0.55": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 97.1,
+     "negatives_avg_fuzzy": 4.5,
+     "positives_avg_noise": 3.98
+    },
+    "0.6": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 87.1,
+     "negatives_avg_fuzzy": 3.13,
+     "positives_avg_noise": 3.86
+    },
+    "0.65": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 51.4,
+     "negatives_avg_fuzzy": 1.47,
+     "positives_avg_noise": 2.75
+    },
+    "0.7": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 31.4,
+     "negatives_avg_fuzzy": 0.76,
+     "positives_avg_noise": 1.64
+    },
+    "0.75": {
+     "positives_hit1": 96.5,
+     "positives_hit5": 99.9,
+     "standard_hit1": 95.8,
+     "standard_hit5": 99.9,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 100.0,
+     "edge_hit5": 100.0,
+     "hard_hit5": 80.0,
+     "negatives_false_positive": 17.1,
+     "negatives_avg_fuzzy": 0.26,
+     "positives_avg_noise": 0.95
+    },
+    "0.8": {
+     "positives_hit1": 96.2,
+     "positives_hit5": 99.6,
+     "standard_hit1": 95.5,
+     "standard_hit5": 99.6,
+     "handwritten_hit1": 98.3,
+     "handwritten_hit5": 100.0,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 60.0,
+     "negatives_false_positive": 4.3,
+     "negatives_avg_fuzzy": 0.07,
+     "positives_avg_noise": 0.57
+    },
+    "0.85": {
+     "positives_hit1": 95.4,
+     "positives_hit5": 98.6,
+     "standard_hit1": 95.1,
+     "standard_hit5": 99.1,
+     "handwritten_hit1": 96.3,
+     "handwritten_hit5": 97.5,
+     "edge_hit1": 95.0,
+     "edge_hit5": 95.0,
+     "hard_hit5": 40.0,
+     "negatives_false_positive": 4.3,
+     "negatives_avg_fuzzy": 0.07,
+     "positives_avg_noise": 0.38
+    },
+    "0.9": {
+     "positives_hit1": 86.8,
+     "positives_hit5": 88.9,
+     "standard_hit1": 85.0,
+     "standard_hit5": 87.4,
+     "handwritten_hit1": 93.0,
+     "handwritten_hit5": 94.2,
+     "edge_hit1": 80.0,
+     "edge_hit5": 80.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.14
+    },
+    "0.95": {
+     "positives_hit1": 70.7,
+     "positives_hit5": 71.0,
+     "standard_hit1": 70.2,
+     "standard_hit5": 70.5,
+     "handwritten_hit1": 73.6,
+     "handwritten_hit5": 74.0,
+     "edge_hit1": 55.0,
+     "edge_hit5": 55.0,
+     "hard_hit5": 0.0,
+     "negatives_false_positive": 0.0,
+     "negatives_avg_fuzzy": 0,
+     "positives_avg_noise": 0.02
+    }
+   },
+   "raw": {
+    "raw_top1": 95.7,
+    "target_score_p10": 0.867,
+    "target_score_median": 0.967,
+    "negative_best_median": 0.662,
+    "negative_best_p90": 0.771,
+    "negative_best_max": 0.85
+   },
+   "timing": {
+    "ms_151_scores": 0.149,
+    "ms_rank_worst_case": 2.424
+   },
+   "chosen_threshold": 0.8
+  }
+ },
+ "detail": {
+  "levenshtein": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 99.2,
+     "hit5": 99.6,
+     "fp": 93.0
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 40.0,
+     "fp": 40.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 86.8
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 11.3,
+     "hit5": 11.9,
+     "fp": 19.2
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 94.7,
+     "hit5": 96.0,
+     "fp": 96.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking",
+      "nidoran-f",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [
+     "mew"
+    ],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "lorem",
+     "top": [
+      "golem"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "geodood",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "group": "edge",
+     "kind": "short prefix + typo",
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "group": "edge",
+     "kind": "short prefix + transposition",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "raichu pikachu",
+     "group": "edge",
+     "kind": "two names typed",
+     "top": []
+    }
+   ]
+  },
+  "damerau_osa": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 99.2,
+     "hit5": 99.6,
+     "fp": 93.0
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 40.0,
+     "fp": 40.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 86.8
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 11.3,
+     "hit5": 11.9,
+     "fp": 19.2
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking",
+      "nidoran-f",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mew"
+     ]
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [
+     "mew"
+    ],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "lorem",
+     "top": [
+      "golem"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "geodood",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "group": "edge",
+     "kind": "short prefix + typo",
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "group": "edge",
+     "kind": "short prefix + transposition",
+     "top": []
+    },
+    {
+     "query": "raichu pikachu",
+     "group": "edge",
+     "kind": "two names typed",
+     "top": []
+    }
+   ]
+  },
+  "indel_ratio": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 96.7,
+     "hit5": 98.8,
+     "fp": 92.1
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 60.0,
+     "hit5": 60.0,
+     "fp": 60.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 86.8
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 4.6,
+     "hit5": 4.6,
+     "fp": 10.6
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 98.7,
+     "hit5": 98.7,
+     "fp": 98.7
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 97.4,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur",
+      "venusaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": false,
+     "top": [
+      "pikachu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [
+     "mew"
+    ],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [],
+   "misses": [
+    {
+     "query": "eevy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oniks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jynks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "raichu pikachu",
+     "group": "edge",
+     "kind": "two names typed",
+     "top": [
+      "pikachu"
+     ]
+    }
+   ]
+  },
+  "jaro_winkler": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 97.9,
+     "hit5": 100.0,
+     "fp": 95.0
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 60.0,
+     "hit5": 60.0,
+     "fp": 60.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 90.1
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 56.3,
+     "hit5": 70.2,
+     "fp": 75.5
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 98.7,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard",
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking",
+      "nidoran-f",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo",
+      "mew",
+      "meowth"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon",
+      "charmander"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "aaaa",
+     "top": [
+      "alakazam"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    }
+   ]
+  },
+  "partial_ratio": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 76.0,
+     "hit5": 80.2,
+     "fp": 73.6
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 40.0,
+     "hit5": 40.0,
+     "fp": 40.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 69.5,
+     "hit5": 74.2,
+     "fp": 61.6
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 86.8,
+     "hit5": 89.4,
+     "fp": 91.4
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 27.8,
+     "hit5": 36.4,
+     "fp": 42.4
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 79.5,
+     "hit5": 81.5,
+     "fp": 82.1
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 78.1,
+     "hit5": 80.8,
+     "fp": 82.8
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": false,
+     "hit5": true,
+     "top": [
+      "nidoran-f",
+      "nidoran-m",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": false,
+     "hit5": true,
+     "top": [
+      "mew",
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": true,
+     "top": [
+      "pikachu",
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "table",
+     "top": [
+      "clefable"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "bulbasore",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "peekachu",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "geodood",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mr mine",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mr myme",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "golum",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "gollem",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "onyx",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "volpix",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "tentacrool",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": [
+      "tentacool"
+     ]
+    },
+    {
+     "query": "ridon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "rhaidon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "sythe",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "lapris",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "lappras",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": [
+      "paras"
+     ]
+    },
+    {
+     "query": "poligon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "zabdos",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pigey",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "meouth",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "miowth",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "genger",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "gangar",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "gengur",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "cuebone",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "kofing",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "chancy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ponita",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "poneyta",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "seedra",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": [
+      "seel"
+     ]
+    },
+    {
+     "query": "sedra",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "goldin",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "stariu",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "kabootops",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "zubbat",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "golbet",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oddich",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "matchop",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "hipno",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "craby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "horsia",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "magmer",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pinser",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pincir",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pinsyr",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "taurus",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "toros",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vaperon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbsor",
+     "group": "edge",
+     "kind": "two typos",
+     "top": []
+    },
+    {
+     "query": "mrmine",
+     "group": "edge",
+     "kind": "hyphenated name + typo",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "onyx",
+     "group": "edge",
+     "kind": "4-letter name, substitution",
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "group": "edge",
+     "kind": "4-letter name, substitution",
+     "top": []
+    }
+   ]
+  },
+  "wratio": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 93.4,
+     "hit5": 96.3,
+     "fp": 88.4
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 20.0,
+     "fp": 20.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 86.1
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 35.1,
+     "hit5": 43.7,
+     "fp": 50.3
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 97.4,
+     "hit5": 98.7,
+     "fp": 98.7
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 96.0,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": false,
+     "hit5": true,
+     "top": [
+      "mew",
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": true,
+     "top": [
+      "pikachu",
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [
+     "mew"
+    ],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "table",
+     "top": [
+      "clefable"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "geodood",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "eevy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oniks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vulpicks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ridon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jynks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "poligon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "craby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "toros",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    }
+   ]
+  },
+  "prefix_osa": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 95.9,
+     "hit5": 96.7,
+     "fp": 89.7
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 20.0,
+     "fp": 20.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 2.5
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 87.4
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 80.8,
+     "hit5": 98.0,
+     "fp": 99.3
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 98.7,
+     "hit5": 98.7,
+     "fp": 98.7
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 97.4,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "test",
+     "top": [
+      "tentacool",
+      "tentacruel"
+     ]
+    },
+    {
+     "query": "eqeg",
+     "top": [
+      "exeggcute",
+      "exeggutor"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "bulbasore",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "snorlacks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oniks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vulpicks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ridon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jynks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "craby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "toros",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbsor",
+     "group": "edge",
+     "kind": "two typos",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "raichu pikachu",
+     "group": "edge",
+     "kind": "two names typed",
+     "top": []
+    }
+   ]
+  },
+  "hybrid_osa": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 95.9,
+     "hit5": 96.7,
+     "fp": 89.7
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 20.0,
+     "fp": 20.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 2.5
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 87.4
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 80.8,
+     "hit5": 98.0,
+     "fp": 99.3
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 98.7,
+     "hit5": 98.7,
+     "fp": 98.7
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 97.4,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "test",
+     "top": [
+      "tentacool",
+      "tentacruel"
+     ]
+    },
+    {
+     "query": "eqeg",
+     "top": [
+      "exeggcute",
+      "exeggutor"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "bulbasore",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "snorlacks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oniks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vulpicks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ridon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jynks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "craby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "toros",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbsor",
+     "group": "edge",
+     "kind": "two typos",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "raichu pikachu",
+     "group": "edge",
+     "kind": "two names typed",
+     "top": []
+    }
+   ]
+  },
+  "trigram_jaccard": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 63.6,
+     "hit5": 64.0,
+     "fp": 56.2
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 20.0,
+     "hit5": 20.0,
+     "fp": 20.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 78.1,
+     "hit5": 78.8,
+     "fp": 64.2
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 93.4,
+     "hit5": 93.4,
+     "fp": 93.4
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 55.0,
+     "hit5": 55.0,
+     "fp": 55.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 6.0,
+     "hit5": 7.3,
+     "fp": 7.9
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [],
+   "misses": [
+    {
+     "query": "bulbasore",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "bulbasor",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "peekachu",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "kedabra",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "geodood",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jeodude",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "eevie",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "eevy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mewto",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mewtoo",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "psiduck",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "sykduck",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "farfeched",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mr mine",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "mr myme",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "blastoys",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "golum",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "onyx",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oniks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vulpicks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "volpix",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ninetails",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ninetail",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "machomp",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": [
+      "machop"
+     ]
+    },
+    {
+     "query": "tentacrool",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": [
+      "tentacool"
+     ]
+    },
+    {
+     "query": "ridon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "rhaidon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "rydon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "starmee",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "sycther",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "scither",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "sythe",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "jynks",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "lapris",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "porigon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "poligon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "zabdos",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "moltris",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "moltras",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "weedel",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pidgy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pidgie",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pigey",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "digglet",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "dyglett",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "meouth",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "miowth",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "genger",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "gangar",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "gengur",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "kubone",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "coffing",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "voltrob",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "chancey",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "chancy",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "tanjela",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ponita",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "seedra",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "sedra",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "goldin",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "goldene",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "goldean",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "stariu",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "areodactyl",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "omanite",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "kabootops",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "zoubat",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "golbet",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "oddich",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "hawnter",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "hipno",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "craby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "crabby",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "rhihorn",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "horsia",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "magmer",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pinser",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pincir",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "pinsyr",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "taurus",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "toros",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "vaperon",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "joltion",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "joltean",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "flarion",
+     "group": "handwritten",
+     "kind": "phonetic",
+     "top": []
+    },
+    {
+     "query": "ublbasaur",
+     "group": "edge",
+     "kind": "transposition at start",
+     "top": []
+    },
+    {
+     "query": "bulbsor",
+     "group": "edge",
+     "kind": "two typos",
+     "top": []
+    },
+    {
+     "query": "bulbs",
+     "group": "edge",
+     "kind": "short prefix + typo",
+     "top": []
+    },
+    {
+     "query": "pikc",
+     "group": "edge",
+     "kind": "short prefix + transposition",
+     "top": []
+    },
+    {
+     "query": "charmad",
+     "group": "edge",
+     "kind": "prefix + typo",
+     "top": []
+    },
+    {
+     "query": "mrmine",
+     "group": "edge",
+     "kind": "hyphenated name + typo",
+     "top": []
+    },
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "group": "edge",
+     "kind": "transposition at end",
+     "top": []
+    },
+    {
+     "query": "onyx",
+     "group": "edge",
+     "kind": "4-letter name, substitution",
+     "top": []
+    },
+    {
+     "query": "jinx",
+     "group": "edge",
+     "kind": "4-letter name, substitution",
+     "top": []
+    }
+   ]
+  },
+  "jw_prefix_max": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 97.9,
+     "hit5": 100.0,
+     "fp": 95.0
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 60.0,
+     "hit5": 60.0,
+     "fp": 60.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 3.3
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 90.1
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 62.9,
+     "hit5": 79.5,
+     "fp": 83.4
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 98.7,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard",
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking",
+      "nidoran-f",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo",
+      "mew",
+      "meowth"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon",
+      "charmander"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "aaaa",
+     "top": [
+      "alakazam"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    }
+   ]
+  },
+  "jw_or_prefix": {
+   "by_kind": {
+    "edge/3-letter name, transposition": {
+     "n": 1,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 0.0
+    },
+    "edge/4-letter name, substitution": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidoking/nidoqueen)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/close siblings (nidorina/nidorino)": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/deletion in the middle": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/extra letter at the end": {
+     "n": 2,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/first letter wrong": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/hyphenated name + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/last letter adjacent key": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/many repeated letters": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + transposition": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/short prefix + typo": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at end": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/transposition at start": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two names typed": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/two typos": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "edge/very short, deletion": {
+     "n": 1,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 0.0
+    },
+    "handwritten/phonetic": {
+     "n": 242,
+     "hit1": 98.3,
+     "hit5": 100.0,
+     "fp": 95.0
+    },
+    "hard/semantic": {
+     "n": 5,
+     "hit1": 60.0,
+     "hit5": 60.0,
+     "fp": 60.0
+    },
+    "negative/random": {
+     "n": 40,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 2.5
+    },
+    "negative/word": {
+     "n": 30,
+     "hit1": 0.0,
+     "hit5": 0.0,
+     "fp": 6.7
+    },
+    "standard/deletion": {
+     "n": 151,
+     "hit1": 100.0,
+     "hit5": 100.0,
+     "fp": 90.1
+    },
+    "standard/insertion": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/prefix_with_typo": {
+     "n": 151,
+     "hit1": 80.8,
+     "hit5": 99.3,
+     "fp": 100.0
+    },
+    "standard/substitution": {
+     "n": 151,
+     "hit1": 99.3,
+     "hit5": 100.0,
+     "fp": 100.0
+    },
+    "standard/transposition": {
+     "n": 151,
+     "hit1": 98.0,
+     "hit5": 98.7,
+     "fp": 98.7
+    }
+   },
+   "edge": [
+    {
+     "query": "vulbasaur",
+     "kind": "first letter wrong",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "ublbasaur",
+     "kind": "transposition at start",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbsor",
+     "kind": "two typos",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "bulbs",
+     "kind": "short prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikc",
+     "kind": "short prefix + transposition",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charmad",
+     "kind": "prefix + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmander",
+      "charizard",
+      "charmeleon"
+     ]
+    },
+    {
+     "query": "bulbasaurr",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "bulbasaur"
+     ]
+    },
+    {
+     "query": "pikachuu",
+     "kind": "extra letter at the end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "mrmine",
+     "kind": "hyphenated name + typo",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mr-mime"
+     ]
+    },
+    {
+     "query": "nidorna",
+     "kind": "close siblings (nidorina/nidorino)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidorina",
+      "nidoran-f",
+      "nidoran-m"
+     ]
+    },
+    {
+     "query": "nidokng",
+     "kind": "close siblings (nidoking/nidoqueen)",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "nidoking",
+      "nidoran-f",
+      "nidorina"
+     ]
+    },
+    {
+     "query": "mwe",
+     "kind": "3-letter name, transposition",
+     "hit1": false,
+     "hit5": false,
+     "top": []
+    },
+    {
+     "query": "mewtow",
+     "kind": "transposition at end",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "mewtwo",
+      "mew",
+      "meowth"
+     ]
+    },
+    {
+     "query": "onyx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "onix"
+     ]
+    },
+    {
+     "query": "jinx",
+     "kind": "4-letter name, substitution",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "jynx"
+     ]
+    },
+    {
+     "query": "eve",
+     "kind": "very short, deletion",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "eevee"
+     ]
+    },
+    {
+     "query": "pikachuuuu",
+     "kind": "many repeated letters",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "pikachu"
+     ]
+    },
+    {
+     "query": "charzard",
+     "kind": "deletion in the middle",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charizard",
+      "charmander"
+     ]
+    },
+    {
+     "query": "charmeleom",
+     "kind": "last letter adjacent key",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "charmeleon",
+      "charmander"
+     ]
+    },
+    {
+     "query": "raichu pikachu",
+     "kind": "two names typed",
+     "hit1": true,
+     "hit5": true,
+     "top": [
+      "raichu"
+     ]
+    }
+   ],
+   "short": {
+    "bu": [
+     "bulbasaur",
+     "butterfree",
+     "kabuto",
+     "kabutops",
+     "electabuzz"
+    ],
+    "pk": [],
+    "mw": [],
+    "ch": [
+     "chansey",
+     "charizard",
+     "charmander",
+     "charmeleon",
+     "raichu"
+    ],
+    "sq": [
+     "squirtle"
+    ],
+    "zz": [
+     "electabuzz"
+    ],
+    "a": [
+     "abra",
+     "arbok",
+     "arcanine",
+     "alakazam",
+     "articuno"
+    ]
+   },
+   "negatives_hit": [
+    {
+     "query": "aaaa",
+     "top": [
+      "alakazam"
+     ]
+    },
+    {
+     "query": "test",
+     "top": [
+      "tentacool",
+      "tentacruel"
+     ]
+    },
+    {
+     "query": "eqeg",
+     "top": [
+      "exeggcute",
+      "exeggutor"
+     ]
+    }
+   ],
+   "misses": [
+    {
+     "query": "mwe",
+     "group": "edge",
+     "kind": "3-letter name, transposition",
+     "top": []
+    }
+   ]
+  }
+ }
+}

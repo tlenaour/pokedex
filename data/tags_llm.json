@@ -1,0 +1,3412 @@
+[
+ {
+  "entity_type": "move",
+  "name": "pound",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "karate-chop",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Has an increased chance for a critical hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "double-slap",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "comet-punch",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mega-punch",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "pay-day",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fire-punch",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "ice-punch",
+  "tags": [
+   {
+    "tag": "inflicts:freeze",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to freeze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thunder-punch",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "scratch",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "vice-grip",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "guillotine",
+  "tags": [
+   {
+    "tag": "inflicts:one-hit-ko",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Causes a one-hit KO."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "razor-wind",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "User’s critical hit rate is one level higher when using this move."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "swords-dance",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Attack by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "cut",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "gust",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "wing-attack",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "whirlwind",
+  "tags": [
+   {
+    "tag": "inflicts:switch",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Forces trainers to switch Pokémon."
+   }
+  ],
+  "comment": "in wild battles, ends the battle instead",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fly",
+  "tags": [
+   {
+    "tag": "immune:moves",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "User flies high into the air for one turn, becoming immune to attack"
+   }
+  ],
+  "comment": "for one turn only (the turn before it hits); some moves still hit the user (e.g. Gust, Thunder)",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bind",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Prevents the target from fleeing"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "slam",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "vine-whip",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "stomp",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "double-kick",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits twice in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mega-kick",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "jump-kick",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "rolling-kick",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sand-attack",
+  "tags": [
+   {
+    "tag": "lowers:accuracy",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s accuracy by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "headbutt",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "horn-attack",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fury-attack",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "horn-drill",
+  "tags": [
+   {
+    "tag": "inflicts:one-hit-ko",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Causes a one-hit KO."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "tackle",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "body-slam",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "wrap",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Prevents the target from fleeing"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "take-down",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thrash",
+  "tags": [
+   {
+    "tag": "self:confusion",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "then confuses the user"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "double-edge",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "tail-whip",
+  "tags": [
+   {
+    "tag": "lowers:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "poison-sting",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to poison the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "twineedle",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 20,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to poison the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "pin-missile",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "leer",
+  "tags": [
+   {
+    "tag": "lowers:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bite",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "growl",
+  "tags": [
+   {
+    "tag": "lowers:attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s Attack by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "roar",
+  "tags": [
+   {
+    "tag": "inflicts:switch",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Forces trainers to switch Pokémon."
+   }
+  ],
+  "comment": "in wild battles, ends the battle instead",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sing",
+  "tags": [
+   {
+    "tag": "inflicts:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Puts the target to sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "supersonic",
+  "tags": [
+   {
+    "tag": "inflicts:confusion",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Confuses the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sonic-boom",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "disable",
+  "tags": [
+   {
+    "tag": "inflicts:disable",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Disables the target’s last used move for 1-8 turns."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "acid",
+  "tags": [
+   {
+    "tag": "lowers:special-defense",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Special Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "ember",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "flamethrower",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mist",
+  "tags": [
+   {
+    "tag": "prevents:stat-drop",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Protects the user’s stats from being changed by enemy moves."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "water-gun",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "hydro-pump",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "surf",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "ice-beam",
+  "tags": [
+   {
+    "tag": "inflicts:freeze",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to freeze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "blizzard",
+  "tags": [
+   {
+    "tag": "inflicts:freeze",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to freeze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "psybeam",
+  "tags": [
+   {
+    "tag": "inflicts:confusion",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to confuse the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bubble-beam",
+  "tags": [
+   {
+    "tag": "lowers:speed",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Speed by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "aurora-beam",
+  "tags": [
+   {
+    "tag": "lowers:attack",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Attack by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "hyper-beam",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "peck",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "drill-peck",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "submission",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "low-kick",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "counter",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "seismic-toss",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "strength",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "absorb",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Drains half the damage inflicted to heal the user."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mega-drain",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Drains half the damage inflicted to heal the user."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "leech-seed",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "heals the user for the amount taken"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "growth",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Attack and Special Attack by one stage."
+   },
+   {
+    "tag": "raises:special-attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Attack and Special Attack by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "razor-leaf",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Has an increased chance for a critical hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "solar-beam",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "poison-powder",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Poisons the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "stun-spore",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Paralyzes the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sleep-powder",
+  "tags": [
+   {
+    "tag": "inflicts:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Puts the target to sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "petal-dance",
+  "tags": [
+   {
+    "tag": "self:confusion",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "then confuses the user"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "string-shot",
+  "tags": [
+   {
+    "tag": "lowers:speed",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s Speed by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "dragon-rage",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fire-spin",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Prevents the target from fleeing"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thunder-shock",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thunderbolt",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thunder-wave",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Paralyzes the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "thunder",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "rock-throw",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "earthquake",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fissure",
+  "tags": [
+   {
+    "tag": "inflicts:one-hit-ko",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Causes a one-hit KO."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "dig",
+  "tags": [
+   {
+    "tag": "immune:moves",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "User digs underground for one turn, becoming immune to attack"
+   }
+  ],
+  "comment": "for one turn only (the turn before it hits); some moves still hit the user (e.g. Earthquake, Fissure)",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "toxic",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Badly poisons the target"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "confusion",
+  "tags": [
+   {
+    "tag": "inflicts:confusion",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to confuse the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "psychic",
+  "tags": [
+   {
+    "tag": "lowers:special-defense",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Special Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "hypnosis",
+  "tags": [
+   {
+    "tag": "inflicts:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Puts the target to sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "meditate",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Attack by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "agility",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Speed by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "quick-attack",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "rage",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "If the user is hit after using this move, its Attack rises by one stage."
+   }
+  ],
+  "comment": "only when the user is hit after using this move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "teleport",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "night-shade",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mimic",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "screech",
+  "tags": [
+   {
+    "tag": "lowers:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s Defense by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "double-team",
+  "tags": [
+   {
+    "tag": "raises:evasion",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s evasion by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "recover",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Heals the user by half its max HP."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "harden",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "minimize",
+  "tags": [
+   {
+    "tag": "raises:evasion",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s evasion by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "smokescreen",
+  "tags": [
+   {
+    "tag": "lowers:accuracy",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s accuracy by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "confuse-ray",
+  "tags": [
+   {
+    "tag": "inflicts:confusion",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Confuses the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "withdraw",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "defense-curl",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises user’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "barrier",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Defense by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "light-screen",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Reduces damage from special attacks by 50% for five turns."
+   }
+  ],
+  "comment": "special attacks only, for five turns",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "haze",
+  "tags": [
+   {
+    "tag": "cures:stat-change",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Resets all Pokémon’s stats, accuracy, and evasion."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "reflect",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Reduces damage from physical attacks by half."
+   }
+  ],
+  "comment": "physical attacks only, for five turns",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "focus-energy",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Increases the user’s chance to score a critical hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bide",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "metronome",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "mirror-move",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "self-destruct",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "egg-bomb",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "lick",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to paralyze the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "smog",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 40,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to poison the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sludge",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to poison the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bone-club",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fire-blast",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "waterfall",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 20,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "clamp",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Prevents the target from fleeing"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "swift",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "skull-bash",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Defense by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "spike-cannon",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "constrict",
+  "tags": [
+   {
+    "tag": "lowers:speed",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Speed by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "amnesia",
+  "tags": [
+   {
+    "tag": "raises:special-defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Special Defense by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "kinesis",
+  "tags": [
+   {
+    "tag": "lowers:accuracy",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s accuracy by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "soft-boiled",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Heals the user by half its max HP."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "high-jump-kick",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "glare",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Paralyzes the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "dream-eater",
+  "tags": [
+   {
+    "tag": "requires:sleep",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Only works on sleeping Pokémon."
+   },
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Drains half the damage inflicted to heal the user."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "poison-gas",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Poisons the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "barrage",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "leech-life",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Drains half the damage inflicted to heal the user."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "lovely-kiss",
+  "tags": [
+   {
+    "tag": "inflicts:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Puts the target to sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sky-attack",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   },
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Critical hit chance is one level higher than normal."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "transform",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bubble",
+  "tags": [
+   {
+    "tag": "lowers:speed",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to lower the target’s Speed by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "dizzy-punch",
+  "tags": [
+   {
+    "tag": "inflicts:confusion",
+    "chance": 20,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to confuse the target."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "spore",
+  "tags": [
+   {
+    "tag": "inflicts:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Puts the target to sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "flash",
+  "tags": [
+   {
+    "tag": "lowers:accuracy",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Lowers the target’s accuracy by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "psywave",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "splash",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "acid-armor",
+  "tags": [
+   {
+    "tag": "raises:defense",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Defense by two stages."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "crabhammer",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Has an increased chance for a critical hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "explosion",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "fury-swipes",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits 2-5 times in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "bonemerang",
+  "tags": [
+   {
+    "tag": "inflicts:multi-hit",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Hits twice in one turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "rest",
+  "tags": [
+   {
+    "tag": "self:sleep",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "User sleeps for two turns"
+   },
+   {
+    "tag": "self:heal",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "completely healing itself"
+   }
+  ],
+  "comment": "effect also says sleep replaces another major status effect; replacement is not a cure, not tagged",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "rock-slide",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 30,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "hyper-fang",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 10,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to make the target flinch."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "sharpen",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": 100,
+    "trigger": "move_hit",
+    "evidence": "Raises the user’s Attack by one stage."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "conversion",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "tri-attack",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 6.7,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn, freeze, or paralyze the target."
+   },
+   {
+    "tag": "inflicts:freeze",
+    "chance": 6.7,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn, freeze, or paralyze the target."
+   },
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 6.7,
+    "trigger": "move_hit",
+    "evidence": "Has a chance to burn, freeze, or paralyze the target."
+   }
+  ],
+  "comment": "one 20% roll (effect_chance) split across three statuses",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "super-fang",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "slash",
+  "tags": [
+   {
+    "tag": "raises:critical",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "Has an increased chance for a critical hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "move",
+  "name": "substitute",
+  "tags": [
+   {
+    "tag": "prevents:any",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "The doll will block major status effects, confusion, and flinching."
+   },
+   {
+    "tag": "prevents:confusion",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "The doll will block major status effects, confusion, and flinching."
+   },
+   {
+    "tag": "prevents:flinch",
+    "chance": null,
+    "trigger": "move_hit",
+    "evidence": "The doll will block major status effects, confusion, and flinching."
+   }
+  ],
+  "comment": "protection lasts only while the doll stands; some sources still get through (e.g. a Yawn already in effect)",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "stench",
+  "tags": [
+   {
+    "tag": "inflicts:flinch",
+    "chance": 10,
+    "trigger": "other",
+    "evidence": "Has a 10% chance of making target Pokémon flinch with each hit."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "battle-armor",
+  "tags": [
+   {
+    "tag": "immune:critical",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against critical hits."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sturdy",
+  "tags": [
+   {
+    "tag": "prevents:one-hit-ko",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against the one-hit KO moves regardless of HP."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "damp",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "limber",
+  "tags": [
+   {
+    "tag": "prevents:paralysis",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents paralysis."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sand-veil",
+  "tags": [
+   {
+    "tag": "raises:evasion",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases evasion to 1.25× during a sandstorm."
+   },
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against sandstorm damage."
+   }
+  ],
+  "comment": "evasion bonus only during a sandstorm; immune to sandstorm damage only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "static",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 30,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of paralyzing attacking Pokémon on contact."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "volt-absorb",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Electric moves, healing for 1/4 max HP."
+   },
+   {
+    "tag": "immune:electric",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Electric moves"
+   }
+  ],
+  "comment": "heals when hit by an Electric move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "water-absorb",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Water moves, healing for 1/4 max HP."
+   },
+   {
+    "tag": "immune:water",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Water moves"
+   }
+  ],
+  "comment": "heals when hit by a Water move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "oblivious",
+  "tags": [
+   {
+    "tag": "prevents:infatuation",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents infatuation"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "cloud-nine",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "compound-eyes",
+  "tags": [
+   {
+    "tag": "raises:accuracy",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases moves' accuracy to 1.3×."
+   }
+  ],
+  "comment": "raises the accuracy of the holder's moves, not the accuracy stat itself",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "insomnia",
+  "tags": [
+   {
+    "tag": "prevents:sleep",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "immunity",
+  "tags": [
+   {
+    "tag": "prevents:poison",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents poison."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "flash-fire",
+  "tags": [
+   {
+    "tag": "immune:fire",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against Fire moves."
+   }
+  ],
+  "comment": "has no effect while the holder is frozen",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "shield-dust",
+  "tags": [],
+  "comment": "blocks moves' extra effects (status ailments, stat changes, flinching) but not main effects; not a plain prevention",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "own-tempo",
+  "tags": [
+   {
+    "tag": "prevents:confusion",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents confusion."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "intimidate",
+  "tags": [
+   {
+    "tag": "lowers:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Lowers opponents' Attack one stage upon entering battle."
+   }
+  ],
+  "comment": "upon entering battle",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "levitate",
+  "tags": [
+   {
+    "tag": "immune:ground",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "This Pokémon is immune to Ground-type moves"
+   }
+  ],
+  "comment": "disabled during Gravity or Ingrain, or while holding an Iron Ball",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "effect-spore",
+  "tags": [
+   {
+    "tag": "inflicts:paralysis",
+    "chance": 10,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of inflcting either paralysis, poison, or sleep"
+   },
+   {
+    "tag": "inflicts:poison",
+    "chance": 10,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of inflcting either paralysis, poison, or sleep"
+   },
+   {
+    "tag": "inflicts:sleep",
+    "chance": 10,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of inflcting either paralysis, poison, or sleep"
+   }
+  ],
+  "comment": "one 30% roll split across three statuses",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "synchronize",
+  "tags": [
+   {
+    "tag": "reflects:burn",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them."
+   },
+   {
+    "tag": "reflects:paralysis",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them."
+   },
+   {
+    "tag": "reflects:poison",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them."
+   }
+  ],
+  "comment": "only statuses received directly from another Pokémon",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "clear-body",
+  "tags": [
+   {
+    "tag": "prevents:stat-drop",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents stats from being lowered by other Pokémon."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "natural-cure",
+  "tags": [
+   {
+    "tag": "cures:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Cures any major status ailment upon switching out."
+   }
+  ],
+  "comment": "upon switching out",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "lightning-rod",
+  "tags": [
+   {
+    "tag": "raises:special-attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Electric moves, raising Special Attack one stage."
+   },
+   {
+    "tag": "immune:electric",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Absorbs Electric moves"
+   }
+  ],
+  "comment": "Special Attack rises when hit by an Electric move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "serene-grace",
+  "tags": [],
+  "comment": "doubles the chance of moves' extra effects (status ailments, stat changes, flinching); does not fit the vocabulary",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "swift-swim",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles Speed during rain."
+   }
+  ],
+  "comment": "only during rain",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "chlorophyll",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles Speed during strong sunlight."
+   }
+  ],
+  "comment": "only during strong sunlight",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "illuminate",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "trace",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "poison-point",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 30,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of poisoning attacking Pokémon on contact."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "inner-focus",
+  "tags": [
+   {
+    "tag": "prevents:flinch",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents flinching."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "water-veil",
+  "tags": [
+   {
+    "tag": "prevents:burn",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents burns."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "magnet-pull",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents Steel opponents from fleeing or switching out."
+   }
+  ],
+  "comment": "Steel-type opponents only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "soundproof",
+  "tags": [
+   {
+    "tag": "immune:sound",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against sound-based moves."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "rain-dish",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Heals for 1/16 max HP after each turn during rain."
+   }
+  ],
+  "comment": "only during rain",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "pressure",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "thick-fat",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Halves damage from Fire and Ice moves."
+   }
+  ],
+  "comment": "Fire and Ice moves only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "early-bird",
+  "tags": [],
+  "comment": "shortens sleep duration; neither prevents nor cures it",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "flame-body",
+  "tags": [
+   {
+    "tag": "inflicts:burn",
+    "chance": 30,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of burning attacking Pokémon on contact."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "run-away",
+  "tags": [],
+  "comment": "lets the holder flee wild battles even when trapped; `trap` can only be inflicted in the vocabulary",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "keen-eye",
+  "tags": [
+   {
+    "tag": "prevents:stat-drop",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents accuracy from being lowered."
+   }
+  ],
+  "comment": "accuracy only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "hyper-cutter",
+  "tags": [
+   {
+    "tag": "prevents:stat-drop",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents Attack from being lowered by other Pokémon."
+   }
+  ],
+  "comment": "Attack only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "pickup",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "hustle",
+  "tags": [],
+  "comment": "lowers the accuracy of the holder's own physical moves; `lowers` is for the target's stats",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "cute-charm",
+  "tags": [
+   {
+    "tag": "inflicts:infatuation",
+    "chance": 30,
+    "trigger": "on_contact",
+    "evidence": "Has a 30% chance of infatuating attacking Pokémon on contact."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sticky-hold",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "shed-skin",
+  "tags": [
+   {
+    "tag": "cures:any",
+    "chance": 33,
+    "trigger": "other",
+    "evidence": "Has a 33% chance of curing any major status ailment after each turn."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "guts",
+  "tags": [
+   {
+    "tag": "requires:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "with a major status ailment"
+   },
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases Attack to 1.5×"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "marvel-scale",
+  "tags": [
+   {
+    "tag": "requires:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "with a major status ailment"
+   },
+   {
+    "tag": "raises:defense",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases Defense to 1.5×"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "liquid-ooze",
+  "tags": [],
+  "comment": "turns the healing of opponents' leeching moves into damage; does not fit the vocabulary",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "overgrow",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "blaze",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "torrent",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "swarm",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "rock-head",
+  "tags": [
+   {
+    "tag": "immune:recoil",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against recoil damage."
+   }
+  ],
+  "comment": "not Struggle's recoil, nor crash damage from missing Jump Kick or High Jump Kick",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "drought",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "arena-trap",
+  "tags": [
+   {
+    "tag": "inflicts:trap",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents opponents from fleeing or switching out."
+   }
+  ],
+  "comment": "does not affect Flying-types and Pokémon in the air",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "vital-spirit",
+  "tags": [
+   {
+    "tag": "prevents:sleep",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Prevents sleep."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "shell-armor",
+  "tags": [
+   {
+    "tag": "immune:critical",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against critical hits."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "tangled-feet",
+  "tags": [
+   {
+    "tag": "requires:confusion",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles evasion when confused."
+   },
+   {
+    "tag": "raises:evasion",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles evasion when confused."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "rivalry",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "steadfast",
+  "tags": [
+   {
+    "tag": "requires:flinch",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Speed one stage upon flinching."
+   },
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Speed one stage upon flinching."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "snow-cloak",
+  "tags": [
+   {
+    "tag": "raises:evasion",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases evasion to 1.25× during hail."
+   },
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against hail damage."
+   }
+  ],
+  "comment": "evasion bonus only during hail; immune to hail damage only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "gluttony",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "anger-point",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Attack to the maximum of six stages upon receiving a critical hit."
+   }
+  ],
+  "comment": "upon receiving a critical hit",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "unburden",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles Speed upon using or losing a held item."
+   }
+  ],
+  "comment": "upon using or losing a held item",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "dry-skin",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "heals for 1/8 max HP during rain"
+   },
+   {
+    "tag": "immune:water",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "absorbs Water moves"
+   }
+  ],
+  "comment": "during rain or when hit by a Water move; also takes damage in strong sunlight and extra Fire damage",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "download",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises the attack stat corresponding to the opponents' weaker defense one stage upon entering battle."
+   },
+   {
+    "tag": "raises:special-attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises the attack stat corresponding to the opponents' weaker defense one stage upon entering battle."
+   }
+  ],
+  "comment": "raises only one of the two, depending on the opponents' weaker defense",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "iron-fist",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "adaptability",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "skill-link",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "hydration",
+  "tags": [
+   {
+    "tag": "cures:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Cures any major status ailment after each turn during rain."
+   }
+  ],
+  "comment": "only during rain",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "solar-power",
+  "tags": [
+   {
+    "tag": "raises:special-attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases Special Attack to 1.5×"
+   }
+  ],
+  "comment": "only during strong sunlight, and costs HP each turn",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "quick-feet",
+  "tags": [
+   {
+    "tag": "requires:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "with a major status ailment"
+   },
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Increases Speed to 1.5×"
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sniper",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "magic-guard",
+  "tags": [
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "this Pokémon takes no damage from from weather, recoil, status ailments, or Spikes"
+   },
+   {
+    "tag": "immune:recoil",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "this Pokémon takes no damage from from weather, recoil, status ailments, or Spikes"
+   }
+  ],
+  "comment": "immune to all damage not directly caused by a move, e.g. also damage from status ailments and Spikes; the ailments themselves are not prevented",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "no-guard",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "technician",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "leaf-guard",
+  "tags": [
+   {
+    "tag": "prevents:any",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against major status ailments during strong sunlight."
+   }
+  ],
+  "comment": "only during strong sunlight",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "mold-breaker",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "aftermath",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "anticipation",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "forewarn",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "unaware",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "tinted-lens",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "filter",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Decreases damage taken from super-effective moves by 1/4."
+   }
+  ],
+  "comment": "super-effective moves only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "scrappy",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "ice-body",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Heals for 1/16 max HP after each turn during hail."
+   },
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against hail damage."
+   }
+  ],
+  "comment": "heals only during hail; immune to hail damage only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "frisk",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "reckless",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sheer-force",
+  "tags": [],
+  "comment": "removes the extra effects of the holder's own moves; does not fit the vocabulary",
+  "confidence": "low"
+ },
+ {
+  "entity_type": "ability",
+  "name": "unnerve",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "defiant",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Attack two stages upon having any stat lowered."
+   }
+  ],
+  "comment": "upon having any stat lowered",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "cursed-body",
+  "tags": [
+   {
+    "tag": "inflicts:disable",
+    "chance": 30,
+    "trigger": "other",
+    "evidence": "Has a 30% chance of Disabling any move that hits the Pokémon."
+   }
+  ],
+  "comment": "disables any move that hits the holder, contact or not",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "healer",
+  "tags": [
+   {
+    "tag": "cures:any",
+    "chance": 30,
+    "trigger": "other",
+    "evidence": "Has a 30% chance of curing each adjacent ally of any major status ailment after each turn."
+   }
+  ],
+  "comment": "cures adjacent allies, not the holder",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "friend-guard",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Decreases all direct damage taken by friendly Pokémon to 0.75×."
+   }
+  ],
+  "comment": "protects allies, not the holder",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "weak-armor",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Speed and lowers Defense by one stage each upon being hit by a physical move."
+   }
+  ],
+  "comment": "upon being hit by a physical move; also lowers the holder's own Defense, which `lowers` (target only) does not cover",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "multiscale",
+  "tags": [
+   {
+    "tag": "reduces:damage",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Halves damage taken from full HP."
+   }
+  ],
+  "comment": "only at full HP",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "harvest",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "overcoat",
+  "tags": [
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against damage from weather."
+   }
+  ],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "poison-touch",
+  "tags": [
+   {
+    "tag": "inflicts:poison",
+    "chance": 30,
+    "trigger": "other",
+    "evidence": "Has a 30% chance of poisoning target Pokémon upon contact."
+   }
+  ],
+  "comment": "the holder's own contact moves poison the target; not a Pokémon touching the holder, so trigger is other",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "regenerator",
+  "tags": [
+   {
+    "tag": "self:heal",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Heals for 1/3 max HP upon switching out."
+   }
+  ],
+  "comment": "upon switching out",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "big-pecks",
+  "tags": [
+   {
+    "tag": "prevents:stat-drop",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against Defense drops."
+   }
+  ],
+  "comment": "Defense only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sand-rush",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Doubles Speed during a sandstorm."
+   },
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against sandstorm damage."
+   }
+  ],
+  "comment": "Speed bonus only during a sandstorm; immune to sandstorm damage only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "wonder-skin",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "analytic",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "imposter",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "infiltrator",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "moxie",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Attack one stage upon KOing a Pokémon."
+   }
+  ],
+  "comment": "upon KOing a Pokémon",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "justified",
+  "tags": [
+   {
+    "tag": "raises:attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Attack one stage upon taking damage from a Dark move."
+   }
+  ],
+  "comment": "upon being hit by a Dark move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "rattled",
+  "tags": [
+   {
+    "tag": "raises:speed",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Speed one stage upon being hit by a Dark, Ghost, or Bug move."
+   }
+  ],
+  "comment": "upon being hit by a Dark, Ghost, or Bug move",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "sand-force",
+  "tags": [
+   {
+    "tag": "immune:weather",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Protects against sandstorm damage."
+   }
+  ],
+  "comment": "sandstorm damage only",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "competitive",
+  "tags": [
+   {
+    "tag": "raises:special-attack",
+    "chance": null,
+    "trigger": "other",
+    "evidence": "Raises Special Attack by two stages upon having any stat lowered."
+   }
+  ],
+  "comment": "upon having any stat lowered",
+  "confidence": "high"
+ },
+ {
+  "entity_type": "ability",
+  "name": "neutralizing-gas",
+  "tags": [],
+  "comment": null,
+  "confidence": "high"
+ }
+]

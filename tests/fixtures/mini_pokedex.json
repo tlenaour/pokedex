@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "source": "https://pokeapi.co/",
+    "scope": "Test fixture: subset of pokedex.json",
+    "version_groups": [
+      "red-blue",
+      "yellow"
+    ]
+  },
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "height_decimetres": 7,
+      "weight_hectograms": 69,
+      "base_experience": 64,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special-attack": 65,
+        "special-defense": 65,
+        "speed": 45
+      },
+      "abilities": [
+        "chlorophyll",
+        "overgrow"
+      ],
+      "moves": [
+        "body-slam",
+        "growl",
+        "vine-whip"
+      ],
+      "species": {
+        "generation": "generation-i",
+        "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+        "genus": "Seed Pokémon",
+        "color": "green",
+        "shape": "quadruped",
+        "habitat": "grassland",
+        "is_legendary": false,
+        "is_mythical": false,
+        "evolution_chain_id": 1
+      },
+      "images": {
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      }
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "height_decimetres": 10,
+      "weight_hectograms": 130,
+      "base_experience": 142,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "defense": 63,
+        "special-attack": 80,
+        "special-defense": 80,
+        "speed": 60
+      },
+      "abilities": [
+        "chlorophyll",
+        "overgrow"
+      ],
+      "moves": [
+        "body-slam",
+        "growl",
+        "vine-whip"
+      ],
+      "species": {
+        "generation": "generation-i",
+        "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+        "genus": "Seed Pokémon",
+        "color": "green",
+        "shape": "quadruped",
+        "habitat": "grassland",
+        "is_legendary": false,
+        "is_mythical": false,
+        "evolution_chain_id": 1
+      },
+      "images": {
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      }
+    },
+    {
+      "id": 25,
+      "name": "pikachu",
+      "height_decimetres": 4,
+      "weight_hectograms": 60,
+      "base_experience": 112,
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 55,
+        "defense": 40,
+        "special-attack": 50,
+        "special-defense": 50,
+        "speed": 90
+      },
+      "abilities": [
+        "lightning-rod",
+        "static"
+      ],
+      "moves": [
+        "body-slam",
+        "growl",
+        "swift",
+        "thunderbolt"
+      ],
+      "species": {
+        "generation": "generation-i",
+        "description": "When several of these POKéMON gather, their electricity could build and cause lightning storms.",
+        "genus": "Mouse Pokémon",
+        "color": "yellow",
+        "shape": "quadruped",
+        "habitat": "forest",
+        "is_legendary": false,
+        "is_mythical": false,
+        "evolution_chain_id": 10
+      },
+      "images": {
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+      }
+    },
+    {
+      "id": 150,
+      "name": "mewtwo",
+      "height_decimetres": 20,
+      "weight_hectograms": 1220,
+      "base_experience": 306,
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 106,
+        "attack": 110,
+        "defense": 90,
+        "special-attack": 154,
+        "special-defense": 90,
+        "speed": 130
+      },
+      "abilities": [
+        "pressure",
+        "unnerve"
+      ],
+      "moves": [
+        "body-slam",
+        "psychic",
+        "swift",
+        "thunderbolt"
+      ],
+      "species": {
+        "generation": "generation-i",
+        "description": "It was created by a scientist after years of horrific gene splicing and DNA engineering experiments.",
+        "genus": "Genetic Pokémon",
+        "color": "purple",
+        "shape": "upright",
+        "habitat": "rare",
+        "is_legendary": true,
+        "is_mythical": false,
+        "evolution_chain_id": 77
+      },
+      "images": {
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+        "official_artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+      }
+    }
+  ],
+  "moves": [
+    {
+      "id": 22,
+      "name": "vine-whip",
+      "type": "grass",
+      "power": 45,
+      "pp": 25,
+      "accuracy": 100,
+      "priority": 0,
+      "damage_class": "physical",
+      "effect_chance": null,
+      "effect": "Inflicts regular damage.",
+      "short_effect": "Inflicts regular damage with no additional effect.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "bulbasaur",
+        "ivysaur"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "body-slam",
+      "type": "normal",
+      "power": 85,
+      "pp": 15,
+      "accuracy": 100,
+      "priority": 0,
+      "damage_class": "physical",
+      "effect_chance": 30,
+      "effect": "Inflicts regular damage. Has a chance to paralyze the target.",
+      "short_effect": "Has a chance to paralyze the target.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "bulbasaur",
+        "ivysaur",
+        "mewtwo",
+        "pikachu"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "growl",
+      "type": "normal",
+      "power": null,
+      "pp": 40,
+      "accuracy": 100,
+      "priority": 0,
+      "damage_class": "status",
+      "effect_chance": null,
+      "effect": "Lowers the target’s Attack by one stage.",
+      "short_effect": "Lowers the target’s Attack by one stage.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "bulbasaur",
+        "ivysaur",
+        "pikachu"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "thunderbolt",
+      "type": "electric",
+      "power": 90,
+      "pp": 15,
+      "accuracy": 100,
+      "priority": 0,
+      "damage_class": "special",
+      "effect_chance": 10,
+      "effect": "Inflicts regular damage. Has a chance to paralyze the target.",
+      "short_effect": "Has a chance to paralyze the target.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "mewtwo",
+        "pikachu"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "psychic",
+      "type": "psychic",
+      "power": 90,
+      "pp": 10,
+      "accuracy": 100,
+      "priority": 0,
+      "damage_class": "special",
+      "effect_chance": 10,
+      "effect": "Inflicts regular damage. Has a chance to lower the target’s Special Defense by one stage.",
+      "short_effect": "Has a chance to lower the target’s Special Defense by one stage.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "mewtwo"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "swift",
+      "type": "normal",
+      "power": 60,
+      "pp": 20,
+      "accuracy": null,
+      "priority": 0,
+      "damage_class": "special",
+      "effect_chance": null,
+      "effect": "Inflicts regular damage. Ignores accuracy and evasion modifiers.",
+      "short_effect": "Never misses.",
+      "generation": "generation-i",
+      "learned_by_pokemon": [
+        "mewtwo",
+        "pikachu"
+      ]
+    }
+  ],
+  "abilities": [
+    {
+      "id": 9,
+      "name": "static",
+      "effect": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed. Pokémon that are immune to Electric-type moves can still be paralyzed by this ability. Overworld: If the lead Pokémon has this ability, there is a 50% chance that encounters will be with an Electric Pokémon, if applicable.",
+      "short_effect": "Has a 30% chance of paralyzing attacking Pokémon on contact.",
+      "generation": "generation-iii",
+      "is_main_series": true,
+      "pokemon": [
+        "pikachu"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "lightning-rod",
+      "effect": "All other Pokémon's single-target Electric-type moves are redirected to this Pokémon if it is an eligible target. Other Pokémon's Electric moves raise this Pokémon's Special Attack one stage, negating any other effect on it, and cannot miss it. If the move's intended target also has this ability, the move is not redirected. When multiple Pokémon with this ability are possible targets for redirection, the move is redirected to the one with the highest Speed stat, or, in the case of a tie, to a random tied Pokémon. Follow Me takes precedence over this ability. If the Pokémon is a Ground-type and thus immune to Electric moves, its immunity prevents the Special Attack boost.",
+      "short_effect": "Redirects single-target Electric moves to this Pokémon where possible. Absorbs Electric moves, raising Special Attack one stage.",
+      "generation": "generation-iii",
+      "is_main_series": true,
+      "pokemon": [
+        "pikachu"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "chlorophyll",
+      "effect": "This Pokémon's Speed is doubled during strong sunlight. This bonus does not count as a stat modifier.",
+      "short_effect": "Doubles Speed during strong sunlight.",
+      "generation": "generation-iii",
+      "is_main_series": true,
+      "pokemon": [
+        "bulbasaur",
+        "ivysaur"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "pressure",
+      "effect": "Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP. When this Pokémon enters battle, all participating trainers are notified that it has this ability. Overworld: If the lead Pokémon has this ability, higher-levelled Pokémon have their encounter rate increased.",
+      "short_effect": "Increases the PP cost of moves targetting the Pokémon by one.",
+      "generation": "generation-iii",
+      "is_main_series": true,
+      "pokemon": [
+        "mewtwo"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "overgrow",
+      "effect": "When this Pokémon has 1/3 or less of its HP remaining, its Grass-type moves inflict 1.5× as much regular damage.",
+      "short_effect": "Strengthens Grass moves to inflict 1.5× damage at 1/3 max HP or less.",
+      "generation": "generation-iii",
+      "is_main_series": true,
+      "pokemon": [
+        "bulbasaur",
+        "ivysaur"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "unnerve",
+      "effect": "Opposing Pokémon cannot eat held Berries while this Pokémon is in battle. Affected Pokémon can still use Bug Bite or Pluck to eat a target's Berry.",
+      "short_effect": "Prevents opposing Pokémon from eating held Berries.",
+      "generation": "generation-v",
+      "is_main_series": true,
+      "pokemon": [
+        "mewtwo"
+      ]
+    }
+  ]
+}
