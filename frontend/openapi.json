@@ -1,0 +1,1795 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pokédex API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/pokemon": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Search Pokemon",
+        "description": "All the Pokémon in Pokédex order (the catalog), optionally filtered.",
+        "operationId": "search_pokemon_pokemon_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Part of the name",
+              "title": "Q"
+            },
+            "description": "Part of the name"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/PokemonType"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Type"
+            }
+          },
+          {
+            "name": "habitat",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Habitat"
+            }
+          },
+          {
+            "name": "legendary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Legendary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonSummary"
+                  },
+                  "title": "Response Search Pokemon Pokemon Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/suggest": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Suggest Pokemon",
+        "description": "Find a Pokémon from a partially remembered name, best matches first.",
+        "operationId": "suggest_pokemon_pokemon_suggest_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "description": "Beginning (or part) of the name, e.g. `bulba`",
+              "title": "Q"
+            },
+            "description": "Beginning (or part) of the name, e.g. `bulba`"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 10,
+              "minimum": 1,
+              "default": 5,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonSuggestionOut"
+                  },
+                  "title": "Response Suggest Pokemon Pokemon Suggest Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/identify": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Identify",
+        "description": "Identify a Pokémon from a description of its appearance, closest first.",
+        "operationId": "identify_pokemon_identify_get",
+        "parameters": [
+          {
+            "name": "description",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000,
+              "description": "What the Pokémon looks like, e.g. `small yellow mouse with red cheeks`",
+              "title": "Description"
+            },
+            "description": "What the Pokémon looks like, e.g. `small yellow mouse with red cheeks`"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 10,
+              "minimum": 1,
+              "default": 5,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonIdentificationOut"
+                  },
+                  "title": "Response Identify Pokemon Identify Get"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Search by appearance unavailable: index missing or stale, or model not loadable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/{ref}": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Get Pokemon",
+        "operationId": "get_pokemon_pokemon__ref__get",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Pokémon, move or ability with this name or id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/{ref}/matchup": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Get Pokemon Matchup",
+        "description": "How to beat a Pokémon: its weaknesses, resistances and immunities, the\ntypes it hits hard, what it can inflict, avoid or cure, and what not to do\nto it.",
+        "operationId": "get_pokemon_matchup_pokemon__ref__matchup_get",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchupOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Pokémon, move or ability with this name or id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pokemon/{ref}/moves": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "summary": "Get Pokemon Moves",
+        "operationId": "get_pokemon_moves_pokemon__ref__moves_get",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Move"
+                  },
+                  "title": "Response Get Pokemon Moves Pokemon  Ref  Moves Get"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Pokémon, move or ability with this name or id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/moves": {
+      "get": {
+        "tags": [
+          "moves"
+        ],
+        "summary": "Search Moves",
+        "operationId": "search_moves_moves_get",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/PokemonType"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Type"
+            }
+          },
+          {
+            "name": "damage_class",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/DamageClass"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Damage Class"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Move"
+                  },
+                  "title": "Response Search Moves Moves Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/moves/{ref}": {
+      "get": {
+        "tags": [
+          "moves"
+        ],
+        "summary": "Get Move",
+        "operationId": "get_move_moves__ref__get",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveDetailOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Pokémon, move or ability with this name or id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/abilities": {
+      "get": {
+        "tags": [
+          "abilities"
+        ],
+        "summary": "List Abilities",
+        "operationId": "list_abilities_abilities_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Ability"
+                  },
+                  "type": "array",
+                  "title": "Response List Abilities Abilities Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/abilities/{ref}": {
+      "get": {
+        "tags": [
+          "abilities"
+        ],
+        "summary": "Get Ability",
+        "operationId": "get_ability_abilities__ref__get",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AbilityDetailOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Pokémon, move or ability with this name or id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/types": {
+      "get": {
+        "tags": [
+          "types"
+        ],
+        "summary": "List Types",
+        "operationId": "list_types_types_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonType"
+                  },
+                  "type": "array",
+                  "title": "Response List Types Types Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedback/missing-result": {
+      "post": {
+        "tags": [
+          "feedback"
+        ],
+        "summary": "Report Missing Result",
+        "description": "'I did not find my Pokémon': save a search that did not show it.",
+        "operationId": "report_missing_result_feedback_missing_result_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MissingResultReportIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportCreatedOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "description": "Is this process able to serve? For the container's health check.\n\nMinimal on purpose: it fails if the process no longer answers or if\npokedex.db cannot be read. The appearance model and feedback.db are left\nout: without them most of the site still works, and restarting the\ncontainer in a loop would turn a partial problem into a full outage.",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "pokedex.db cannot be read",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Ability": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "effect": {
+            "type": "string",
+            "title": "Effect"
+          },
+          "short_effect": {
+            "type": "string",
+            "title": "Short Effect"
+          },
+          "generation": {
+            "type": "string",
+            "title": "Generation"
+          },
+          "is_main_series": {
+            "type": "boolean",
+            "title": "Is Main Series"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "effect",
+          "short_effect",
+          "generation",
+          "is_main_series"
+        ],
+        "title": "Ability"
+      },
+      "AbilityDetailOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "effect": {
+            "type": "string",
+            "title": "Effect"
+          },
+          "short_effect": {
+            "type": "string",
+            "title": "Short Effect"
+          },
+          "generation": {
+            "type": "string",
+            "title": "Generation"
+          },
+          "is_main_series": {
+            "type": "boolean",
+            "title": "Is Main Series"
+          },
+          "pokemon": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonSummary"
+            },
+            "type": "array",
+            "title": "Pokemon"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "effect",
+          "short_effect",
+          "generation",
+          "is_main_series",
+          "pokemon"
+        ],
+        "title": "AbilityDetailOut"
+      },
+      "AbilitySummary": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "short_effect": {
+            "type": "string",
+            "title": "Short Effect"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "short_effect"
+        ],
+        "title": "AbilitySummary"
+      },
+      "DamageClass": {
+        "type": "string",
+        "enum": [
+          "physical",
+          "special",
+          "status"
+        ],
+        "title": "DamageClass"
+      },
+      "Effect": {
+        "type": "string",
+        "enum": [
+          "sleep",
+          "poison",
+          "paralysis",
+          "burn",
+          "freeze",
+          "confusion",
+          "flinch",
+          "infatuation",
+          "one-hit-ko",
+          "any"
+        ],
+        "title": "Effect",
+        "description": "Effects of the tag vocabulary that something can prevent."
+      },
+      "ErrorOut": {
+        "properties": {
+          "detail": {
+            "type": "string",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "detail"
+        ],
+        "title": "ErrorOut",
+        "description": "A 404 or 503: what went wrong, in one sentence."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthOut": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "unavailable"
+            ],
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "HealthOut"
+      },
+      "Images": {
+        "properties": {
+          "sprite": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Sprite"
+          },
+          "official_artwork": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Official Artwork"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sprite",
+          "official_artwork"
+        ],
+        "title": "Images"
+      },
+      "MatchKind": {
+        "type": "string",
+        "enum": [
+          "exact",
+          "prefix",
+          "word_prefix",
+          "substring",
+          "fuzzy"
+        ],
+        "title": "MatchKind",
+        "description": "How a name matches the query. Declaration order is the priority order."
+      },
+      "MatchOut": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/MatchKind"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "segments": {
+            "items": {
+              "$ref": "#/components/schemas/NameSegmentOut"
+            },
+            "type": "array",
+            "title": "Segments"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kind",
+          "score",
+          "segments"
+        ],
+        "title": "MatchOut"
+      },
+      "MatchupOut": {
+        "properties": {
+          "pokemon": {
+            "$ref": "#/components/schemas/PokemonSummary"
+          },
+          "weaknesses": {
+            "items": {
+              "$ref": "#/components/schemas/TypeMultiplierOut"
+            },
+            "type": "array",
+            "title": "Weaknesses"
+          },
+          "resistances": {
+            "items": {
+              "$ref": "#/components/schemas/TypeMultiplierOut"
+            },
+            "type": "array",
+            "title": "Resistances"
+          },
+          "immunities": {
+            "items": {
+              "$ref": "#/components/schemas/TypeImmunityOut"
+            },
+            "type": "array",
+            "title": "Immunities"
+          },
+          "strong_against": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            },
+            "type": "array",
+            "title": "Strong Against"
+          },
+          "threats": {
+            "items": {
+              "$ref": "#/components/schemas/ThreatOut"
+            },
+            "type": "array",
+            "title": "Threats"
+          },
+          "protections": {
+            "items": {
+              "$ref": "#/components/schemas/ProtectionOut"
+            },
+            "type": "array",
+            "title": "Protections"
+          },
+          "pitfalls": {
+            "items": {
+              "$ref": "#/components/schemas/PitfallOut"
+            },
+            "type": "array",
+            "title": "Pitfalls"
+          }
+        },
+        "type": "object",
+        "required": [
+          "pokemon",
+          "weaknesses",
+          "resistances",
+          "immunities",
+          "strong_against",
+          "threats",
+          "protections",
+          "pitfalls"
+        ],
+        "title": "MatchupOut"
+      },
+      "MissingResultReportIn": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/SearchKind"
+          },
+          "query": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Query",
+            "description": "The search text that produced the results"
+          },
+          "shown_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "title": "Shown Ids",
+            "description": "Ids of the Pokémon shown, in display order (may be empty)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kind",
+          "query",
+          "shown_ids"
+        ],
+        "title": "MissingResultReportIn",
+        "description": "'I did not find my Pokémon', sent from the results of a search."
+      },
+      "Move": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PokemonType"
+          },
+          "damage_class": {
+            "$ref": "#/components/schemas/DamageClass"
+          },
+          "power": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Power"
+          },
+          "accuracy": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accuracy"
+          },
+          "pp": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Pp"
+          },
+          "priority": {
+            "type": "integer",
+            "title": "Priority"
+          },
+          "effect_chance": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effect Chance"
+          },
+          "effect": {
+            "type": "string",
+            "title": "Effect"
+          },
+          "short_effect": {
+            "type": "string",
+            "title": "Short Effect"
+          },
+          "generation": {
+            "type": "string",
+            "title": "Generation"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "damage_class",
+          "pp",
+          "priority",
+          "effect",
+          "short_effect",
+          "generation"
+        ],
+        "title": "Move"
+      },
+      "MoveDetailOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PokemonType"
+          },
+          "damage_class": {
+            "$ref": "#/components/schemas/DamageClass"
+          },
+          "power": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Power"
+          },
+          "accuracy": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accuracy"
+          },
+          "pp": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Pp"
+          },
+          "priority": {
+            "type": "integer",
+            "title": "Priority"
+          },
+          "effect_chance": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effect Chance"
+          },
+          "effect": {
+            "type": "string",
+            "title": "Effect"
+          },
+          "short_effect": {
+            "type": "string",
+            "title": "Short Effect"
+          },
+          "generation": {
+            "type": "string",
+            "title": "Generation"
+          },
+          "learned_by": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonSummary"
+            },
+            "type": "array",
+            "title": "Learned By"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "damage_class",
+          "pp",
+          "priority",
+          "effect",
+          "short_effect",
+          "generation",
+          "learned_by"
+        ],
+        "title": "MoveDetailOut"
+      },
+      "NameSegmentOut": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "matched": {
+            "type": "boolean",
+            "title": "Matched"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text",
+          "matched"
+        ],
+        "title": "NameSegmentOut"
+      },
+      "PitfallKind": {
+        "type": "string",
+        "enum": [
+          "reflects",
+          "boosts"
+        ],
+        "title": "PitfallKind"
+      },
+      "PitfallOut": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/PitfallKind"
+          },
+          "effect": {
+            "$ref": "#/components/schemas/Effect"
+          },
+          "ability": {
+            "type": "string",
+            "title": "Ability"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kind",
+          "effect",
+          "ability"
+        ],
+        "title": "PitfallOut"
+      },
+      "PokemonIdentificationOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "sprite": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Sprite"
+          },
+          "types": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            },
+            "type": "array",
+            "title": "Types"
+          },
+          "genus": {
+            "type": "string",
+            "title": "Genus"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "display_name",
+          "sprite",
+          "types",
+          "genus",
+          "score"
+        ],
+        "title": "PokemonIdentificationOut"
+      },
+      "PokemonOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "height_m": {
+            "type": "number",
+            "title": "Height M"
+          },
+          "weight_kg": {
+            "type": "number",
+            "title": "Weight Kg"
+          },
+          "base_experience": {
+            "type": "integer",
+            "title": "Base Experience"
+          },
+          "types": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            },
+            "type": "array",
+            "title": "Types"
+          },
+          "stats": {
+            "$ref": "#/components/schemas/Stats"
+          },
+          "species": {
+            "$ref": "#/components/schemas/Species"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "abilities": {
+            "items": {
+              "$ref": "#/components/schemas/AbilitySummary"
+            },
+            "type": "array",
+            "title": "Abilities"
+          },
+          "evolution_family": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonSummary"
+            },
+            "type": "array",
+            "title": "Evolution Family"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "display_name",
+          "height_m",
+          "weight_kg",
+          "base_experience",
+          "types",
+          "stats",
+          "species",
+          "images",
+          "abilities",
+          "evolution_family"
+        ],
+        "title": "PokemonOut"
+      },
+      "PokemonSuggestionOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "sprite": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Sprite"
+          },
+          "types": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            },
+            "type": "array",
+            "title": "Types"
+          },
+          "genus": {
+            "type": "string",
+            "title": "Genus"
+          },
+          "match": {
+            "$ref": "#/components/schemas/MatchOut"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "display_name",
+          "sprite",
+          "types",
+          "genus",
+          "match"
+        ],
+        "title": "PokemonSuggestionOut"
+      },
+      "PokemonSummary": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "types": {
+            "items": {
+              "$ref": "#/components/schemas/PokemonType"
+            },
+            "type": "array",
+            "title": "Types"
+          },
+          "sprite": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Sprite"
+          },
+          "genus": {
+            "type": "string",
+            "title": "Genus"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "display_name",
+          "types",
+          "sprite",
+          "genus"
+        ],
+        "title": "PokemonSummary"
+      },
+      "PokemonType": {
+        "type": "string",
+        "enum": [
+          "normal",
+          "fire",
+          "water",
+          "electric",
+          "grass",
+          "ice",
+          "fighting",
+          "poison",
+          "ground",
+          "flying",
+          "psychic",
+          "bug",
+          "rock",
+          "ghost",
+          "dragon",
+          "dark",
+          "steel",
+          "fairy"
+        ],
+        "title": "PokemonType"
+      },
+      "ProtectionKind": {
+        "type": "string",
+        "enum": [
+          "prevents",
+          "cures"
+        ],
+        "title": "ProtectionKind"
+      },
+      "ProtectionOut": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/ProtectionKind"
+          },
+          "effect": {
+            "$ref": "#/components/schemas/Effect"
+          },
+          "sources": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sources"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kind",
+          "effect",
+          "sources"
+        ],
+        "title": "ProtectionOut"
+      },
+      "ReportCreatedOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "ReportCreatedOut"
+      },
+      "SearchKind": {
+        "type": "string",
+        "enum": [
+          "name",
+          "appearance"
+        ],
+        "title": "SearchKind"
+      },
+      "Species": {
+        "properties": {
+          "genus": {
+            "type": "string",
+            "title": "Genus"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "generation": {
+            "type": "string",
+            "title": "Generation"
+          },
+          "color": {
+            "type": "string",
+            "title": "Color"
+          },
+          "shape": {
+            "type": "string",
+            "title": "Shape"
+          },
+          "habitat": {
+            "type": "string",
+            "title": "Habitat"
+          },
+          "is_legendary": {
+            "type": "boolean",
+            "title": "Is Legendary"
+          },
+          "is_mythical": {
+            "type": "boolean",
+            "title": "Is Mythical"
+          },
+          "evolution_chain_id": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Evolution Chain Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "genus",
+          "description",
+          "generation",
+          "color",
+          "shape",
+          "habitat",
+          "is_legendary",
+          "is_mythical",
+          "evolution_chain_id"
+        ],
+        "title": "Species"
+      },
+      "Stats": {
+        "properties": {
+          "hp": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Hp"
+          },
+          "attack": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Attack"
+          },
+          "defense": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Defense"
+          },
+          "special_attack": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Special Attack"
+          },
+          "special_defense": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Special Defense"
+          },
+          "speed": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Speed"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hp",
+          "attack",
+          "defense",
+          "special_attack",
+          "special_defense",
+          "speed",
+          "total"
+        ],
+        "title": "Stats"
+      },
+      "ThreatOut": {
+        "properties": {
+          "effect": {
+            "$ref": "#/components/schemas/Effect"
+          },
+          "sources": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sources"
+          }
+        },
+        "type": "object",
+        "required": [
+          "effect",
+          "sources"
+        ],
+        "title": "ThreatOut"
+      },
+      "TypeImmunityOut": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/PokemonType"
+          },
+          "ability": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ability"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "ability"
+        ],
+        "title": "TypeImmunityOut"
+      },
+      "TypeMultiplierOut": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/PokemonType"
+          },
+          "multiplier": {
+            "type": "number",
+            "title": "Multiplier"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "multiplier"
+        ],
+        "title": "TypeMultiplierOut"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Prompt used to generate [`data/pokemon_descriptions.json`](../../../data/pokemon_descriptions.json). It is kept here so the file can be regenerated or extended the same way. See [`data/README.md`](../../../data/README.md) for how the file is used and reviewed.
 
-> ⚠️ **À COMPLÉTER** si le prompt a été modifié au moment de la génération : ce fichier doit refléter le prompt **réellement** utilisé.
+> ⚠️ **TO COMPLETE** if the prompt was changed at generation time: this file must show the prompt **actually** used.
 
 ## Input
 

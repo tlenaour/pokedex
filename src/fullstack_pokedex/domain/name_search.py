@@ -28,7 +28,7 @@ MAX_QUERY_LENGTH = 30
 FUZZY_THRESHOLD = 0.80
 """Minimum similarity for a fuzzy match: below, the name is considered unrelated.
 
-Tuned for Jaro-Winkler, see docs/benchmark-fuzzy-name-matching.md: 0.80 finds
+Tuned for Jaro-Winkler, see docs/decisions/fuzzy-name-matching-benchmark.md: 0.80 finds
 95% of typos with 1.4% false positives; 0.75 jumps to 14% false positives,
 0.85 drops to 86% of typos found."""
 

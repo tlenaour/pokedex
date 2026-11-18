@@ -1,7 +1,7 @@
 """Implementations of the SimilarityScorer port (typo tolerance).
 
 The only module depending on rapidfuzz. The choice of Jaro-Winkler is
-documented in docs/benchmark-fuzzy-name-matching.md.
+documented in docs/decisions/fuzzy-name-matching-benchmark.md.
 """
 
 from rapidfuzz.distance import JaroWinkler

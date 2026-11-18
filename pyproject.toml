@@ -1,7 +1,7 @@
 [project]
 name = "fullstack-pokedex"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = " A Pokédex for trainers on the move"
 readme = "README.md"
 authors = [
     { name = "Thomas Le Naour", email = "t.lenaour@vitadx.com" }
@@ -12,13 +12,13 @@ dependencies = [
     "model2vec>=0.10.0",
     "pydantic>=2.14.3",
     "rapidfuzz>=3.14.6",
-    "ruff>=0.17.4",
     "uvicorn>=0.54.0",
 ]
 
 [project.scripts]
 fullstack-pokedex = "fullstack_pokedex:main"
 pokedex-import = "fullstack_pokedex.infrastructure.sqlite.importer:main"
+pokedex-openapi = "fullstack_pokedex.api.app:export_openapi"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
@@ -29,6 +29,7 @@ dev = [
     "httpx2>=2.16.0",
     "pytest>=9.2.0",
     "pytest-cov>=7.1.0",
+    "ruff>=0.17.5",
 ]
 
 [tool.pytest.ini_options]
@@ -38,3 +39,12 @@ filterwarnings = ["error"]
 
 [tool.coverage.run]
 branch = true
+
+[tool.coverage.report]
+# `uv run pytest` fails below this total (lines and branches). To run only
+# some tests, add --no-cov: a subset never covers 95 % of the code.
+fail_under = 95
+
+[tool.ruff.lint]
+# Ruff's defaults, plus these families in full.
+extend-select = ["I", "UP", "B", "SIM", "C4", "RET", "PTH", "ARG"]

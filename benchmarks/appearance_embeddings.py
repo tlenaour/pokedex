@@ -75,7 +75,11 @@ def rank(scores: np.ndarray) -> np.ndarray:
 
 def evaluate(rankings: list[np.ndarray], expected: list[int]) -> dict[int, float]:
     return {
-        k: round(100 * np.mean([e in r[:k] for r, e in zip(rankings, expected)]), 1)
+        k: round(
+            100
+            * np.mean([e in r[:k] for r, e in zip(rankings, expected, strict=True)]),
+            1,
+        )
         for k in KS
     }
 
@@ -120,7 +124,7 @@ def main() -> None:
 
     def by_category(rankings):
         groups = defaultdict(list)
-        for r, e, c in zip(rankings, expected, categories):
+        for r, e, c in zip(rankings, expected, categories, strict=True):
             groups[c].append((r, e))
         return {
             c: evaluate([r for r, _ in g], [e for _, e in g])[1]
@@ -169,7 +173,7 @@ def main() -> None:
         entry["categories@1"] = by_category(best)
         entry["misses@3"] = [
             {"query": t, "expected": names[e], "got": [names[i] for i in r[:3]]}
-            for t, e, r in zip(texts, expected, best)
+            for t, e, r in zip(texts, expected, best, strict=True)
             if e not in r[:3]
         ]
         entry["load_s"] = round(load_s, 2)

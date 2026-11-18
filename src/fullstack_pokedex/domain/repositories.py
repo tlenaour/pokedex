@@ -39,6 +39,7 @@ class PokemonRepository(Protocol):
         ...
 
     def search(self, criteria: PokemonCriteria) -> list[Pokemon]: ...
+    def count(self) -> int: ...
     def list_name_candidates(self) -> list[NameCandidate]:
         """Every Pokémon, reduced to what name search needs."""
         ...
@@ -67,9 +68,12 @@ class AbilityRepository(Protocol):
 
 
 class EffectRepository(Protocol):
-    def list_pokemon_effects(self) -> dict[int, list[PokemonEffect]]:
-        """Effect tags of every Pokémon, by id, from its moves and abilities.
-        Pokémon without any tag are absent."""
+    def list_effects(self, pokemon_id: int) -> list[PokemonEffect]:
+        """Effect tags of one Pokémon, from its moves and abilities."""
+        ...
+
+    def count_learners(self, move_names: Iterable[str]) -> dict[str, int]:
+        """How many Pokémon learn each of these moves (unknown names absent)."""
         ...
 
 

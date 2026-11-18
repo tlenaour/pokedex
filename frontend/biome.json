@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignore": ["src/api/schema.d.ts", "dist"]
+    "ignore": ["src/api/schema.d.ts", "openapi.json", "dist"]
   },
   "formatter": {
     "indentStyle": "space",

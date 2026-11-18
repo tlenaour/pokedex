@@ -32,7 +32,7 @@ def test_score_is_symmetric() -> None:
     assert scorer.score("pikachoo", "pikachu") == scorer.score("pikachu", "pikachoo")
 
 
-# Cases from the benchmark (docs/benchmark-fuzzy-name-matching.md), with the
+# Cases from the benchmark (docs/decisions/fuzzy-name-matching-benchmark.md), with the
 # domain threshold: they document what the chosen measure does and does not do.
 
 

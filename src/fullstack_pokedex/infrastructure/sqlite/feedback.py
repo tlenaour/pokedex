@@ -21,7 +21,8 @@ def init_feedback_db(path: Path) -> None:
 def connect_feedback_db(path: Path) -> sqlite3.Connection:
     """Read-write connection to an existing feedback database (see init)."""
     return sqlite3.connect(
-        f"file:{path}?mode=rw",
+        # as_uri(): a "?", "#" or "%" in the path must not break the URI.
+        f"{path.resolve().as_uri()}?mode=rw",
         uri=True,
         # FastAPI may create the connection and use it in different threads
         # (one connection per request, never used concurrently).

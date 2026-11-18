@@ -1,0 +1,21 @@
+# Run the Pokédex: `docker compose up`, then open http://localhost:8000
+#
+# Uses the image published on Docker Hub: nothing to build.
+# To build it from this repository instead: `docker compose up --build`
+# (needs pokedex.json at the repository root, see docs/specs/deployment.md).
+services:
+  pokedex:
+    image: tlenaour/pokedex:latest
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # User reports (feedback.db) survive restarts and image updates.
+      - pokedex-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+
+volumes:
+  pokedex-data:

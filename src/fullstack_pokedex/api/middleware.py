@@ -10,8 +10,6 @@ DEFAULT_CACHE_MAX_AGE = 3600
 client may reuse a response for an hour; after a re-import, it can see the
 previous data until then."""
 
-_CACHEABLE_METHODS = {"GET", "HEAD"}
-
 
 class CacheControlMiddleware(BaseHTTPMiddleware):
     """Let browsers and proxies reuse successful read responses.
@@ -33,7 +31,9 @@ class CacheControlMiddleware(BaseHTTPMiddleware):
     ) -> Response:
         response = await call_next(request)
         if (
-            request.method in _CACHEABLE_METHODS
+            # GET only: the API's routes are declared with @get, and FastAPI
+            # answers 405 to HEAD on them, so a HEAD rule would never apply.
+            request.method == "GET"
             and 200 <= response.status_code < 300
             and "cache-control" not in response.headers
         ):

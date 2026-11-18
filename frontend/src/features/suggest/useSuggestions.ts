@@ -1,35 +1,10 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { ApiError, type PokemonSuggestion, api } from "../../api/client";
+import { api, call, errorMessage } from "../../api/client";
 import { isSearchable } from "../../shared/pokemon";
 import { useDebouncedValue } from "./useDebouncedValue";
 
 export const DEBOUNCE_MS = 200;
-export const SUGGESTION_LIMIT = 5;
-
-export async function fetchSuggestions(
-  q: string,
-  signal?: AbortSignal,
-): Promise<PokemonSuggestion[]> {
-  const { data, response } = await api
-    .GET("/pokemon/suggest", {
-      params: { query: { q, limit: SUGGESTION_LIMIT } },
-      signal,
-    })
-    .catch((error: unknown) => {
-      // A cancelled request (outdated query) is not an error to show.
-      if (error instanceof Error && error.name === "AbortError") throw error;
-      throw new ApiError("API unreachable. Check that the server is running.");
-    });
-
-  if (!response.ok || data === undefined) {
-    throw new ApiError(
-      response.status === 422
-        ? "Invalid search."
-        : `Server error (${response.status}).`,
-    );
-  }
-  return data;
-}
+export const SUGGESTION_LIMIT = 10;
 
 /**
  * Suggestions for what the trainer is typing.
@@ -45,11 +20,16 @@ export function useSuggestions(input: string) {
 
   const result = useQuery({
     queryKey: ["suggest", query],
-    queryFn: ({ signal }) => fetchSuggestions(query, signal),
+    queryFn: ({ signal }) =>
+      call(
+        api.GET("/pokemon/suggest", {
+          params: { query: { q: query, limit: SUGGESTION_LIMIT } },
+          signal,
+        }),
+        { 422: "Invalid search." },
+      ),
     enabled,
     placeholderData: keepPreviousData,
-    staleTime: 60 * 60 * 1000,
-    retry: false,
   });
 
   return {
@@ -65,11 +45,6 @@ export function useSuggestions(input: string) {
       !result.isPlaceholderData &&
       result.data.length === 0,
     /** Message to show, or null. */
-    errorMessage:
-      enabled && result.error
-        ? result.error instanceof ApiError
-          ? result.error.message
-          : "Unexpected error."
-        : null,
+    errorMessage: enabled ? errorMessage(result.error) : null,
   };
 }

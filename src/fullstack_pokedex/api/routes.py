@@ -1,13 +1,19 @@
+import logging
+import re
 import sqlite3
+import threading
 from collections.abc import Iterator
+from contextlib import closing
 from functools import cache
-from typing import Annotated
+from typing import Annotated, Any
 
-from fastapi import APIRouter, Depends, Query, Request
+from fastapi import APIRouter, Depends, Query, Request, Response
 
 from fullstack_pokedex.api.schemas import (
     AbilityDetailOut,
     AbilitySummary,
+    ErrorOut,
+    HealthOut,
     MatchupOut,
     MissingResultReportIn,
     MoveDetailOut,
@@ -18,14 +24,13 @@ from fullstack_pokedex.api.schemas import (
     ReportCreatedOut,
 )
 from fullstack_pokedex.domain.appearance import TextEmbedder
+from fullstack_pokedex.domain.display_name import display_name
 from fullstack_pokedex.domain.entities import (
     Ability,
     DamageClass,
     Move,
-    Pokemon,
     PokemonType,
 )
-from fullstack_pokedex.domain.errors import NotFoundError
 from fullstack_pokedex.domain.repositories import (
     AbilityRepository,
     EffectRepository,
@@ -53,7 +58,13 @@ from fullstack_pokedex.infrastructure.sqlite.repositories import (
     read_appearance_model,
 )
 from fullstack_pokedex.use_cases import identify_pokemon
+from fullstack_pokedex.use_cases.get_ability import GetAbility
 from fullstack_pokedex.use_cases.get_matchup import GetMatchup
+from fullstack_pokedex.use_cases.get_move import GetMove
+from fullstack_pokedex.use_cases.get_pokemon_detail import (
+    GetPokemonDetail,
+    GetPokemonMoves,
+)
 from fullstack_pokedex.use_cases.identify_pokemon import (
     IdentifyPokemon,
     IdentifyPokemonQuery,
@@ -69,6 +80,7 @@ from fullstack_pokedex.use_cases.suggest_pokemon import (
 )
 
 router = APIRouter()
+_log = logging.getLogger(__name__)
 
 
 # --- Dependencies: the only place where SQLite is wired to the domain ------
@@ -117,27 +129,67 @@ def get_get_matchup(
     return GetMatchup(pokemons, effects)
 
 
+def get_get_pokemon_detail(
+    pokemons: Pokemons, abilities: Abilities
+) -> GetPokemonDetail:
+    return GetPokemonDetail(pokemons, abilities)
+
+
+def get_get_pokemon_moves(pokemons: Pokemons, moves: Moves) -> GetPokemonMoves:
+    return GetPokemonMoves(pokemons, moves)
+
+
+def get_get_move(moves: Moves, pokemons: Pokemons) -> GetMove:
+    return GetMove(moves, pokemons)
+
+
+def get_get_ability(abilities: Abilities, pokemons: Pokemons) -> GetAbility:
+    return GetAbility(abilities, pokemons)
+
+
 def get_suggest_pokemon(pokemons: Pokemons) -> SuggestPokemon:
     return SuggestPokemon(pokemon=pokemons, scorer=JaroWinklerScorer())
 
 
 class AppearanceIndexUnavailableError(Exception):
-    """The appearance search index is missing or built with another model."""
+    """The search by appearance cannot run: index missing or stale, or model
+    not loadable."""
+
+
+_embedder_lock = threading.Lock()
+
+
+def get_text_embedder() -> TextEmbedder:
+    """Loaded once per process, on first use (loading takes a moment).
+
+    The lock: FastAPI runs this in a thread pool, and two first searches at
+    the same time would otherwise load the model twice (≈ 290 MB each at peak).
+    """
+    with _embedder_lock:
+        return _load_text_embedder()
 
 
 @cache
-def get_text_embedder() -> TextEmbedder:
-    """Loaded once per process, on first use (loading takes a moment)."""
-    return Model2VecEmbedder()
+def _load_text_embedder() -> TextEmbedder:
+    # Not cached on failure: the next search tries again (e.g. once cached).
+    try:
+        return Model2VecEmbedder()
+    except Exception as error:  # model2vec / huggingface_hub raise many types
+        # The cause goes to the server's log, not to the client: it may hold
+        # paths, URLs or library internals.
+        _log.exception("Embedding model %r could not be loaded", configured_model())
+        raise AppearanceIndexUnavailableError(
+            "The embedding model could not be loaded. Run `uv run pokedex-import` "
+            "once with network access to cache it."
+        ) from error
 
 
-def get_identify_pokemon(
-    pokemons: Pokemons,
-    conn: Connection,
-    embedder: Annotated[TextEmbedder, Depends(get_text_embedder)],
-) -> IdentifyPokemon:
-    # Vectors from different models are not comparable: refuse rather than
-    # return meaningless results.
+def require_appearance_index(conn: Connection) -> None:
+    """The appearance index exists and was built with the configured model.
+
+    Vectors from different models are not comparable: refuse rather than
+    return meaningless results.
+    """
     stored = read_appearance_model(conn)
     if stored is None:
         raise AppearanceIndexUnavailableError(
@@ -148,6 +200,15 @@ def get_identify_pokemon(
             f"Appearance index built with {stored!r}, but the configured model is "
             f"{configured_model()!r}: run `uv run pokedex-import` again."
         )
+
+
+def get_identify_pokemon(
+    pokemons: Pokemons,
+    # Before `embedder`: FastAPI resolves dependencies in parameter order, so a
+    # missing or stale index answers 503 without loading the model first.
+    _index: Annotated[None, Depends(require_appearance_index)],
+    embedder: Annotated[TextEmbedder, Depends(get_text_embedder)],
+) -> IdentifyPokemon:
     return IdentifyPokemon(pokemon=pokemons, embedder=embedder)
 
 
@@ -172,17 +233,36 @@ def get_report_missing_result(
     return ReportMissingResult(feedback=feedback, pokemon=pokemons)
 
 
+# An id is 1 to 9 ASCII digits. Not `str.isdigit()`: it accepts "²" (which
+# `int()` rejects) and other scripts' digits; and an unbounded number
+# overflows SQLite's INTEGER. Anything else is looked up as a name (404).
+_ID = re.compile(r"[0-9]{1,9}")
+
+
 def _parse_ref(ref: str) -> int | str:
-    """`/pokemon/25` and `/pokemon/pikachu` both work."""
-    return int(ref) if ref.isdigit() else ref.lower()
+    """`/pokemon/25` and `/pokemon/pikachu` both work: an id or a name.
+
+    Only the URL convention lives here; the use cases do the lookup.
+    """
+    return int(ref) if _ID.fullmatch(ref) else ref.lower()
 
 
-def _find_pokemon(repo: PokemonRepository, ref: str) -> Pokemon:
-    key = _parse_ref(ref)
-    pokemon = repo.get_by_id(key) if isinstance(key, int) else repo.get_by_name(key)
-    if pokemon is None:
-        raise NotFoundError("Pokemon", ref)
-    return pokemon
+# Error responses a route can send besides 200/422, declared so that they show
+# in /api/docs and in the frontend's generated types. A test checks that every
+# `{ref}` route declares NOT_FOUND.
+NOT_FOUND: dict[int | str, dict[str, Any]] = {
+    404: {
+        "model": ErrorOut,
+        "description": "No Pokémon, move or ability with this name or id",
+    }
+}
+UNAVAILABLE: dict[int | str, dict[str, Any]] = {
+    503: {
+        "model": ErrorOut,
+        "description": "Search by appearance unavailable: index missing or stale, "
+        "or model not loadable",
+    }
+}
 
 
 # --- Pokémon ----------------------------------------------------------------
@@ -196,10 +276,10 @@ def search_pokemon(
     habitat: str | None = None,
     legendary: bool | None = None,
 ) -> list[PokemonSummary]:
+    """All the Pokémon in Pokédex order (the catalog), optionally filtered."""
     criteria = PokemonCriteria(
         name_contains=q, type=type, habitat=habitat, is_legendary=legendary
     )
-    """All the Pokémon in Pokédex order (the catalog), optionally filtered."""
     return [PokemonSummary.from_item(p) for p in list_pokemon.execute(criteria)]
 
 
@@ -226,7 +306,7 @@ def suggest_pokemon(
 
 
 # Also before /pokemon/{ref}, for the same reason.
-@router.get("/pokemon/identify", tags=["pokemon"])
+@router.get("/pokemon/identify", tags=["pokemon"], responses=UNAVAILABLE)
 def identify(
     identify_use_case: Annotated[IdentifyPokemon, Depends(get_identify_pokemon)],
     description: Annotated[
@@ -252,13 +332,17 @@ def identify(
     return [PokemonIdentificationOut.from_identification(r) for r in results]
 
 
-@router.get("/pokemon/{ref}", tags=["pokemon"])
-def get_pokemon(ref: str, pokemons: Pokemons, abilities: Abilities) -> PokemonOut:
-    pokemon = _find_pokemon(pokemons, ref)
-    family = pokemons.list_by_evolution_chain(pokemon.species.evolution_chain_id)
+@router.get("/pokemon/{ref}", tags=["pokemon"], responses=NOT_FOUND)
+def get_pokemon(
+    ref: str,
+    get_detail: Annotated[GetPokemonDetail, Depends(get_get_pokemon_detail)],
+) -> PokemonOut:
+    detail = get_detail.execute(_parse_ref(ref))
+    pokemon = detail.pokemon
     return PokemonOut(
         id=pokemon.id,
         name=pokemon.name,
+        display_name=display_name(pokemon.name),
         height_m=pokemon.height_m,
         weight_kg=pokemon.weight_kg,
         base_experience=pokemon.base_experience,
@@ -268,26 +352,31 @@ def get_pokemon(ref: str, pokemons: Pokemons, abilities: Abilities) -> PokemonOu
         images=pokemon.images,
         abilities=[
             AbilitySummary(id=a.id, name=a.name, short_effect=a.short_effect)
-            for a in abilities.get_many(pokemon.ability_ids)
+            for a in detail.abilities
         ],
-        evolution_family=[PokemonSummary.from_entity(p) for p in family],
+        evolution_family=[
+            PokemonSummary.from_entity(p) for p in detail.evolution_family
+        ],
     )
 
 
-@router.get("/pokemon/{ref}/matchup", tags=["pokemon"])
+@router.get("/pokemon/{ref}/matchup", tags=["pokemon"], responses=NOT_FOUND)
 def get_pokemon_matchup(
     ref: str,
-    pokemons: Pokemons,
     get_matchup: Annotated[GetMatchup, Depends(get_get_matchup)],
 ) -> MatchupOut:
-    """Prepare a fight: the Pokémon's weaknesses and strengths, and the
-    Pokémon to send against it (best first)."""
-    return MatchupOut.from_matchup(get_matchup.execute(_find_pokemon(pokemons, ref)))
+    """How to beat a Pokémon: its weaknesses, resistances and immunities, the
+    types it hits hard, what it can inflict, avoid or cure, and what not to do
+    to it."""
+    return MatchupOut.from_matchup(get_matchup.execute(_parse_ref(ref)))
 
 
-@router.get("/pokemon/{ref}/moves", tags=["pokemon"])
-def get_pokemon_moves(ref: str, pokemons: Pokemons, moves: Moves) -> list[Move]:
-    return moves.get_many(_find_pokemon(pokemons, ref).move_ids)
+@router.get("/pokemon/{ref}/moves", tags=["pokemon"], responses=NOT_FOUND)
+def get_pokemon_moves(
+    ref: str,
+    get_moves: Annotated[GetPokemonMoves, Depends(get_get_pokemon_moves)],
+) -> list[Move]:
+    return get_moves.execute(_parse_ref(ref))
 
 
 # --- Moves ------------------------------------------------------------------
@@ -302,17 +391,14 @@ def search_moves(
     return moves.search(MoveCriteria(type=type, damage_class=damage_class))
 
 
-@router.get("/moves/{ref}", tags=["moves"])
-def get_move(ref: str, moves: Moves, pokemons: Pokemons) -> MoveDetailOut:
-    key = _parse_ref(ref)
-    move = moves.get_by_id(key) if isinstance(key, int) else moves.get_by_name(key)
-    if move is None:
-        raise NotFoundError("Move", ref)
+@router.get("/moves/{ref}", tags=["moves"], responses=NOT_FOUND)
+def get_move(
+    ref: str, get_move_use_case: Annotated[GetMove, Depends(get_get_move)]
+) -> MoveDetailOut:
+    detail = get_move_use_case.execute(_parse_ref(ref))
     return MoveDetailOut(
-        **move.model_dump(),
-        learned_by=[
-            PokemonSummary.from_entity(p) for p in pokemons.list_by_move(move.id)
-        ],
+        **detail.move.model_dump(),
+        learned_by=[PokemonSummary.from_entity(p) for p in detail.learned_by],
     )
 
 
@@ -324,19 +410,14 @@ def list_abilities(abilities: Abilities) -> list[Ability]:
     return abilities.list_all()
 
 
-@router.get("/abilities/{ref}", tags=["abilities"])
-def get_ability(ref: str, abilities: Abilities, pokemons: Pokemons) -> AbilityDetailOut:
-    key = _parse_ref(ref)
-    ability = (
-        abilities.get_by_id(key) if isinstance(key, int) else abilities.get_by_name(key)
-    )
-    if ability is None:
-        raise NotFoundError("Ability", ref)
+@router.get("/abilities/{ref}", tags=["abilities"], responses=NOT_FOUND)
+def get_ability(
+    ref: str, get_ability_use_case: Annotated[GetAbility, Depends(get_get_ability)]
+) -> AbilityDetailOut:
+    detail = get_ability_use_case.execute(_parse_ref(ref))
     return AbilityDetailOut(
-        **ability.model_dump(),
-        pokemon=[
-            PokemonSummary.from_entity(p) for p in pokemons.list_by_ability(ability.id)
-        ],
+        **detail.ability.model_dump(),
+        pokemon=[PokemonSummary.from_entity(p) for p in detail.pokemon],
     )
 
 
@@ -358,3 +439,32 @@ def report_missing_result(
 ) -> ReportCreatedOut:
     """'I did not find my Pokémon': save a search that did not show it."""
     return ReportCreatedOut(id=report_use_case.execute(body.to_report()))
+
+
+# --- Health ------------------------------------------------------------------
+
+
+@router.get(
+    "/health",
+    tags=["health"],
+    responses={503: {"model": HealthOut, "description": "pokedex.db cannot be read"}},
+)
+def health(request: Request, response: Response) -> HealthOut:
+    """Is this process able to serve? For the container's health check.
+
+    Minimal on purpose: it fails if the process no longer answers or if
+    pokedex.db cannot be read. The appearance model and feedback.db are left
+    out: without them most of the site still works, and restarting the
+    container in a loop would turn a partial problem into a full outage.
+    """
+    # Never cached: a proxy must not answer "ok" in place of a dead container.
+    response.headers["Cache-Control"] = "no-store"
+    try:
+        # Not the `Connection` dependency: a failure to open must be caught here.
+        # A real read: `SELECT 1` alone would not touch the file.
+        with closing(connect(request.app.state.db_path)) as conn:
+            conn.execute("SELECT 1 FROM pokemon LIMIT 1").fetchone()
+    except sqlite3.Error:
+        response.status_code = 503
+        return HealthOut(status="unavailable")
+    return HealthOut(status="ok")

@@ -2,7 +2,7 @@
 
 Every case runs through the real domain `rank_candidates` (strict tiers first,
 fuzzy only to fill the limit), with limit=5 like the API default.
-Documentation: docs/benchmark-fuzzy-name-matching.md
+Documentation: docs/decisions/fuzzy-name-matching-benchmark.md
 
 Usage (from the project root, ~4 min):
     uv run python benchmarks/fuzzy_name_matching.py \
@@ -16,6 +16,7 @@ import sys
 import time
 from collections import defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 
 from rapidfuzz import fuzz
 from rapidfuzz.distance import OSA, Indel, JaroWinkler, Levenshtein
@@ -453,7 +454,7 @@ def main() -> None:
         if len(sys.argv) > 2
         else "benchmarks/results/fuzzy_name_matching.json"
     )
-    with open(source, encoding="utf-8") as f:
+    with Path(source).open(encoding="utf-8") as f:
         data = json.load(f)
     names = {p["name"]: p["id"] for p in data["pokemon"]}
     candidates = [NameCandidate(pid, name) for name, pid in names.items()]
@@ -559,7 +560,7 @@ def main() -> None:
             ],
         }
 
-    with open(output, "w", encoding="utf-8") as f:
+    with Path(output).open("w", encoding="utf-8") as f:
         json.dump(results, f, indent=1, default=str, ensure_ascii=False)
     print("results written to", output)
 

@@ -38,7 +38,7 @@ def names(query: str, limit: int = 10, **kwargs: object) -> list[str]:
 def scorer_returning(scores: dict[str, float]) -> MagicMock:
     """Scorer mock: similarity per normalized name, 0.0 for the others."""
     scorer = create_autospec(SimilarityScorer, instance=True)
-    scorer.score.side_effect = lambda query, name: scores.get(name, 0.0)
+    scorer.score.side_effect = lambda _query, name: scores.get(name, 0.0)
     return scorer
 
 

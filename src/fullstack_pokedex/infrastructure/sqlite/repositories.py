@@ -24,7 +24,9 @@ from fullstack_pokedex.domain.repositories import MoveCriteria, PokemonCriteria
 def connect(db_path: Path) -> sqlite3.Connection:
     """Open a read-only connection. Raises if the database does not exist."""
     conn = sqlite3.connect(
-        f"file:{db_path}?mode=ro",
+        # as_uri() percent-encodes the path: a "?", "#" or "%" in a folder name
+        # would otherwise be read as part of the URI.
+        f"{db_path.resolve().as_uri()}?mode=ro",
         uri=True,
         # FastAPI may create the connection and use it in different threads
         # (one connection per request, never used concurrently).
@@ -71,6 +73,9 @@ class SqlitePokemonRepository:
 
     def get_by_name(self, name: str) -> Pokemon | None:
         return next(iter(self._select("WHERE name = ?", [name])), None)
+
+    def count(self) -> int:
+        return self._conn.execute("SELECT COUNT(*) FROM pokemon").fetchone()[0]
 
     def get_many(self, pokemon_ids: Iterable[int]) -> list[Pokemon]:
         """Ordered by id (the port guarantees no order: do not rely on it)."""
@@ -225,25 +230,39 @@ class SqliteEffectRepository:
     def __init__(self, conn: sqlite3.Connection) -> None:
         self._conn = conn
 
-    def list_pokemon_effects(self) -> dict[int, list[PokemonEffect]]:
+    def list_effects(self, pokemon_id: int) -> list[PokemonEffect]:
         rows = self._conn.execute(
-            """SELECT pm.pokemon_id, 'move' AS kind, m.name, t.tag, t.chance
+            """SELECT 'move' AS kind, m.name, t.tag, t.chance
             FROM pokemon_move pm
             JOIN move m ON m.id = pm.move_id
             JOIN effect_tag t ON t.entity_type = 'move' AND t.entity_id = m.id
+            WHERE pm.pokemon_id = :id
             UNION ALL
-            SELECT pa.pokemon_id, 'ability', a.name, t.tag, t.chance
+            SELECT 'ability', a.name, t.tag, t.chance
             FROM pokemon_ability pa
             JOIN ability a ON a.id = pa.ability_id
             JOIN effect_tag t ON t.entity_type = 'ability' AND t.entity_id = a.id
-            ORDER BY 1, 2, 3, 4"""
+            WHERE pa.pokemon_id = :id
+            ORDER BY 1, 2, 3""",
+            {"id": pokemon_id},
         )
-        effects: defaultdict[int, list[PokemonEffect]] = defaultdict(list)
-        for pokemon_id, kind, source, tag, chance in rows:
-            effects[pokemon_id].append(
-                PokemonEffect(tag, SourceKind(kind), source, chance)
-            )
-        return dict(effects)
+        return [
+            PokemonEffect(tag, SourceKind(kind), source, chance)
+            for kind, source, tag, chance in rows
+        ]
+
+    def count_learners(self, move_names: Iterable[str]) -> dict[str, int]:
+        names = list(move_names)
+        if not names:
+            return {}
+        rows = self._conn.execute(
+            f"""SELECT m.name, COUNT(*)
+            FROM pokemon_move pm JOIN move m ON m.id = pm.move_id
+            WHERE m.name IN ({_placeholders(names)})
+            GROUP BY m.name""",
+            names,
+        )
+        return dict(rows.fetchall())
 
 
 def _to_pokemon(

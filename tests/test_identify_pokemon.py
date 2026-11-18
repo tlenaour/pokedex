@@ -150,7 +150,7 @@ def test_no_index_gives_no_result_without_loading(
 def test_pokemon_missing_from_get_many_is_skipped(
     identify: IdentifyPokemon, repository: MagicMock
 ) -> None:
-    repository.get_many.side_effect = lambda ids: [POKEMON[1]]
+    repository.get_many.side_effect = lambda _ids: [POKEMON[1]]
 
     assert names(identify.execute(IdentifyPokemonQuery("yellow mouse"))) == [
         "bulbasaur"

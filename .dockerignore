@@ -1,0 +1,38 @@
+# Everything here is kept out of the Docker build context: smaller context,
+# faster builds, and nothing local leaks into the image.
+
+# Version control and tooling
+.git
+.gitignore
+.claude
+
+# Python: local venv and caches (dependencies are reinstalled from uv.lock)
+.venv
+**/__pycache__
+**/*.py[oc]
+.pytest_cache
+.ruff_cache
+.coverage
+
+# Frontend: reinstalled and rebuilt inside the image
+frontend/node_modules
+frontend/dist
+frontend/coverage
+
+# Databases: pokedex.db is rebuilt during the build from pokedex.json and
+# data/ (both kept in the context); feedback.db is runtime data (volume).
+# Neither local copy may end up in the image.
+pokedex.db
+feedback.db
+*.db-wal
+*.db-shm
+
+# Not needed to build or run the app
+tests
+benchmarks
+scripts
+docs
+frontend/README.md
+Dockerfile
+compose.yaml
+.dockerignore

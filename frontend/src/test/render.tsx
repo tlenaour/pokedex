@@ -1,15 +1,13 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { render, screen, waitFor } from "@testing-library/react";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { type ReactElement, StrictMode } from "react";
 import { App } from "../App";
-import { PAGES, type Page } from "../navigation";
+import { createQueryClient } from "../api/queryClient";
 
 /** Render with a fresh query cache per test, so tests never share results. */
 export function renderWithClient(ui: ReactElement) {
-  const client = new QueryClient({
-    defaultOptions: { queries: { retry: false } },
-  });
+  const client = createQueryClient();
   return {
     user: userEvent.setup(),
     // StrictMode as in main.tsx: effects run twice, like in development.
@@ -21,20 +19,19 @@ export function renderWithClient(ui: ReactElement) {
   };
 }
 
-/** Render the whole app as if the visitor had opened the URL of `page`. */
-export function renderApp(page: Page) {
-  window.location.hash = PAGES[page];
+/** Render the whole app as if the visitor had opened this address. */
+export function renderApp(hash = "#/") {
+  // `replaceState`: setting `location.hash` would fire a late `hashchange`,
+  // which the home would take for a navigation in the middle of the test.
+  window.history.replaceState(null, "", hash);
   return renderWithClient(<App />);
 }
 
-export const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-/** The option whose text contains `text` (bold parts split its accessible name). */
-export const findOption = (text: string) =>
-  waitFor(() => {
-    const option = screen
-      .getAllByRole("option")
-      .find((candidate) => candidate.textContent?.includes(text));
-    if (!option) throw new Error(`No option containing ${text}`);
-    return option;
-  });
+/**
+ * Pretend the visitor scrolled the page to `y`: jsdom has no layout, so it
+ * never scrolls by itself. Sets `window.scrollY` and fires the scroll event.
+ */
+export function scrollPageTo(y: number) {
+  Object.defineProperty(window, "scrollY", { value: y, configurable: true });
+  window.dispatchEvent(new Event("scroll"));
+}

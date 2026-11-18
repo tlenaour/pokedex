@@ -14,8 +14,7 @@ def make_client(**middleware_options: int) -> TestClient:
     app = FastAPI()
     app.add_middleware(CacheControlMiddleware, **middleware_options)
 
-    # FastAPI does not answer HEAD on @app.get routes (405): declare it.
-    @app.api_route("/ok", methods=["GET", "HEAD"])
+    @app.get("/ok")
     def ok() -> dict[str, str]:
         return {"status": "ok"}
 
@@ -53,10 +52,6 @@ def test_successful_get_is_cacheable(client: TestClient) -> None:
     assert response.headers["cache-control"] == (
         f"public, max-age={DEFAULT_CACHE_MAX_AGE}"
     )
-
-
-def test_head_is_cacheable_too(client: TestClient) -> None:
-    assert "public" in client.head("/ok").headers["cache-control"]
 
 
 def test_max_age_is_configurable() -> None:

@@ -182,7 +182,7 @@ def test_no_match_returns_an_empty_list_without_loading(
 def test_pokemon_missing_from_get_many_is_skipped(
     suggest: SuggestPokemon, repository: MagicMock
 ) -> None:
-    repository.get_many.side_effect = lambda ids: [POKEMON[150]]
+    repository.get_many.side_effect = lambda _ids: [POKEMON[150]]
 
     result = suggest.execute(SuggestPokemonQuery("mew"))
 
@@ -194,7 +194,7 @@ def test_pokemon_missing_from_get_many_is_skipped(
 
 def test_typo_is_found_when_a_scorer_is_provided(repository: MagicMock) -> None:
     scorer = create_autospec(SimilarityScorer, instance=True)
-    scorer.score.side_effect = lambda query, name: 0.93 if name == "bulbasaur" else 0.0
+    scorer.score.side_effect = lambda _query, name: 0.93 if name == "bulbasaur" else 0.0
     suggest = SuggestPokemon(pokemon=repository, scorer=scorer)
 
     [suggestion] = suggest.execute(SuggestPokemonQuery("bulbsaur"))

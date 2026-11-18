@@ -4,7 +4,7 @@ Domain entities are reused as-is when their shape fits; dedicated models
 are only defined where the API returns a different shape.
 """
 
-from typing import Self
+from typing import Literal, Self
 
 from pydantic import BaseModel, Field, HttpUrl
 
@@ -63,6 +63,7 @@ class AbilitySummary(BaseModel):
 class PokemonOut(BaseModel):
     id: int
     name: str
+    display_name: str
     height_m: float
     weight_kg: float
     base_experience: int
@@ -173,6 +174,16 @@ class ReportCreatedOut(BaseModel):
     id: int
 
 
+class ErrorOut(BaseModel):
+    """A 404 or 503: what went wrong, in one sentence."""
+
+    detail: str
+
+
+class HealthOut(BaseModel):
+    status: Literal["ok", "unavailable"]
+
+
 class TypeMultiplierOut(BaseModel):
     type: PokemonType
     multiplier: float
@@ -214,9 +225,9 @@ class MatchupOut(BaseModel):
     immunities: list[TypeImmunityOut]
     strong_against: list[PokemonType]
     threats: list[ThreatOut]
+    """What it can inflict."""
     protections: list[ProtectionOut]
     """What it can avoid or heal."""
-    """What it can inflict."""
     pitfalls: list[PitfallOut]
     """What not to do to it."""
 

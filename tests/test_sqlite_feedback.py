@@ -3,6 +3,7 @@
 import json
 import sqlite3
 from collections.abc import Iterator
+from contextlib import closing
 from pathlib import Path
 
 import pytest
@@ -75,3 +76,14 @@ def test_database_rejects_an_unknown_search_kind(conn: sqlite3.Connection) -> No
 def test_connect_does_not_create_a_missing_database(tmp_path: Path) -> None:
     with pytest.raises(sqlite3.OperationalError):
         connect_feedback_db(tmp_path / "missing.db")
+
+
+def test_feedback_db_in_a_folder_with_uri_characters(tmp_path: Path) -> None:
+    folder = tmp_path / "odd ?#%41 name"
+    folder.mkdir()
+    path = folder / "feedback.db"
+    init_feedback_db(path)
+
+    with closing(connect_feedback_db(path)) as conn:
+        report = MissingResultReport(SearchKind.NAME, "nido", (29,))
+        assert SqliteFeedbackRepository(conn).add(report) == 1

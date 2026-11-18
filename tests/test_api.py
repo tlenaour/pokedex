@@ -29,7 +29,11 @@ from fullstack_pokedex.domain.effects import (
     Threat,
 )
 from fullstack_pokedex.domain.entities import DamageClass, PokemonType
-from fullstack_pokedex.domain.errors import InvalidReportError, InvalidSearchQueryError
+from fullstack_pokedex.domain.errors import (
+    InvalidReportError,
+    InvalidSearchQueryError,
+    NotFoundError,
+)
 from fullstack_pokedex.domain.feedback import MissingResultReport, SearchKind
 from fullstack_pokedex.domain.matchup import (
     DefensiveProfile,
@@ -231,7 +235,13 @@ def test_business_validation_error_returns_422(
 
     assert response.status_code == 422
     assert response.json() == {
-        "detail": "Invalid search query '!!!': no letter or digit"
+        "detail": [
+            {
+                "loc": [],
+                "msg": "Invalid search query '!!!': no letter or digit",
+                "type": "value_error",
+            }
+        ]
     }
 
 
@@ -354,6 +364,7 @@ def test_get_pokemon_by_id(client: TestClient, mocks: Mocks) -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["name"] == "pikachu"
+    assert body["display_name"] == "Pikachu"
     assert body["types"] == ["electric"]
     assert body["height_m"] == 0.4
     assert body["weight_kg"] == 6.0
@@ -398,7 +409,6 @@ def test_get_unknown_pokemon_returns_404(
 
 def test_get_pokemon_matchup(client: TestClient, mocks: Mocks) -> None:
     pikachu = make_pokemon()
-    mocks.pokemon.get_by_name.return_value = pikachu
     mocks.matchup.execute.return_value = Matchup(
         pokemon=PokemonListItem.from_entity(pikachu),
         defense=DefensiveProfile(
@@ -415,8 +425,8 @@ def test_get_pokemon_matchup(client: TestClient, mocks: Mocks) -> None:
     response = client.get("/pokemon/Pikachu/matchup")
 
     assert response.status_code == 200
-    mocks.pokemon.get_by_name.assert_called_once_with("pikachu")
-    mocks.matchup.execute.assert_called_once_with(pikachu)
+    # The route only reads the reference; the use case looks the Pokémon up.
+    mocks.matchup.execute.assert_called_once_with("pikachu")
     body = response.json()
     assert body["pokemon"]["display_name"] == "Pikachu"
     assert body["weaknesses"] == [{"type": "ground", "multiplier": 2}]
@@ -435,10 +445,10 @@ def test_get_pokemon_matchup(client: TestClient, mocks: Mocks) -> None:
 def test_matchup_of_an_unknown_pokemon_returns_404(
     client: TestClient, mocks: Mocks
 ) -> None:
-    mocks.pokemon.get_by_id.return_value = None
+    mocks.matchup.execute.side_effect = NotFoundError("Pokemon", 0)
 
     assert client.get("/pokemon/0/matchup").status_code == 404
-    mocks.matchup.execute.assert_not_called()
+    mocks.matchup.execute.assert_called_once_with(0)
 
 
 def test_get_pokemon_moves(client: TestClient, mocks: Mocks) -> None:
@@ -642,4 +652,4 @@ def test_report_missing_result_business_error_returns_422(
     response = client.post("/feedback/missing-result", json=REPORT_BODY)
 
     assert response.status_code == 422
-    assert "999" in response.json()["detail"]
+    assert "999" in response.json()["detail"][0]["msg"]

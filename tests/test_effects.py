@@ -27,24 +27,25 @@ def move(name: str, tag: str, chance: float | None = None) -> PokemonEffect:
 def test_moves_learned_by_almost_everyone_are_dropped() -> None:
     toxic = move("toxic", "inflicts:poison", 100)
     sting = move("poison-sting", "inflicts:poison", 30)
-    effects = {1: [toxic, sting], 2: [toxic], 3: [toxic], 4: [toxic], 5: [toxic]}
+    learners = {"toxic": 5, "poison-sting": 1}
 
-    kept = drop_universal_moves(effects, pokemon_count=5)
+    kept = drop_universal_moves([toxic, sting], learners, pokemon_count=5)
 
-    assert kept == {1: (sting,), 2: (), 3: (), 4: (), 5: ()}
+    assert kept == (sting,)
 
 
 def test_a_move_at_the_threshold_is_kept() -> None:
     body_slam = move("body-slam", "inflicts:paralysis", 30)
-    effects = {i: [body_slam] for i in range(4)}
 
-    assert drop_universal_moves(effects, pokemon_count=5)[0] == (body_slam,)
+    kept = drop_universal_moves([body_slam], {"body-slam": 4}, pokemon_count=5)
+
+    assert kept == (body_slam,)
 
 
 def test_abilities_are_always_kept() -> None:
     hydration = ability("hydration", "cures:any")
 
-    assert drop_universal_moves({1: [hydration]}, 1) == {1: (hydration,)}
+    assert drop_universal_moves([hydration], {}, pokemon_count=1) == (hydration,)
 
 
 # --- The target -------------------------------------------------------------------

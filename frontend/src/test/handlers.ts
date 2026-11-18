@@ -137,10 +137,11 @@ export const CATALOG: PokemonSummary[] = [
   },
 ];
 
-/** The detailed card of Pikachu (GET /pokemon/25), as the real backend answers. */
+/** The details of Pikachu (GET /pokemon/pikachu), as the real backend answers. */
 export const PIKACHU_DETAIL: PokemonDetail = {
   id: 25,
   name: "pikachu",
+  display_name: "Pikachu",
   height_m: 0.4,
   weight_kg: 6,
   base_experience: 112,
@@ -198,6 +199,7 @@ const RAICHU_DETAIL: PokemonDetail = {
   ...PIKACHU_DETAIL,
   id: 26,
   name: "raichu",
+  display_name: "Raichu",
   species: {
     ...PIKACHU_DETAIL.species,
     description: "Its long tail serves as a ground.",
@@ -205,26 +207,27 @@ const RAICHU_DETAIL: PokemonDetail = {
 };
 
 const DETAILS: Record<string, PokemonDetail> = {
-  25: PIKACHU_DETAIL,
-  26: RAICHU_DETAIL,
+  pikachu: PIKACHU_DETAIL,
+  raichu: RAICHU_DETAIL,
 };
 
 const summary = (
   id: number,
   name: string,
+  displayName: string,
   types: PokemonSummary["types"],
 ): PokemonSummary => ({
   id,
-  name: name.toLowerCase(),
-  display_name: name,
+  name,
+  display_name: displayName,
   types,
   sprite: `https://example.com/sprites/${id}.png`,
   genus: "Test Pokémon",
 });
 
-/** Bulbasaur (#1, from `bulba`): Grass/Poison. */
+/** Bulbasaur: Grass/Poison. */
 export const BULBASAUR_MATCHUP: Matchup = {
-  pokemon: summary(1, "Bulbasaur", ["grass", "poison"]),
+  pokemon: summary(1, "bulbasaur", "Bulbasaur", ["grass", "poison"]),
   weaknesses: [
     { type: "fire", multiplier: 2 },
     { type: "ice", multiplier: 2 },
@@ -245,10 +248,10 @@ export const BULBASAUR_MATCHUP: Matchup = {
   pitfalls: [],
 };
 
-/** Mr. Mime (#122, from `mime`): an immunity given by its types and a possible one. */
+/** Mr. Mime: no weakness, an immunity given by its types and a possible one. */
 const MR_MIME_MATCHUP: Matchup = {
   ...BULBASAUR_MATCHUP,
-  pokemon: summary(122, "Mr. Mime", ["psychic", "fairy"]),
+  pokemon: summary(122, "mr-mime", "Mr. Mime", ["psychic", "fairy"]),
   weaknesses: [],
   immunities: [
     { type: "dragon", ability: null },
@@ -265,9 +268,23 @@ const MR_MIME_MATCHUP: Matchup = {
   ],
 };
 
+/** Pikachu and Raichu: a weakness and nothing else to say. */
+const plainMatchup = (pokemon: PokemonSummary): Matchup => ({
+  pokemon,
+  weaknesses: [{ type: "ground", multiplier: 2 }],
+  resistances: [],
+  immunities: [],
+  strong_against: [],
+  threats: [],
+  protections: [],
+  pitfalls: [],
+});
+
 const MATCHUPS: Record<string, Matchup> = {
-  1: BULBASAUR_MATCHUP,
-  122: MR_MIME_MATCHUP,
+  bulbasaur: BULBASAUR_MATCHUP,
+  "mr-mime": MR_MIME_MATCHUP,
+  pikachu: plainMatchup(summary(25, "pikachu", "Pikachu", ["electric"])),
+  raichu: plainMatchup(summary(26, "raichu", "Raichu", ["electric"])),
 };
 
 /** Reports received by the fake feedback route, in order. */

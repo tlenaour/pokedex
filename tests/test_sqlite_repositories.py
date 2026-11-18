@@ -1,4 +1,5 @@
 import sqlite3
+from contextlib import closing
 from pathlib import Path
 
 import pytest
@@ -309,16 +310,51 @@ def test_vector_storage_round_trip(vector: list[float]) -> None:
 def test_pokemon_effects_come_from_moves_and_abilities(
     conn: sqlite3.Connection,
 ) -> None:
-    effects = SqliteEffectRepository(conn).list_pokemon_effects()
+    effects = SqliteEffectRepository(conn).list_effects(25)
 
-    assert set(effects) <= {1, 2, 25, 150}
     assert (
         PokemonEffect("immune:electric", SourceKind.ABILITY, "lightning-rod", None)
-        in effects[25]
+        in effects
     )
     assert (
         PokemonEffect("inflicts:paralysis", SourceKind.MOVE, "thunderbolt", 10)
-        in effects[25]
+        in effects
     )
-    # Only Pikachu learns Thunderbolt in the mini pokedex.
-    assert all(e.source != "thunderbolt" for e in effects.get(1, []))
+    # Bulbasaur does not learn Thunderbolt.
+    bulbasaur = SqliteEffectRepository(conn).list_effects(1)
+    assert all(e.source != "thunderbolt" for e in bulbasaur)
+
+
+def test_effects_of_an_unknown_pokemon_are_empty(conn: sqlite3.Connection) -> None:
+    assert SqliteEffectRepository(conn).list_effects(999) == []
+
+
+def test_count_learners_of_moves(conn: sqlite3.Connection) -> None:
+    repository = SqliteEffectRepository(conn)
+
+    # Pikachu and Mewtwo learn Thunderbolt in the mini pokedex.
+    assert repository.count_learners(["thunderbolt", "unknown-move"]) == {
+        "thunderbolt": 2
+    }
+    assert repository.count_learners([]) == {}
+
+
+def test_count_pokemon(conn: sqlite3.Connection) -> None:
+    assert SqlitePokemonRepository(conn).count() == 4
+
+
+def test_connect_accepts_any_folder_name(
+    tmp_path: Path, conn: sqlite3.Connection
+) -> None:
+    """Characters that mean something in a URI must stay part of the path."""
+    folder = tmp_path / "odd ?#%41 name"
+    folder.mkdir()
+    db = folder / "pokedex.db"
+    with sqlite3.connect(db) as target:
+        conn.backup(target)
+    target.close()
+
+    with closing(connect(db)) as read_only:
+        assert SqlitePokemonRepository(read_only).count() == 4
+        with pytest.raises(sqlite3.OperationalError, match="readonly"):
+            read_only.execute("DELETE FROM pokemon")

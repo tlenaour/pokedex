@@ -62,23 +62,18 @@ class Effect(StrEnum):
 
 
 def drop_universal_moves(
-    effects: Mapping[int, Sequence[PokemonEffect]], pokemon_count: int
-) -> dict[int, tuple[PokemonEffect, ...]]:
-    """The effects without those of the moves almost every Pokémon learns."""
-    learners: defaultdict[str, set[int]] = defaultdict(set)
-    for pokemon_id, pokemon_effects in effects.items():
-        for e in pokemon_effects:
-            if e.source_kind is SourceKind.MOVE:
-                learners[e.source].add(pokemon_id)
+    effects: Sequence[PokemonEffect],
+    learners: Mapping[str, int],
+    pokemon_count: int,
+) -> tuple[PokemonEffect, ...]:
+    """One Pokémon's effects without those of the moves almost every Pokémon
+    learns. `learners`: how many Pokémon learn each of its moves."""
     limit = UNIVERSAL_MOVE_SHARE * pokemon_count
-
-    def kept(e: PokemonEffect) -> bool:
-        return e.source_kind is not SourceKind.MOVE or len(learners[e.source]) <= limit
-
-    return {
-        pokemon_id: tuple(e for e in pokemon_effects if kept(e))
-        for pokemon_id, pokemon_effects in effects.items()
-    }
+    return tuple(
+        e
+        for e in effects
+        if e.source_kind is not SourceKind.MOVE or learners.get(e.source, 0) <= limit
+    )
 
 
 # --- The target -------------------------------------------------------------------

@@ -25,7 +25,10 @@ def configured_model() -> str:
 class Model2VecEmbedder:
     def __init__(self, model: str | None = None) -> None:
         self.model_name = model or configured_model()
-        self._model = StaticModel.from_pretrained(self.model_name)
+        # force_download=False: use the cached model when it is there. model2vec's
+        # default (True) contacts the Hugging Face Hub on every load, so the first
+        # search would wait on the network, or hang if the Hub is unreachable.
+        self._model = StaticModel.from_pretrained(self.model_name, force_download=False)
 
     def embed(self, texts: Sequence[str]) -> list[list[float]]:
         return self._model.encode(list(texts)).tolist()

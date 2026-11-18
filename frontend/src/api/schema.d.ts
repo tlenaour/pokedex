@@ -11,7 +11,10 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** Search Pokemon */
+        /**
+         * Search Pokemon
+         * @description All the Pokémon in Pokédex order (the catalog), optionally filtered.
+         */
         get: operations["search_pokemon_pokemon_get"];
         put?: never;
         post?: never;
@@ -87,8 +90,9 @@ export interface paths {
         };
         /**
          * Get Pokemon Matchup
-         * @description Prepare a fight: the Pokémon's weaknesses and strengths, and the
-         *     Pokémon to send against it (best first).
+         * @description How to beat a Pokémon: its weaknesses, resistances and immunities, the
+         *     types it hits hard, what it can inflict, avoid or cure, and what not to do
+         *     to it.
          */
         get: operations["get_pokemon_matchup_pokemon__ref__matchup_get"];
         put?: never;
@@ -221,6 +225,31 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/health": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Health
+         * @description Is this process able to serve? For the container's health check.
+         *
+         *     Minimal on purpose: it fails if the process no longer answers or if
+         *     pokedex.db cannot be read. The appearance model and feedback.db are left
+         *     out: without them most of the site still works, and restarting the
+         *     container in a loop would turn a partial problem into a full outage.
+         */
+        get: operations["health_health_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -277,10 +306,26 @@ export interface components {
          * @enum {string}
          */
         Effect: "sleep" | "poison" | "paralysis" | "burn" | "freeze" | "confusion" | "flinch" | "infatuation" | "one-hit-ko" | "any";
+        /**
+         * ErrorOut
+         * @description A 404 or 503: what went wrong, in one sentence.
+         */
+        ErrorOut: {
+            /** Detail */
+            detail: string;
+        };
         /** HTTPValidationError */
         HTTPValidationError: {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
+        };
+        /** HealthOut */
+        HealthOut: {
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "ok" | "unavailable";
         };
         /** Images */
         Images: {
@@ -441,6 +486,8 @@ export interface components {
             id: number;
             /** Name */
             name: string;
+            /** Display Name */
+            display_name: string;
             /** Height M */
             height_m: number;
             /** Weight Kg */
@@ -698,6 +745,15 @@ export interface operations {
                     "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
+            /** @description Search by appearance unavailable: index missing or stale, or model not loadable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
         };
     };
     get_pokemon_pokemon__ref__get: {
@@ -718,6 +774,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["PokemonOut"];
+                };
+            };
+            /** @description No Pokémon, move or ability with this name or id */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
                 };
             };
             /** @description Validation Error */
@@ -751,6 +816,15 @@ export interface operations {
                     "application/json": components["schemas"]["MatchupOut"];
                 };
             };
+            /** @description No Pokémon, move or ability with this name or id */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -780,6 +854,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Move"][];
+                };
+            };
+            /** @description No Pokémon, move or ability with this name or id */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
                 };
             };
             /** @description Validation Error */
@@ -845,6 +928,15 @@ export interface operations {
                     "application/json": components["schemas"]["MoveDetailOut"];
                 };
             };
+            /** @description No Pokémon, move or ability with this name or id */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -894,6 +986,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AbilityDetailOut"];
+                };
+            };
+            /** @description No Pokémon, move or ability with this name or id */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
                 };
             };
             /** @description Validation Error */
@@ -956,6 +1057,35 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    health_health_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HealthOut"];
+                };
+            };
+            /** @description pokedex.db cannot be read */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HealthOut"];
                 };
             };
         };
