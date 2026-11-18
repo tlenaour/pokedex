@@ -33,7 +33,7 @@ def tag(tag, chance=None, evidence=None, trigger=None):
 def label(entity_type, name, *tags, comment=None, confidence="high"):
     key = (entity_type, name)
     assert key in ITEMS, f"unknown item {key}"
-    assert key not in LABELS, f"labelled twice {key}"
+    assert key not in LABELS, f"labeled twice {key}"
     default_trigger = "move_hit" if entity_type == "move" else "other"
     done = []
     for t in tags:

@@ -1,6 +1,6 @@
 # Instructions for AI coding agents
 
-Read this before changing anything. Details: [`docs/architecture.md`](docs/architecture.md) (how it works) and [`docs/development.md`](docs/development.md) (how to work on it).
+Read this before changing anything. Details: [`README.md`](README.md) (Details on project) 
 
 ## Project in one paragraph
 
@@ -28,7 +28,7 @@ cd frontend && pnpm test:coverage && pnpm lint && pnpm build   # coverage ≥ 95
 - **After changing `data/`**, run `uv run pokedex-import` (vectors and tags are computed at import).
 - **`feedback.db` holds user data**: never drop, recreate or migrate it destructively. `pokedex.db` can always be rebuilt.
 - **Do not commit** `pokedex.json`, `*.db`, `.coverage`, or anything from `.venv`, `node_modules`, `dist`.
-- **The frontend must stay explainable by a backend developer.** The maintainer is a backend developer who has to defend every frontend choice. Prefer plain React, HTML and Tailwind; no new frontend library (router, UI kit, state manager, form library, animation…) without a stated reason and the user's agreement; no clever abstractions. When you make a frontend choice, write its reason in [`docs/frontend.md`](docs/frontend.md).
+- **The frontend must stay explainable by a backend developer.** The maintainer is a backend developer who has to defend every frontend choice. Prefer plain React, HTML and Tailwind; no new frontend library (router, UI kit, state manager, form library, animation…) without a stated reason and the user's agreement; no clever abstractions.
 - Comments explain **why**, not what. Keep the existing tone: short, plain sentences.
 
 ## Where to put what
@@ -42,4 +42,4 @@ cd frontend && pnpm test:coverage && pnpm lint && pnpm build   # coverage ≥ 95
 | new business error | a `DomainError` subclass in `domain/errors.py`: 422 automatically; another status goes in `_DOMAIN_ERROR_STATUS` (`api/app.py`) |
 | UI of a feature | `frontend/src/features/<feature>/` (component, `useX.ts` hook); its user-level test goes in the test file of the screen that shows it (`Home.test.tsx`, `PokemonPage.test.tsx`) |
 | hash route | `frontend/src/navigation.ts` |
-| reference data | `data/` (see `data/README.md`) |
+| reference data | `data/` |

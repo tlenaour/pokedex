@@ -2,8 +2,8 @@
 
 Fails if a change to the reference descriptions (data/pokemon_descriptions.json)
 or to the model lowers identification quality below the measured baseline
-(benchmarks/appearance_embeddings.py: potion-base-32M, "joined" strategy,
-95.6 % first / 100 % top 3 on 68 queries).
+(potion-base-32M, "joined" strategy, 95.6 % first / 100 % top 3 on the
+68 queries of fixtures/appearance_queries.json).
 
 Skipped when the model is not already on this machine: tests never download it.
 Get it once with `uv run pokedex-import` (or any first use of the model).
@@ -25,7 +25,7 @@ from fullstack_pokedex.infrastructure.embeddings import (
 )
 from tests.factories import DESCRIPTIONS
 
-QUERIES = Path(__file__).parents[1] / "benchmarks" / "appearance_queries.json"
+QUERIES = Path(__file__).parent / "fixtures" / "appearance_queries.json"
 
 # Measured baseline minus a small margin (1 query = 1.5 points).
 MIN_HIT_AT_1 = 0.92

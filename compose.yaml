@@ -5,7 +5,7 @@
 # (needs pokedex.json at the repository root, see docs/specs/deployment.md).
 services:
   pokedex:
-    image: tlenaour/pokedex:latest
+    image: tlenaour/pokedex:0.2.0
     build: .
     ports:
       - "8000:8000"

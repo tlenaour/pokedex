@@ -46,7 +46,7 @@ export class NotFoundError extends ApiError {
  * Run one API request and return its data, or throw an error already worded
  * for the user. Every data hook goes through here: one error policy.
  *
- * - a cancelled request (outdated query) is rethrown as is: not an error to show;
+ * - a canceled request (outdated query) is rethrown as is: not an error to show;
  * - no answer at all → "API unreachable";
  * - 404 → NotFoundError (the only 404s the frontend can get are Pokémon
  *   references; the API also answers 404 on /moves/{ref} and /abilities/{ref});

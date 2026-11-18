@@ -10,7 +10,7 @@ export const SUGGESTION_LIMIT = 10;
  * Suggestions for what the trainer is typing.
  *
  * - waits DEBOUNCE_MS after the last keystroke before calling the API;
- * - an outdated request is cancelled (TanStack Query passes an AbortSignal);
+ * - an outdated request is canceled (TanStack Query passes an AbortSignal);
  * - the previous list stays displayed while the next one loads (no flicker);
  * - results are cached: the data only changes on a backend re-import.
  */

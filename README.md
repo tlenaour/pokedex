@@ -37,7 +37,7 @@ pnpm install
 pnpm dev                       # http://localhost:5173 (calls to /api go to the backend)
 ```
 
-With Docker, nothing to install but Docker: `docker compose up -d`, then open http://localhost:8000. See [`DOCKER.md`](DOCKER.md).
+With Docker, nothing to install but Docker: `docker compose up -d`, then open http://localhost:8000
 
 ## Checks
 
@@ -47,8 +47,6 @@ uv run ruff check . && uv run ruff format --check .    # backend lint and format
 cd frontend && pnpm test:coverage && pnpm lint && pnpm build
 ```
 
-CI (`.github/workflows/ci.yml`) runs the same checks on every push and pull request, then builds and tests the Docker image. It publishes nothing.
-
 ## Repository map
 
 | Path | Content |
@@ -56,19 +54,12 @@ CI (`.github/workflows/ci.yml`) runs the same checks on every push and pull requ
 | `src/fullstack_pokedex/` | backend: `domain/`, `use_cases/`, `infrastructure/`, `api/` |
 | `tests/` | backend tests (one file per backend module, mini dataset in `fixtures/`) |
 | `frontend/` | React app (`src/features/<feature>/`) |
-| `data/` | versioned reference data: appearance descriptions, effect tags ([`data/README.md`](data/README.md)) |
-| `benchmarks/` | scripts and results behind the search choices |
+| `data/` | versioned reference data: appearance descriptions, effect tags |
 | `scripts/` | data build script, Docker image test |
-| `docs/` | documentation ([index](docs/README.md)) |
-| `.github/workflows/` | CI |
 | `Dockerfile`, `compose.yaml` | the deployable image |
 
 ## Read next
 
-- [`docs/architecture.md`](docs/architecture.md): how the project works today.
-- [`docs/development.md`](docs/development.md): setup details, tests, conventions, recipes.
-- [`docs/frontend.md`](docs/frontend.md): the frontend explained to a backend developer, with the reasons behind each choice.
 - [`AGENTS.md`](AGENTS.md): the rules for AI coding agents (useful to humans too). `CLAUDE.md` only imports it, for Claude Code.
 - [`WRITEUP.md`](WRITEUP.md): the product, the persona, the choices and the next steps, in one page.
 - [`AI_USAGE.md`](AI_USAGE.md): where AI is used, in the product and to build it, and how it is checked.
-- [`docs/README.md`](docs/README.md): every document, and who it is for.
